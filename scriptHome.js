@@ -39,6 +39,7 @@ function pedirGIFO() {
 
         crearElementosGIFOS(listaURLSGIFOS);
 
+        inicioSlider();
 
     }).catch(error => {
         console.log(error);
@@ -63,6 +64,7 @@ function addElement (url) {
 
     let currentDiv = document.getElementById("slider");
     currentDiv.appendChild(nuevoDiv);
+    nuevoDiv.classList.add("slider-section");
 }
 
 pedirGIFO();
@@ -115,3 +117,4 @@ function inicioSlider() {
 }
 
 //inicioSlider(pedirGIFO);
+
