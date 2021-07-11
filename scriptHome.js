@@ -1,16 +1,3 @@
-//BARRA DE BUSQUEDA
-
-var busquedas = function(callback){
-    
-    console.log("Hola, hubo un callback de busqueda");
-}
-
-let boton = document.getElementById('search');
-boton.addEventListener("input", busquedas);
-
-
-
-
 //--SLIDER--//
 
 //---> llamado API
@@ -50,12 +37,12 @@ function crearElementosGIFOS (listaUrls) {
     imagenes = document.getElementById('slider');
     for(idElement in listaUrls) {
         let unaUrl = listaUrls[idElement];
-        addElement(unaUrl);
+        insertarImagenSlider(unaUrl);
     }
 }
 
 
-function addElement (url) {
+function insertarImagenSlider (url) {
     let nuevoDiv = document.createElement("div");
     let nuevaImg = document.createElement("img");
     nuevoDiv.appendChild(nuevaImg);
@@ -116,5 +103,49 @@ function inicioSlider() {
 
 }
 
-//inicioSlider(pedirGIFO);
 
+
+//BARRA BUSQUEDA
+
+function askSearchSuggestions() {
+    async function getSearch() {
+        inputBusqueda = document.getElementById('search');
+        valueInput = inputBusqueda.value;
+
+        let url = `https://api.giphy.com/v1/tags/related/${valueInput}?api_key=${apiKeyGIPHY}`;
+        const resp = await fetch(url);
+        const info = await resp.json();
+        return info;
+    }
+
+    let info = getSearch();
+    info.then(response => {
+        console.log(response);
+        listaSugerencias = document.getElementById('lista-search');
+        listaSugerencias.textContent = '';
+
+        for(indiceElement in response.data) {
+            let element = response.data[indiceElement];
+            let nameDelElemento = element.name;
+            addUlSuggestions(nameDelElemento);
+        }
+         
+
+    }).catch(error => {
+        console.log(error);
+    });
+
+
+
+}
+
+inputBusqueda = document.getElementById('search');
+inputBusqueda.addEventListener('input', askSearchSuggestions);
+
+function addUlSuggestions(sugerencia) {
+    listaSugerencias = document.getElementById('lista-search');
+    let nuevaSugerencia = document.createElement('li');
+    listaSugerencias.appendChild(nuevaSugerencia);
+
+    nuevaSugerencia.innerHTML = sugerencia;
+}
