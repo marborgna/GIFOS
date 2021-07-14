@@ -31,6 +31,7 @@ body {
                 height: 59.1px;
                 justify-items: flex-start;
                 align-self: center;
+                font-weight: bold;
             }
 
             .menu {
@@ -71,6 +72,7 @@ body {
                     text-transform: uppercase;
                     color: $main-color-blue;
                     text-decoration: none;
+                    font-weight: bold;
                     .separador {
                         display: none;
                     }                 
@@ -103,8 +105,10 @@ body {
         }
 
         img {
-            width: 399px;
-            height: 190;
+            max-width: 399px;
+            max-height: 190px;
+            width: 65%;
+            height: 45%;
             align-self: center;
         }
 
@@ -112,6 +116,7 @@ body {
             text-align: center;
             vertical-align: middle;
             white-space: nowrap;
+            width: 100%;
             
             input {
             padding-left: 1%;
@@ -125,6 +130,20 @@ body {
             font-family: 'Roboto-black', sans-serif;
             background: url(img/icon-search.svg) no-repeat scroll 97%;      
             }
+
+            ul {
+
+                li {
+                    
+                    text-decoration: none;
+                    ::marker {
+                        display: none;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+
         }
     }
 
@@ -424,14 +443,21 @@ body {
                 }
             }
 
+            img {
+                min-width: 273px;
+                min-height: 130px;
+            }
+
             .barra {
-                width: 500px;
+                width: 100%;
                 text-align: center;
                 vertical-align: middle;
                 white-space: nowrap;
                 input {
-                    
+                    min-width: 334px;
+                    max-width: 85%;
                 }
+                
             }
 
         }
@@ -477,9 +503,7 @@ body {
                     margin: 0px;
                     padding: 0;
                     padding-bottom: 3%;
-                    li {
-                        a{}
-                    }
+                    
                 }             
             }
             .footerB{

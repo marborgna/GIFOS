@@ -44,6 +44,7 @@ body header nav img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  font-weight: bold;
 }
 
 body header nav .menu {
@@ -100,6 +101,7 @@ body header nav .sections li {
   text-transform: uppercase;
   color: #572EE5;
   text-decoration: none;
+  font-weight: bold;
 }
 
 body header nav .sections li .separador {
@@ -142,8 +144,10 @@ body .main-section h1 .mobile-break {
 }
 
 body .main-section img {
-  width: 399px;
-  height: 190;
+  max-width: 399px;
+  max-height: 190px;
+  width: 65%;
+  height: 45%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -153,6 +157,7 @@ body .main-section .barra {
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
+  width: 100%;
 }
 
 body .main-section .barra input {
@@ -166,6 +171,15 @@ body .main-section .barra input {
   border-radius: 27px;
   font-family: 'Roboto-black', sans-serif;
   background: url(img/icon-search.svg) no-repeat scroll 97%;
+}
+
+body .main-section .barra ul li {
+  text-decoration: none;
+}
+
+body .main-section .barra ul li ::marker {
+  display: none;
+  text-decoration: none;
 }
 
 body .trending-section {
@@ -523,11 +537,19 @@ body .down-barra {
   body .main-section h1 span {
     display: inline;
   }
+  body .main-section img {
+    min-width: 273px;
+    min-height: 130px;
+  }
   body .main-section .barra {
-    width: 500px;
+    width: 100%;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
+  }
+  body .main-section .barra input {
+    min-width: 334px;
+    max-width: 85%;
   }
   body .trending-section {
     display: -webkit-box;

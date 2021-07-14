@@ -1,4 +1,19 @@
-//--SLIDER--//
+// NAV sticky
+window.onscroll = function() {
+    myFunction()
+};
+
+var navbar = document.getElementById("navbar");
+
+var sticky = navbar.offsetTop;
+
+fuction myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
 
 //---> llamado API
 let apiKeyGIPHY = "bdbs9mjKP9hSl2LbvfTBkpX2CDuOaHeR";
