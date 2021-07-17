@@ -1,19 +1,20 @@
 // NAV sticky
-window.onscroll = function() {
-    myFunction()
-};
 
 var navbar = document.getElementById("navbar");
 
 var sticky = navbar.offsetTop;
 
-fuction myFunction() {
+function myFunction () {
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky")
     } else {
         navbar.classList.remove("sticky");
     }
 }
+
+window.onscroll = function() {
+    myFunction()
+};
 
 //---> llamado API
 let apiKeyGIPHY = "bdbs9mjKP9hSl2LbvfTBkpX2CDuOaHeR";
@@ -163,4 +164,9 @@ function addUlSuggestions(sugerencia) {
     listaSugerencias.appendChild(nuevaSugerencia);
 
     nuevaSugerencia.innerHTML = sugerencia;
+
+    let img = document.createElement("img");
+    img.src = "img/icon-search.svg";
+
+    nuevaSugerencia.appendChild(img);
 }

@@ -26,6 +26,7 @@ body {
             align-content: center;
             justify-content: space-around;  
             background: rgba(255,255,255,0.50);        
+            position: sticky;
             img {
                 width: 59.1px;
                 height: 59.1px;
@@ -128,17 +129,28 @@ body {
             border-color: $main-color-blue;
             border-radius: 27px;
             font-family: 'Roboto-black', sans-serif;
-            background: url(img/icon-search.svg) no-repeat scroll 97%;      
+            background: url(img/icon-search.svg) no-repeat scroll 97%;     
             }
 
-            ul {
-
+            //HACER EL ESTILOD E LA BARRA DE BUSQUEDA RIGHT NOW
+            ul { 
+                border: $main-color-blue;
+                border-radius: 27px;
                 li {
                     
+                    color: #9CAFC3;
                     text-decoration: none;
-                    ::marker {
-                        display: none;
-                        text-decoration: none;
+                    list-style: none;
+                    border-color: $main-color-blue;
+                    border-radius: 27px;
+                    font-family: 'Roboto-black', sans-serif;
+                    
+                    img {
+                        height: 15.8px;
+                        width: 15.8px;
+                        color: #9CAFC3;
+                        filter: grayscale(95%) brightness(0.8) opacity(35%);
+                        
                     }
                 }
             }
@@ -193,7 +205,7 @@ body {
 
         h5 {
             margin-top: 1%;
-            font-family: 'Roboto-black', sans-serif;
+            font-family: 'Roboto-Regular', sans-serif;
             align-self: center;
             br {
                 display: none;

@@ -35,6 +35,8 @@ body header nav {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background: rgba(255, 255, 255, 0.5);
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 body header nav img {
@@ -173,13 +175,26 @@ body .main-section .barra input {
   background: url(img/icon-search.svg) no-repeat scroll 97%;
 }
 
-body .main-section .barra ul li {
-  text-decoration: none;
+body .main-section .barra ul {
+  border: #572EE5;
+  border-radius: 27px;
 }
 
-body .main-section .barra ul li ::marker {
-  display: none;
+body .main-section .barra ul li {
+  color: #9CAFC3;
   text-decoration: none;
+  list-style: none;
+  border-color: #572EE5;
+  border-radius: 27px;
+  font-family: 'Roboto-black', sans-serif;
+}
+
+body .main-section .barra ul li img {
+  height: 15.8px;
+  width: 15.8px;
+  color: #9CAFC3;
+  -webkit-filter: grayscale(95%) brightness(0.8) opacity(35%);
+          filter: grayscale(95%) brightness(0.8) opacity(35%);
 }
 
 body .trending-section {
@@ -244,7 +259,7 @@ body .gifos-section h2 {
 
 body .gifos-section h5 {
   margin-top: 1%;
-  font-family: 'Roboto-black', sans-serif;
+  font-family: 'Roboto-Regular', sans-serif;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
