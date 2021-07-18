@@ -160,17 +160,26 @@ body .main-section .barra {
   vertical-align: middle;
   white-space: nowrap;
   width: 100%;
+  border: 2px solid;
+  width: 30%;
+  min-width: 551px;
+  height: 15%;
+  border-color: #572EE5;
+  border-radius: 27px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body .main-section .barra :focus {
+  outline: none;
 }
 
 body .main-section .barra input {
   padding-left: 1%;
   padding-right: 2%;
   display: inline;
-  width: 30%;
-  min-width: 50px;
-  height: 50px;
-  border-color: #572EE5;
-  border-radius: 27px;
+  text-align: center;
+  border: none;
   font-family: 'Roboto-black', sans-serif;
   background: url(img/icon-search.svg) no-repeat scroll 97%;
 }
@@ -193,8 +202,8 @@ body .main-section .barra ul li img {
   height: 15.8px;
   width: 15.8px;
   color: #9CAFC3;
-  -webkit-filter: grayscale(95%) brightness(0.8) opacity(35%);
-          filter: grayscale(95%) brightness(0.8) opacity(35%);
+  -webkit-filter: grayscale(100%) brightness(0.8) opacity(35%);
+          filter: grayscale(100%) brightness(0.8) opacity(35%);
 }
 
 body .trending-section {
@@ -270,23 +279,25 @@ body .gifos-section h5 br {
 }
 
 body .gifos-section .container-slider {
-  width: 90%;
+  width: 80%;
   margin: auto;
-  overflow: hidden;
   position: relative;
-  height: 300px;
   padding-bottom: 15%;
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 5%;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 body .gifos-section .container-slider .slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 400%;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
+  overflow: hidden;
 }
 
 body .gifos-section .container-slider .slider .slider-section {
@@ -299,16 +310,15 @@ body .gifos-section .container-slider .slider .slider-section {
   width: 357px;
   height: 275px;
   display: block;
-  margin-left: 20%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-body .gifos-section .container-slider .slider .slider-section .slider-img {
-  height: 275px;
-  margin-left: 20%;
+body .gifos-section .container-slider .slider .slider-section img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 275px;
+  height: 275px;
 }
 
 body .gifos-section div .slider-btn {
@@ -326,16 +336,21 @@ body .gifos-section div .slider-btn {
 }
 
 body .gifos-section div .right {
+  background: url("img/button-slider-right.svg");
   right: 10px;
 }
 
+body .gifos-section div .right:hover {
+  background: url("img/button-slider-right-hover.svg");
+}
+
 body .gifos-section div .left {
+  background: url("img/button-slider-left.svg");
   left: 10px;
 }
 
-body .gifos-section div .slider-btn:hover {
-  color: #F3F5F8;
-  background-color: #572EE5;
+body .gifos-section div .left:hover {
+  background: url("img/button-slider-left-hover.svg");
 }
 
 body footer {

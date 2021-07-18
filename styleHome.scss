@@ -118,16 +118,24 @@ body {
             vertical-align: middle;
             white-space: nowrap;
             width: 100%;
+            border: 2px solid;
+            width: 30%;
+            min-width: 551px;
+            height: 15%;
+            border-color: $main-color-blue;
+            border-radius: 27px;
+            margin-left: auto;
+            margin-right: auto;
+            :focus {
+                outline: none;
+            }
             
             input {
             padding-left: 1%;
             padding-right: 2%;
             display: inline;
-            width: 30%;
-            min-width: 50px;
-            height: 50px;
-            border-color: $main-color-blue;
-            border-radius: 27px;
+            text-align: center;
+            border: none;
             font-family: 'Roboto-black', sans-serif;
             background: url(img/icon-search.svg) no-repeat scroll 97%;     
             }
@@ -149,7 +157,7 @@ body {
                         height: 15.8px;
                         width: 15.8px;
                         color: #9CAFC3;
-                        filter: grayscale(95%) brightness(0.8) opacity(35%);
+                        filter: grayscale(100%) brightness(0.8) opacity(35%);
                         
                     }
                 }
@@ -213,19 +221,18 @@ body {
         }
 
         .container-slider {
-            width: 90%;
+            width: 80%;
             margin: auto;
-            overflow: hidden; 
             position: relative;
-            height: 300px;
             padding-bottom: 15%;
-            padding-left: 5%;
+            padding-left:5%;
             padding-right: 5%;
+            padding-top: 5%;
+            align-items: baseline;
             .slider {
                 display: flex;
-                //height: 10%;
-                width: 400%;
                 align-content: space-around;
+                overflow: hidden;
 
                 .slider-section {
                     width: 80%;
@@ -234,14 +241,12 @@ body {
                     width: 357px;
                     height: 275px;
                     display: block;
-                    margin-left: 20%;
                     object-fit: cover;
-                    .slider-img{
-                        //display: block;
-                        //width: 357px;
-                        height: 275px;
-                        margin-left: 20%;
+                    img{
                         object-fit: cover;
+                        width: 275px;
+                        height: 275px;
+
                     }
                 }
             }
@@ -258,20 +263,25 @@ body {
                 font-size: 30px;
                 font-weight: bold;
                 text-align: center;
-                cursor: pointer; //boton
+                cursor: pointer;
+
             }
             .right {
+                background: url('img/button-slider-right.svg');
                 right: 10px;
+                &:hover {
+                    background: url('img/button-slider-right-hover.svg');
+                }
             }
     
             .left {
+                background: url('img/button-slider-left.svg');
                 left: 10px;
+                &:hover {
+                    background: url('img/button-slider-left-hover.svg');
+                }
             }
-    
-            .slider-btn:hover {
-                color: #F3F5F8;
-                background-color: $main-color-blue;
-            }
+
         }
     }
 
