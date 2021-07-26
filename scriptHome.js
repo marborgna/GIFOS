@@ -178,3 +178,21 @@ function addUlSuggestions(sugerencia) {
 
     nuevaSugerencia.appendChild(img);
 }
+
+
+// Trending endpoint
+
+function pedirInfo() {
+    async function getInfo() {
+        let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKeyGIPHY}?limit=${5}`;
+        const resp = await fetch(url);
+        const info = await resp.json();
+        return info;
+    }
+
+    let info = getInfo();
+    info.then(response => {
+        console.log(response);
+        palabrasSugeridas = document.getElementById("sugerencia");
+    })
+}
