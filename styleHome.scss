@@ -248,10 +248,14 @@ body {
                     height: 275px;
                     display: block;
                     object-fit: cover;
+                    margin-left: 7%;
+                    transition: margin 700ms;    
+
                     img{
                         object-fit: cover;
                         width: 275px;
                         height: 275px;
+                        
 
                     }
                 }

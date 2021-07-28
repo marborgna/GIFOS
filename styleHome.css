@@ -321,6 +321,9 @@ body .gifos-section .container-slider .slider .slider-section {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-left: 7%;
+  -webkit-transition: margin 700ms;
+  transition: margin 700ms;
 }
 
 body .gifos-section .container-slider .slider .slider-section img {

@@ -121,10 +121,38 @@ pedirGIFO();
 
 // carousel 2
 
+var posicionSlider = 0;
+
+
 function inicioSlider() {
+    var cantidadImagenes = slider.childElementCount;
+    slider = document.getElementById('slider');
+    botonLeft = document.getElementById('btn-left');
+    botonRight = document.getElementById('btn-right');
+    posicionarImgsSlider();
     
+    botonLeft.addEventListener('click', () => {
+        if(posicionSlider > 0) {
+            posicionSlider = posicionSlider - 1;
+        }
+        posicionarImgsSlider();
+    });
+    botonRight.addEventListener('click',  () => {
+        if(posicionSlider < cantidadImagenes) {
+            posicionSlider = posicionSlider + 1;
+        }
+        posicionarImgsSlider();
+    });
+
 }
 
+function posicionarImgsSlider() {
+    let nuevoMargin =  posicionSlider * -275; // SI CAMBIO MARGEN EN CSS CAMBIO EL MARGEN DE ACA
+
+    slider = document.getElementById('slider');
+    primerImagen = slider.firstChild;
+    primerImagen.style['margin-left'] = nuevoMargin + "px";
+}
 
 
 
@@ -184,7 +212,7 @@ function addUlSuggestions(sugerencia) {
 
 function pedirInfo() {
     async function getInfo() {
-        let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKeyGIPHY}?limit=${5}`;
+        let url = `https://api.giphy.com/v1/trending/searches?api_key=${apiKeyGIPHY}`;
         const resp = await fetch(url);
         const info = await resp.json();
         return info;
