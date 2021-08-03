@@ -38,7 +38,7 @@ body header nav {
   overflow: hidden;
 }
 
-body header nav img {
+body header nav .logo-desktop {
   width: 59.1px;
   height: 59.1px;
   justify-items: flex-start;
@@ -47,6 +47,10 @@ body header nav img {
       align-self: center;
   font-weight: bold;
   margin-left: 5%;
+}
+
+body header nav .logo-mobile {
+  display: none;
 }
 
 body header nav .menu {
@@ -108,6 +112,10 @@ body header nav .sections li {
 
 body header nav .sections li .separador {
   display: none;
+}
+
+body header nav .sections li #last-button:hover {
+  background: url("img/CTA-crear-gifo-hover.svg");
 }
 
 body header nav #toggle {
@@ -396,8 +404,8 @@ body .gifos-section .container-slider .slider .slider-section {
   transition: margin 700ms;
 }
 
-body .gifos-section .container-slider .slider .slider-section :hover {
-  background-color: #572EE5;
+body .gifos-section .container-slider .slider .slider-section:hover {
+  background: #572EE5 50%;
 }
 
 body .gifos-section .container-slider .slider .slider-section img {
@@ -523,9 +531,12 @@ body .down-barra {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body header img {
+  body header .logo-mobile {
     padding-left: 15px;
     padding-top: 15px;
+  }
+  body header .logo-desktop {
+    display: none;
   }
   body header nav {
     display: -webkit-box;

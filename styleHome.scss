@@ -29,13 +29,17 @@ body {
             overflow: hidden;   
                 
 
-            img {
+            .logo-desktop {
                 width: 59.1px;
                 height: 59.1px;
                 justify-items: flex-start;
                 align-self: center;
                 font-weight: bold;
                 margin-left: 5%;
+            }
+
+            .logo-mobile {
+                display: none;
             }
 
             .menu {
@@ -81,7 +85,12 @@ body {
                     font-weight: bold;
                     .separador {
                         display: none;
-                    }                 
+                    } 
+                    #last-button {
+                        &:hover {
+                            background: url('img/CTA-crear-gifo-hover.svg');
+                        }
+                    }                
                 }
             }
             #toggle {
@@ -302,6 +311,7 @@ body {
                 display: flex;
                 align-content: space-around;
                 overflow: hidden;
+                
 
                 .slider-section {
                     width: 80%;
@@ -313,10 +323,9 @@ body {
                     object-fit: cover;
                     margin-left: 7%;
                     transition: margin 700ms;  
-                    :hover{
-                        background-color: $main-color-blue;
-                        
-                    }  
+                    &:hover {
+                        background: $main-color-blue 50%;
+                    }
 
                     img{
                         object-fit: cover;
@@ -427,10 +436,16 @@ body {
             background-color: $main-color-white;
             display: flex;
             justify-content: space-between;
-            img {
+            
+            .logo-mobile {
                 padding-left: 15px;
                 padding-top: 15px;
             }
+
+            .logo-desktop {
+                display: none;
+            }
+
             nav {
                 display: flex;
                 justify-content: space-between;
