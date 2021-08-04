@@ -83,10 +83,22 @@ body {
                     color: $main-color-blue;
                     text-decoration: none;
                     font-weight: bold;
+                    
                     .separador {
                         display: none;
                     } 
+
+                    li:hover {
+                        .separador{
+                            display: inline;
+                            color: $main-color-green;
+                            width: 78px;
+                            height: 1px;
+                        }
+                    }
+
                     #last-button {
+                        
                         &:hover {
                             background: url('img/CTA-crear-gifo-hover.svg');
                         }
@@ -307,6 +319,7 @@ body {
             padding-right: 5%;
             padding-top: 5%;
             align-items: baseline;
+        
             .slider {
                 display: flex;
                 align-content: space-around;
@@ -324,7 +337,9 @@ body {
                     margin-left: 7%;
                     transition: margin 700ms;  
                     &:hover {
-                        background: $main-color-blue 50%;
+                        color: $main-color-blue;
+                        z-index: 1;
+                        
                     }
 
                     img{
@@ -332,7 +347,6 @@ body {
                         width: 275px;
                         height: 275px;
                         
-
                     }
                 }
             }

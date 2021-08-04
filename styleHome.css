@@ -114,6 +114,13 @@ body header nav .sections li .separador {
   display: none;
 }
 
+body header nav .sections li li:hover .separador {
+  display: inline;
+  color: #50E3C2;
+  width: 78px;
+  height: 1px;
+}
+
 body header nav .sections li #last-button:hover {
   background: url("img/CTA-crear-gifo-hover.svg");
 }
@@ -405,7 +412,8 @@ body .gifos-section .container-slider .slider .slider-section {
 }
 
 body .gifos-section .container-slider .slider .slider-section:hover {
-  background: #572EE5 50%;
+  color: #572EE5;
+  z-index: 1;
 }
 
 body .gifos-section .container-slider .slider .slider-section img {
