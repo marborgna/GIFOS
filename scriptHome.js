@@ -6,13 +6,13 @@ var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
 function stickyNav() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
 }
- //NO ADD Y SACA LA CLASS STICKY, LA DEJA SIEMPRE PueSTA
+
 
 
 //---> llamado API
@@ -59,8 +59,12 @@ function crearElementosGIFOS (listaUrls) {
 
 function insertarImagenSlider (url) {
     let nuevoDiv = document.createElement("div");
+    let nuevoHover = document.createElement("div");
     let nuevaImg = document.createElement("img");
     nuevoDiv.appendChild(nuevaImg);
+    nuevoDiv.appendChild(nuevoHover);
+
+    nuevoHover.classList.add("fondoHover");
 
     nuevaImg.setAttribute("src", url);
 
