@@ -392,6 +392,41 @@ body {
             }
         }
 
+        .modal {
+            display: flex;
+            .boton-cierre {
+                background-color: #572EE5;
+                clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);;
+                height: 15.2px;
+                width: 15.2px;
+
+            }
+
+            .slider-max {
+                img {
+                    height: 385px;
+                    width: 695px;
+                    margin: auto;
+                }
+            }
+    
+    
+            .barra-tareas{
+                #user{
+                    font-size: 15px;
+                    text-align: center;
+                    font-family: 'roboto', sans-serif;
+                    font-weight: 100;
+                }
+                #titulo-GIFO{
+                    font-size: 16px;
+                    text-align: center;
+                    font-family: 'roboto', sans-serif;
+                    font-weight: 200;
+                }
+            }
+        }
+
         footer{
             height: 116px;
             width: 100%;
@@ -448,9 +483,7 @@ body {
         }
     }
 
-    .modal {
-        display: none;
-    }
+    
 }
 
 
