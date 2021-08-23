@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleFavoritos.css">
     <title>GIFOS</title>
 </head>
 <body>
     <header>
         <nav id="navbar">
             <div class="up-barra"></div>
-            <img alt="logo" src="img/logo-desktop.svg">     
+            <img alt="logo" class="logo-desktop" src="img/logo-desktop.svg">
+            <img alt="logo" class="logo-mobile" src="img/logo-mobile.svg">     
             <input type="checkbox" id="toggle"/>
             <label for="toggle" class="menu">
                 <span class="raya"></span>
@@ -18,26 +20,25 @@
                 <span class="raya"></span>
                 <span class="cuadrado"></span>
             </label>
+            <div class="barra">               
+                <input type="search" id="search" placeholder="Busca GIFOS y más"></input>
+                <ul id="lista-search" class="lista-search"></ul>
+            </div>
             <ul class="sections">
                 <li><a>Modo Nocturno</a></li>
                 <li><div class="separador"></div></li>
-                <li><a>Favoritos</a></li>
+                <li><a href="indexFavoritos.html">Favoritos</a></li>
                 <li><div class="separador"></div></li>
-                <li><a>Mis GIFOS</a></li>
+                <li><a href="indexGifos.html">Mis GIFOS</a></li>
                 <li><div class="separador"></div></li>
-                <li><a><img alt="más" src="img/button-crear-gifo.svg"></a></li>
+                <li><a href="indexCrear.html"><img alt="más" src="img/button-crear-gifo.svg"></a></li>
             </ul>
         </nav>
     </header>
     <section class="favoritos">
         <img src="img/icon-favoritos.svg">
         <h3>Favoritos</h3>
-        <input placeholder="ver mas" type="text">
-    </section>
-    <section class="trending-section">
-        <h4>Trending:</h4>
-        <p>Reactions, Entertainment, <br>Sports, Stickers, Artists</p>
-        <div class="resultado-busqueda"></div>
+        <div class="barra"><input placeholder="VER MAS" type="text"></div>   
     </section>
     <section class="gifos-section">
         <h2>Trending GIFOS</h2>
@@ -63,7 +64,6 @@
         </div>
     </footer>
     <div class="down-barra"></div>
-<script src="scriptHome.js"></script>
-    
+    <script src="scriptFavoritos.js"></script>    
 </body>
 </html>
