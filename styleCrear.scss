@@ -172,6 +172,7 @@ body {
     }
 
     .main {
+        display: flex;
         .camara {
             img {
                 height: 163px;
@@ -185,10 +186,14 @@ body {
         }
 
         .cuadro {
-            border: $main-color-blue;
-            border-width: 1px;
+            display: flex;
+            border: 1px solid;
+            border-color: $main-color-blue;
             height: 390px;
             width: 688px;
+            align-items: center;
+            justify-self: center;
+            padding: 4%;
             h2 {
                 font-family: 'Montserrat', sans-serif;
                 color: $main-color-blue;

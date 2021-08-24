@@ -199,6 +199,12 @@ body header #navbar #toggle {
   display: none;
 }
 
+body .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 body .main .camara img {
   height: 163px;
   width: 123px;
@@ -210,10 +216,18 @@ body .main .camara .gradiente {
 }
 
 body .main .cuadro {
-  border: #572EE5;
-  border-width: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  border-color: #572EE5;
   height: 390px;
   width: 688px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  padding: 4%;
 }
 
 body .main .cuadro h2 {
