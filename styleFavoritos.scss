@@ -205,14 +205,13 @@ body {
                 margin-right: auto;
                 margin-bottom: 5%;
                 
+                
+
                 :focus {
                     outline: none;
                 }
 
-                ::placeholder{
-                    color: #572EE5;
-                    font-family: 'Montserrat-Bold', sans-serif;
-                }
+                
 
                 input {
                     display: flex;
@@ -224,6 +223,11 @@ body {
                     align-items: center;
                     border-radius: 27px;
                     padding: 10%;
+                    ::placeholder{
+                        background-color: green;
+                        color: #572EE5;
+                        font-family: 'Montserrat-Bold', sans-serif;
+                    }
                     
                 }
 
