@@ -270,6 +270,7 @@ body .main .main-section .barra :focus {
 }
 
 body .main .main-section .barra input {
+  margin: .5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,6 +401,7 @@ body .main .gifos-section .container-slider .slider {
   display: flex;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
+  overflow: hidden;
 }
 
 body .main .gifos-section .container-slider .slider .slider-section {
@@ -473,9 +475,8 @@ body .main .gifos-section div .left:hover {
 }
 
 body .main .modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  position: absolute;
 }
 
 body .main .modal .boton-cierre input {

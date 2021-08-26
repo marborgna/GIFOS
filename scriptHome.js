@@ -77,14 +77,14 @@ pedirGIFO();
 
 
 
-// Carousel
+// SLIDER
 
 var posicionSlider = 0;
 
 
 function inicioSlider() {
-    var cantidadImagenes = slider.childElementCount;
     slider = document.getElementById('slider');
+    var cantidadImagenes = slider.childElementCount;  
     botonLeft = document.getElementById('btn-left');
     botonRight = document.getElementById('btn-right');
     posicionarImgsSlider();
@@ -105,8 +105,11 @@ function inicioSlider() {
 }
 
 function posicionarImgsSlider() {
-    let nuevoMargin =  posicionSlider * -275; // SI CAMBIO MARGEN EN CSS CAMBIO EL MARGEN DE ACA
-
+    segundaImagen = slider.children[1];
+    let compStyle = window.getComputedStyle(segundaImagen);
+    let valorTotalAnchoImagen = parseFloat(compStyle.marginLeft) + parseFloat(compStyle.width);
+    let nuevoMargin =  posicionSlider * -valorTotalAnchoImagen; 
+    
     slider = document.getElementById('slider');
     primerImagen = slider.firstChild;
     primerImagen.style['margin-left'] = nuevoMargin + "px";

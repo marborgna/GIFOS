@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
 body {
   margin: 0;
+  width: 100%;
 }
 
 body header {
@@ -203,6 +204,11 @@ body .main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 15%;
+  padding-top: 3%;
 }
 
 body .main .camara img {
@@ -211,8 +217,11 @@ body .main .camara img {
 }
 
 body .main .camara .gradiente {
-  color: #50E3C2;
-  background-image: linear-gradient(267deg, rgba(136, 243, 226, 0) 22%);
+  border-top: 50px solid transparent;
+  border-right: 100px solid;
+  border-bottom: 50px solid transparent;
+  width: 0;
+  height: 0;
 }
 
 body .main .cuadro {
@@ -241,6 +250,44 @@ body .main .cuadro h2 span {
 
 body .main .cuadro p {
   font-family: 'Roboto', sans-serif;
+}
+
+body .main .botones-numeros input {
+  border: 1px solid;
+  border-color: #572EE5;
+  border-radius: 70%;
+  text-align: center;
+  height: 32px;
+  width: 32px;
+}
+
+body .main .botones-numeros input ::-webkit-input-placeholder {
+  color: #572EE5;
+}
+
+body .main .botones-numeros input :-ms-input-placeholder {
+  color: #572EE5;
+}
+
+body .main .botones-numeros input ::-ms-input-placeholder {
+  color: #572EE5;
+}
+
+body .main .botones-numeros input ::placeholder {
+  color: #572EE5;
+}
+
+body .main .separador {
+  color: #572EE5;
+}
+
+body .main .comenzar {
+  height: 50px;
+  width: 127px;
+  color: #572EE5;
+  border: 1px solid;
+  border-radius: 25%;
+  text-align: center;
 }
 
 body footer {

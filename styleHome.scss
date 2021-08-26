@@ -224,6 +224,7 @@ body {
                 }
                 
                 input {
+                    margin: .5em;
                     display: flex;
                     border: none;
                     font-family: 'Roboto-black', sans-serif;
@@ -328,7 +329,7 @@ body {
                 .slider {
                     display: flex;
                     align-content: space-around;
-                    //overflow: hidden;
+                    overflow: hidden;
                     
 
                     .slider-section {
@@ -393,7 +394,8 @@ body {
         }
 
         .modal {
-            display: flex;
+            display: none;
+            position: absolute;
             .boton-cierre {
                 input {
                     background-color: #572EE5;
