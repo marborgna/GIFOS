@@ -50,7 +50,8 @@ body .main header nav .logo-desktop img {
       -ms-grid-row-align: center;
       align-self: center;
   font-weight: bold;
-  margin-left: 5%;
+  margin-left: 40%;
+  margin-top: 25%;
 }
 
 body .main header nav .logo-mobile img {
@@ -474,33 +475,56 @@ body .main .gifos-section div .left:hover {
   background: url("img/button-slider-left-hover.svg");
 }
 
-body .main .modal {
-  display: none;
-  position: absolute;
+body .main .gifos-section .modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background-color: #ffffff;
+  padding-top: 7%;
+  margin-left: auto;
+  margin-right: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: translate(0%);
+          transform: translate(0%);
 }
 
-body .main .modal .boton-cierre input {
+body .main .gifos-section .modal .close input {
   background-color: #572EE5;
   -webkit-clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
           clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
   height: 15.2px;
   width: 15.2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-body .main .modal .slider-max img {
+body .main .gifos-section .modal .slider-max .container-slider {
+  padding-top: 5%;
+}
+
+body .main .gifos-section .modal .slider-max img {
   height: 385px;
   width: 695px;
-  margin: auto;
 }
 
-body .main .modal .barra-tareas #user {
+body .main .gifos-section .modal .barra-tareas #user {
   font-size: 15px;
   text-align: center;
   font-family: 'roboto', sans-serif;
   font-weight: 100;
 }
 
-body .main .modal .barra-tareas #titulo-GIFO {
+body .main .gifos-section .modal .barra-tareas #titulo-GIFO {
   font-size: 16px;
   text-align: center;
   font-family: 'roboto', sans-serif;
@@ -592,6 +616,9 @@ body .main .down-barra {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  body header .logo-mobile {
+    margin-top: 25%;
   }
   body header .logo-mobile a {
     padding-left: 15px;

@@ -185,3 +185,15 @@ function pedirInfo() {
         palabrasSugeridas = document.getElementById("sugerencia");
     })
 }
+
+//TERMINAR
+
+
+
+
+// MODAL
+
+let cerrar = document.querySelector(".close")[0];
+//let abrir = document.querySelector("")[0];
+let modal = document.querySelector(".modal")[0];
+let modalC = document.querySelector(".close")[0];
