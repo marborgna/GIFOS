@@ -158,6 +158,10 @@ body {
                             }
                         }
 
+                        .marcado {
+                            color: #9CAFC3;
+                        }
+
                         #last-button {
                             
                             &:hover {
@@ -185,6 +189,7 @@ body {
             h3 {
                 font-family: 'Montserrat-Bold', sans-serif;
                 color: $main-color-blue; 
+                font-size: 25px;
             }
 
             .barra {
@@ -224,6 +229,20 @@ body {
                     
                 }
 
+            }
+
+            .vacio {
+                text-align: center;
+                img {
+                    height: 151px;
+                    width: 150px;
+                }
+
+                p {
+                    color: $main-color-green;
+                    font-family: 'Montserrat-Bold', sans-serif;
+                    font-size: 22px;
+                }
             }
             
     }

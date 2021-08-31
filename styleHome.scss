@@ -441,11 +441,13 @@ body {
             align-items: center;
             flex-wrap: wrap;
             justify-content: space-around; 
-            margin-bottom: 0;       
+            margin-bottom: 0; 
+            margin-left: 0%;      
             .footerA {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+                margin-left: 0%;
                 h3 {
                     font-family: 'Roboto-Regular', sans-serif;
                     font-size: 13px;
@@ -455,6 +457,7 @@ body {
                     li{
                         display: inline-block;
                         margin-right: 5px;
+
 
                         a {
                             .fab {

@@ -157,6 +157,10 @@ body {
                             }
                         }
 
+                        .marcado {
+                            color: #9CAFC3;
+                        }
+
                         #last-button {
                             
                             &:hover {
@@ -226,37 +230,20 @@ body {
             }
 
         }
-    }
 
-    .trending-section{
-        padding-top: 4%;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        
-        h4 {
-            font-family: 'Montserrat', sans-serif;
-            color: $main-color-blue;
-            align-self: center;
-        }
-
-        p {
-            font-family: 'Montserrat', sans-serif;
-            color: $main-color-blue;
-            align-self: center;
-            br {
-                display: none;
+        .vacio {
+            text-align: center;
+            img {
+                height: 151px;
+                width: 150px;
             }
-            
-        }
 
-        .resultado-busqueda {
-            display: block;
-            width: 100%;
-            height: 73px;
-            
+            p {
+                color: $main-color-green;
+                font-family: 'Montserrat-Bold', sans-serif;
+                font-size: 22px;
+            }
         }
-
     }
 
     .gifos-section{

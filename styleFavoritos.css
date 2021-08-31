@@ -192,6 +192,10 @@ body header #navbar .sections li li:hover .separador {
   height: 1px;
 }
 
+body header #navbar .sections li .marcado {
+  color: #9CAFC3;
+}
+
 body header #navbar .sections li #last-button:hover {
   background: url("img/CTA-crear-gifo-hover.svg");
 }
@@ -221,6 +225,7 @@ body .favoritos img {
 body .favoritos h3 {
   font-family: 'Montserrat-Bold', sans-serif;
   color: #572EE5;
+  font-size: 25px;
 }
 
 body .favoritos .barra {
@@ -281,6 +286,21 @@ body .favoritos .barra input ::placeholder {
   background-color: green;
   color: #572EE5;
   font-family: 'Montserrat-Bold', sans-serif;
+}
+
+body .favoritos .vacio {
+  text-align: center;
+}
+
+body .favoritos .vacio img {
+  height: 151px;
+  width: 150px;
+}
+
+body .favoritos .vacio p {
+  color: #50E3C2;
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-size: 22px;
 }
 
 body .gifos-section {
