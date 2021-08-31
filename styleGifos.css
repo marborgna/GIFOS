@@ -200,7 +200,7 @@ body header #navbar #toggle {
   display: none;
 }
 
-body .favoritos {
+body .mis-GIFOS {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,17 +213,18 @@ body .favoritos {
           align-items: center;
 }
 
-body .favoritos img {
-  height: 21px;
-  width: 28px;
+body .mis-GIFOS img {
+  height: 22px;
+  width: 22px;
 }
 
-body .favoritos h3 {
+body .mis-GIFOS h3 {
+  font-size: 25px;
   font-family: 'Montserrat-Bold', sans-serif;
   color: #572EE5;
 }
 
-body .favoritos .barra {
+body .mis-GIFOS .barra {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,15 +239,14 @@ body .favoritos .barra {
   margin-bottom: 5%;
 }
 
-body .favoritos .barra :focus {
+body .mis-GIFOS .barra :focus {
   outline: none;
 }
 
-body .favoritos .barra input {
+body .mis-GIFOS .barra input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   border: none;
   font-family: 'Montserrat-Bold', sans-serif;
   margin: none;
@@ -257,30 +257,70 @@ body .favoritos .barra input {
           align-items: center;
   border-radius: 27px;
   padding: 10%;
+  text-align: center;
 }
 
-body .favoritos .barra input ::-webkit-input-placeholder {
+body .mis-GIFOS .barra input ::-webkit-input-placeholder {
   background-color: green;
   color: #572EE5;
   font-family: 'Montserrat-Bold', sans-serif;
 }
 
-body .favoritos .barra input :-ms-input-placeholder {
+body .mis-GIFOS .barra input :-ms-input-placeholder {
   background-color: green;
   color: #572EE5;
   font-family: 'Montserrat-Bold', sans-serif;
 }
 
-body .favoritos .barra input ::-ms-input-placeholder {
+body .mis-GIFOS .barra input ::-ms-input-placeholder {
   background-color: green;
   color: #572EE5;
   font-family: 'Montserrat-Bold', sans-serif;
 }
 
-body .favoritos .barra input ::placeholder {
+body .mis-GIFOS .barra input ::placeholder {
   background-color: green;
   color: #572EE5;
   font-family: 'Montserrat-Bold', sans-serif;
+}
+
+body .trending-section {
+  padding-top: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body .trending-section h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #572EE5;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body .trending-section p {
+  font-family: 'Montserrat', sans-serif;
+  color: #572EE5;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body .trending-section p br {
+  display: none;
+}
+
+body .trending-section .resultado-busqueda {
+  display: block;
+  width: 100%;
+  height: 73px;
 }
 
 body .gifos-section {
@@ -478,4 +518,4 @@ body .down-barra {
   width: 100%;
   height: 5px;
 }
-/*# sourceMappingURL=styleFavoritos.css.map */
+/*# sourceMappingURL=styleGifos.css.map */

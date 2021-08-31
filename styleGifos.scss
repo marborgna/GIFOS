@@ -3,7 +3,6 @@ $main-color-blue: #572EE5;
 $main-color-green: #50E3C2;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
-
 body {
     margin: 0;
     background-color: $main-color-white;
@@ -172,60 +171,92 @@ body {
             }
     
     }
-    
-    .favoritos {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            img {
-                height: 21px;
-                width: 28px;
+
+    .mis-GIFOS {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            height: 22px;
+            width: 22px;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-family: 'Montserrat-Bold', sans-serif;
+            color: $main-color-blue;
+        }
+
+        .barra {
+            display: flex;                
+            white-space: nowrap;
+            border: 2px solid;
+            width: 10%;
+            height: 15%;
+            border-color: $main-color-blue;
+            border-radius: 27px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5%;
+            
+            :focus {
+                outline: none;
             }
 
-            h3 {
+            
+
+            input {
+                display: flex;
+                border: none;
                 font-family: 'Montserrat-Bold', sans-serif;
-                color: $main-color-blue; 
+                margin: none;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                border-radius: 27px;
+                padding: 10%;
+                text-align: center;
+                ::placeholder{
+                    background-color: green;
+                    color: #572EE5;
+                    font-family: 'Montserrat-Bold', sans-serif;
+                }
+                
             }
 
-            .barra {
-                display: flex;                             
-                white-space: nowrap;
-                border: 2px solid;
-                width: 10%;
-                height: 15%;
-                border-color: $main-color-blue;
-                border-radius: 27px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 5%;
-                
-                :focus {
-                    outline: none;
-                }
+        }
+    }
 
-                
+    .trending-section{
+        padding-top: 4%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: $main-color-blue;
+            align-self: center;
+        }
 
-                input {
-                    display: flex;
-                    text-align: center; 
-                    border: none;
-                    font-family: 'Montserrat-Bold', sans-serif;
-                    margin: none;
-                    width: 100%;
-                    height: 100%;
-                    align-items: center;
-                    border-radius: 27px;
-                    padding: 10%;
-                    ::placeholder{
-                        background-color: green;
-                        color: #572EE5;
-                        font-family: 'Montserrat-Bold', sans-serif;
-                    }
-                    
-                }
-
+        p {
+            font-family: 'Montserrat', sans-serif;
+            color: $main-color-blue;
+            align-self: center;
+            br {
+                display: none;
             }
             
+        }
+
+        .resultado-busqueda {
+            display: block;
+            width: 100%;
+            height: 73px;
+            
+        }
+
     }
 
     .gifos-section{
@@ -277,6 +308,8 @@ body {
                     margin-left: 7%;
                     transition: margin 700ms;
                     flex: 0 0 257px;  
+                    //grid-template-columns: 375px ;
+                    //grid-template-rows: ;
                     
                     .fondoHover {
                         background-color: $main-color-blue;
@@ -374,7 +407,7 @@ body {
         
         
     }
-    
+
     .down-barra {
         display: block;
         background-color: $main-color-blue;

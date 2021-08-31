@@ -42,7 +42,7 @@ body .main header nav {
   overflow: hidden;
 }
 
-body .main header nav .logo-desktop {
+body .main header nav .logo-desktop img {
   width: 59.1px;
   height: 59.1px;
   justify-items: flex-start;
@@ -53,7 +53,7 @@ body .main header nav .logo-desktop {
   margin-left: 5%;
 }
 
-body .main header nav .logo-mobile {
+body .main header nav .logo-mobile img {
   display: none;
 }
 
@@ -591,11 +591,11 @@ body .main .down-barra {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body header .logo-mobile {
+  body header .logo-mobile a {
     padding-left: 15px;
     padding-top: 15px;
   }
-  body header .logo-desktop {
+  body header .logo-desktop a {
     display: none;
   }
   body header nav {

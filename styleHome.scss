@@ -30,19 +30,23 @@ body {
                 background: rgba(255,255,255,0.50);
                 overflow: hidden;   
                     
-
-                .logo-desktop {
-                    width: 59.1px;
-                    height: 59.1px;
-                    justify-items: flex-start;
-                    align-self: center;
-                    font-weight: bold;
-                    margin-left: 5%;
+                .logo-desktop { 
+                    img  {
+                        width: 59.1px;
+                        height: 59.1px;
+                        justify-items: flex-start;
+                        align-self: center;
+                        font-weight: bold;
+                        margin-left: 5%;
+                    }
                 }
-
+                
                 .logo-mobile {
-                    display: none;
+                    img {
+                        display: none;
+                    }
                 }
+                
 
                 .menu {
                     display: none;
@@ -501,12 +505,16 @@ body {
             justify-content: space-between;
             
             .logo-mobile {
-                padding-left: 15px;
-                padding-top: 15px;
+                a {
+                    padding-left: 15px;
+                    padding-top: 15px;
+                }
             }
 
             .logo-desktop {
-                display: none;
+                a {
+                    display: none;
+                }
             }
 
             nav {

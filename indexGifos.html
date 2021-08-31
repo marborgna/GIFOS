@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleGifos.css">
     <title>GIFOS</title>
 </head>
 <body>
     <header>
         <nav id="navbar">
             <div class="up-barra"></div>
-            <img alt="logo" src="img/logo-desktop.svg">     
+            <a href="indexHome.html" class="logo-desktop"><img alt="logo" src="img/logo-desktop.svg"></a>
+            <a href="indexHome.html" class="logo-mobile"><img alt="logo" src="img/logo-mobile.svg">  </a>    
             <input type="checkbox" id="toggle"/>
             <label for="toggle" class="menu">
                 <span class="raya"></span>
@@ -21,22 +23,22 @@
             <ul class="sections">
                 <li><a>Modo Nocturno</a></li>
                 <li><div class="separador"></div></li>
-                <li><a>Favoritos</a></li>
+                <li><a href="indexFavoritos.html">Favoritos</a></li>
                 <li><div class="separador"></div></li>
-                <li><a>Mis GIFOS</a></li>
+                <li><a href="indexGifos.html">Mis GIFOS</a></li>
                 <li><div class="separador"></div></li>
-                <li><a><img alt="más" src="img/button-crear-gifo.svg"></a></li>
+                <li><a href="indexCrear.html"><img alt="más" src="img/button-crear-gifo.svg"></a></li>
             </ul>
         </nav>
     </header>
-    <section class="Mis GIFOS">
-        <img src="img/icon-favoritos.svg">
-        <h3>Favoritos</h3>
-        <input placeholder="ver mas" type="text">
+    <section class="mis-GIFOS">
+        <img src="img/icon-mis-gifos.svg">
+        <h3>Mis GIFOS</h3>
+        <div class="barra"><input placeholder="VER MAS" type="text"></div>
     </section>
     <section class="trending-section">
         <h4>Trending:</h4>
-        <p>Reactions, Entertainment, <br>Sports, Stickers, Artists</p>
+        <p> <br></p>
         <div class="resultado-busqueda"></div>
     </section>
     <section class="gifos-section">
