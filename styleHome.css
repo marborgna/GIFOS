@@ -144,6 +144,7 @@ body .main .sticky {
   width: 100%;
   -webkit-box-shadow: 0px 2px 4px 1px #9CAFC3;
           box-shadow: 0px 2px 4px 1px #9CAFC3;
+  z-index: 10;
 }
 
 body .main .sticky .barra {
@@ -358,6 +359,56 @@ body .main .gifos-section {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #F3F5F8;
+  /*.modal {
+                display: flex;
+                //position: absolute;
+                position: relative;
+                background-color: $main-color-white;
+                padding-top: 7%;
+                margin-left: auto;
+                margin-right: auto;
+                justify-content: space-around;
+                transition: transform 1s;
+                transform: translate(0%);
+                .close {
+                    input {
+                        background-color: #572EE5;
+                        clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);;
+                        height: 15.2px;
+                        width: 15.2px;  
+                        display: flex;  
+                        justify-content: flex-end;                
+                    }
+                }
+    
+                .slider-max {
+                    .container-slider {
+                        padding-top: 5%;
+                    }
+    
+                    img {
+                        height: 385px;
+                        width: 695px;
+                        //margin: auto;
+                    }
+                }
+        
+        
+                .barra-tareas{
+                    #user{
+                        font-size: 15px;
+                        text-align: center;
+                        font-family: 'roboto', sans-serif;
+                        font-weight: 100;
+                    }
+                    #titulo-GIFO{
+                        font-size: 16px;
+                        text-align: center;
+                        font-family: 'roboto', sans-serif;
+                        font-weight: 200;
+                    }
+                }
+            }*/
 }
 
 body .main .gifos-section h2 {
@@ -431,6 +482,12 @@ body .main .gifos-section .container-slider .slider .slider-section .fondoHover 
   grid-area: 1 / 1 / 2 / 2;
 }
 
+body .main .gifos-section .container-slider .slider .slider-section .fondoHover :hover {
+  color: #572EE5;
+  opacity: 50%;
+  z-index: 1000;
+}
+
 body .main .gifos-section .container-slider .slider .slider-section img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -443,7 +500,7 @@ body .main .gifos-section .container-slider .slider .slider-section img {
   grid-area: 1 / 1 / 2 / 2;
 }
 
-body .main .gifos-section div .slider-btn {
+body .main .gifos-section .botones-slider .slider-btn {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -457,78 +514,51 @@ body .main .gifos-section div .slider-btn {
   cursor: pointer;
 }
 
-body .main .gifos-section div .right {
+body .main .gifos-section .botones-slider .right {
   background: url("img/button-slider-right.svg");
   right: 10px;
 }
 
-body .main .gifos-section div .right:hover {
+body .main .gifos-section .botones-slider .right:hover {
   background: url("img/button-slider-right-hover.svg");
 }
 
-body .main .gifos-section div .left {
+body .main .gifos-section .botones-slider .left {
   background: url("img/button-slider-left.svg");
   left: 10px;
 }
 
-body .main .gifos-section div .left:hover {
+body .main .gifos-section .botones-slider .left:hover {
   background: url("img/button-slider-left-hover.svg");
 }
 
 body .main .gifos-section .modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  background-color: #ffffff;
-  padding-top: 7%;
-  margin-left: auto;
-  margin-right: auto;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform: translate(0%);
-          transform: translate(0%);
+  display: none;
 }
 
-body .main .gifos-section .modal .close input {
+body .main .gifos-section .modal .myBtn {
   background-color: #572EE5;
   -webkit-clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
           clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
   height: 15.2px;
   width: 15.2px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
-body .main .gifos-section .modal .slider-max .container-slider {
-  padding-top: 5%;
+body .main .gifos-section .modal .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #ffffff;
 }
 
-body .main .gifos-section .modal .slider-max img {
+body .main .gifos-section .modal .modal-content img {
   height: 385px;
   width: 695px;
-}
-
-body .main .gifos-section .modal .barra-tareas #user {
-  font-size: 15px;
-  text-align: center;
-  font-family: 'roboto', sans-serif;
-  font-weight: 100;
-}
-
-body .main .gifos-section .modal .barra-tareas #titulo-GIFO {
-  font-size: 16px;
-  text-align: center;
-  font-family: 'roboto', sans-serif;
-  font-weight: 200;
 }
 
 body .main footer {
