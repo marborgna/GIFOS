@@ -533,11 +533,11 @@ body .main .gifos-section .botones-slider .left:hover {
 }
 
 body .main .gifos-section .modal {
-  display: none;
+  display: inline;
 }
 
 body .main .gifos-section .modal .myBtn {
-  background-color: #572EE5;
+  color: #572EE5;
   -webkit-clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
           clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
   height: 15.2px;
@@ -559,6 +559,47 @@ body .main .gifos-section .modal .modal {
 body .main .gifos-section .modal .modal-content img {
   height: 385px;
   width: 695px;
+}
+
+body .main .gifos-section .modal .modal-content .botones .right {
+  background: url("img/button-slider-right.svg");
+  right: 10px;
+}
+
+body .main .gifos-section .modal .modal-content .botones .right:hover {
+  background: url("img/button-slider-right-hover.svg");
+}
+
+body .main .gifos-section .modal .modal-content .botones .left {
+  background: url("img/button-slider-left.svg");
+  left: 10px;
+}
+
+body .main .gifos-section .modal .modal-content .botones .left:hover {
+  background: url("img/button-slider-left-hover.svg");
+}
+
+body .main .gifos-section .modal .modal-content .barra-tareas h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+body .main .gifos-section .modal .modal-content .barra-tareas h3 {
+  font-family: 'Roboto-black', sans-serif;
+  font-size: 16px;
+}
+
+body .main .gifos-section .modal .modal-content .barra-tareas a img {
+  height: 32px;
+  width: 32px;
+}
+
+body .main .gifos-section .modal .modal-content .barra-tareas a :hover {
+  background-image: url("img/icon-fav-hover.svg");
+}
+
+body .main .gifos-section .modal .modal-content .barra-tareas a :hover img {
+  display: none;
 }
 
 body .main footer {
