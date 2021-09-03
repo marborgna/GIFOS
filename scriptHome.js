@@ -197,7 +197,7 @@ var modal = document.getElementById('myModal');
 
 var boton = document.getElementById('myBtn');
 
-var span = document.getElementsByClassName('close');
+//var a = document.getElementsByClassName('close');
 
 var sticky = document.getElementsByClassName('sticky');
 
@@ -206,8 +206,8 @@ boton.onclick = function() {
     sticky.style.display = "block";
 }
 
-span.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+//a.onclick = function(event) {
+//    if (event.target == modal) {
+//        modal.style.display = "none";
+//    }
+//}

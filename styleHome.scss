@@ -83,6 +83,7 @@ body {
                     align-items: center;
                     justify-content: space-between;
                     padding: 0px;
+                    
                     li {
                         display: flex;
                         font-size: 16px;
@@ -91,11 +92,17 @@ body {
                         text-transform: uppercase;
                         color: $main-color-blue;
                         text-decoration: none;
+                        outline: none;
                         font-weight: bold;
+
                         
                         .separador {
                             display: none;
                         } 
+
+                        li:visited {
+                            color: $main-color-blue;
+                        }
 
                         li:hover {
                             .separador{
@@ -405,20 +412,19 @@ body {
             }
             
             .main-modal {
-                
+                width: 100%;
+                height: 100%;
                 .myBtn {
                     color: #572EE5;
     
-                    height: 15.2px;
-                    width: 15.2px;  
+                    height: 30%;
+                    width: 20%;  
                 }
 
                 .modal {
                     display: none;
                     position: fixed;
                     z-index: 1;
-                    left: 0;
-                    top: 0;
                     width: 100%;
                     height: 100%;
                     overflow: auto;

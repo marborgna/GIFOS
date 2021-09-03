@@ -116,11 +116,16 @@ body .main header nav .sections li {
   text-transform: uppercase;
   color: #572EE5;
   text-decoration: none;
+  outline: none;
   font-weight: bold;
 }
 
 body .main header nav .sections li .separador {
   display: none;
+}
+
+body .main header nav .sections li li:visited {
+  color: #572EE5;
 }
 
 body .main header nav .sections li li:hover .separador {
@@ -482,18 +487,21 @@ body .main .gifos-section .botones-slider .left:hover {
   background: url("img/button-slider-left-hover.svg");
 }
 
+body .main .gifos-section .main-modal {
+  width: 100%;
+  height: 100%;
+}
+
 body .main .gifos-section .main-modal .myBtn {
   color: #572EE5;
-  height: 15.2px;
-  width: 15.2px;
+  height: 30%;
+  width: 20%;
 }
 
 body .main .gifos-section .main-modal .modal {
   display: none;
   position: fixed;
   z-index: 1;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
