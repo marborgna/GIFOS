@@ -359,56 +359,6 @@ body .main .gifos-section {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #F3F5F8;
-  /*.modal {
-                display: flex;
-                //position: absolute;
-                position: relative;
-                background-color: $main-color-white;
-                padding-top: 7%;
-                margin-left: auto;
-                margin-right: auto;
-                justify-content: space-around;
-                transition: transform 1s;
-                transform: translate(0%);
-                .close {
-                    input {
-                        background-color: #572EE5;
-                        clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);;
-                        height: 15.2px;
-                        width: 15.2px;  
-                        display: flex;  
-                        justify-content: flex-end;                
-                    }
-                }
-    
-                .slider-max {
-                    .container-slider {
-                        padding-top: 5%;
-                    }
-    
-                    img {
-                        height: 385px;
-                        width: 695px;
-                        //margin: auto;
-                    }
-                }
-        
-        
-                .barra-tareas{
-                    #user{
-                        font-size: 15px;
-                        text-align: center;
-                        font-family: 'roboto', sans-serif;
-                        font-weight: 100;
-                    }
-                    #titulo-GIFO{
-                        font-size: 16px;
-                        text-align: center;
-                        font-family: 'roboto', sans-serif;
-                        font-weight: 200;
-                    }
-                }
-            }*/
 }
 
 body .main .gifos-section h2 {
@@ -532,19 +482,13 @@ body .main .gifos-section .botones-slider .left:hover {
   background: url("img/button-slider-left-hover.svg");
 }
 
-body .main .gifos-section .modal {
-  display: inline;
-}
-
-body .main .gifos-section .modal .myBtn {
+body .main .gifos-section .main-modal .myBtn {
   color: #572EE5;
-  -webkit-clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
-          clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
   height: 15.2px;
   width: 15.2px;
 }
 
-body .main .gifos-section .modal .modal {
+body .main .gifos-section .main-modal .modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -556,50 +500,61 @@ body .main .gifos-section .modal .modal {
   background-color: #ffffff;
 }
 
-body .main .gifos-section .modal .modal-content img {
+body .main .gifos-section .main-modal .modal .modal-content {
+  margin: 15%;
+  padding: 20px;
+  width: 80%;
+}
+
+body .main .gifos-section .main-modal .modal .modal-content .cerrar {
+  float: right;
+  color: #572EE5;
+  font-weight: bold;
+  width: 15.2px;
+  height: 15.2px;
+  text-decoration: none;
+}
+
+body .main .gifos-section .main-modal .modal .modal-content img {
   height: 385px;
   width: 695px;
 }
 
-body .main .gifos-section .modal .modal-content .botones .right {
+body .main .gifos-section .main-modal .modal .modal-content .botones .right {
   background: url("img/button-slider-right.svg");
   right: 10px;
 }
 
-body .main .gifos-section .modal .modal-content .botones .right:hover {
+body .main .gifos-section .main-modal .modal .modal-content .botones .right:hover {
   background: url("img/button-slider-right-hover.svg");
 }
 
-body .main .gifos-section .modal .modal-content .botones .left {
+body .main .gifos-section .main-modal .modal .modal-content .botones .left {
   background: url("img/button-slider-left.svg");
   left: 10px;
 }
 
-body .main .gifos-section .modal .modal-content .botones .left:hover {
+body .main .gifos-section .main-modal .modal .modal-content .botones .left:hover {
   background: url("img/button-slider-left-hover.svg");
 }
 
-body .main .gifos-section .modal .modal-content .barra-tareas h4 {
+body .main .gifos-section .main-modal .modal .modal-content .barra-tareas #user {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
 
-body .main .gifos-section .modal .modal-content .barra-tareas h3 {
+body .main .gifos-section .main-modal .modal .modal-content .barra-tareas #titulo-GIFO {
   font-family: 'Roboto-black', sans-serif;
   font-size: 16px;
 }
 
-body .main .gifos-section .modal .modal-content .barra-tareas a img {
+body .main .gifos-section .main-modal .modal .modal-content .barra-tareas a img {
   height: 32px;
   width: 32px;
 }
 
-body .main .gifos-section .modal .modal-content .barra-tareas a :hover {
-  background-image: url("img/icon-fav-hover.svg");
-}
-
-body .main .gifos-section .modal .modal-content .barra-tareas a :hover img {
-  display: none;
+body .main .gifos-section .main-modal .modal .modal-content .barra-tareas a :hover {
+  background: url("img/icon-fav-hover.svg");
 }
 
 body .main footer {

@@ -186,14 +186,28 @@ function pedirInfo() {
     })
 }
 
-//TERMINAR
+//TERMINAR --->
 
 
 
 
 // MODAL
 
-let cerrar = document.querySelector(".close")[0];
-//let abrir = document.querySelector("")[0];
-let modal = document.querySelector(".modal")[0];
-let modalC = document.querySelector(".close")[0];
+var modal = document.getElementById('myModal');
+
+var boton = document.getElementById('myBtn');
+
+var span = document.getElementsByClassName('close');
+
+var sticky = document.getElementsByClassName('sticky');
+
+boton.onclick = function() {
+    modal.style.display = "block";
+    sticky.style.display = "block";
+}
+
+span.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
