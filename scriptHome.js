@@ -193,11 +193,11 @@ function pedirInfo() {
 
 // MODAL
 
-var modal = document.getElementById('myModal');
+var modal = document.getElementsByClassName('modal');
 
 var boton = document.getElementById('myBtn');
 
-//var a = document.getElementsByClassName('close');
+var cerrar = document.getElementsByClassName('cerrar');
 
 var sticky = document.getElementsByClassName('sticky');
 
@@ -206,8 +206,8 @@ boton.onclick = function() {
     sticky.style.display = "block";
 }
 
-//a.onclick = function(event) {
-//    if (event.target == modal) {
-//        modal.style.display = "none";
-//    }
-//}
+cerrar.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

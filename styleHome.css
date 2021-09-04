@@ -437,12 +437,6 @@ body .main .gifos-section .container-slider .slider .slider-section .fondoHover 
   grid-area: 1 / 1 / 2 / 2;
 }
 
-body .main .gifos-section .container-slider .slider .slider-section .fondoHover :hover {
-  color: #572EE5;
-  opacity: 50%;
-  z-index: 1000;
-}
-
 body .main .gifos-section .container-slider .slider .slider-section img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -492,14 +486,13 @@ body .main .gifos-section .main-modal {
   height: 100%;
 }
 
-body .main .gifos-section .main-modal .myBtn {
+body .main .gifos-section .main-modal #myBtn {
   color: #572EE5;
-  height: 30%;
+  height: 60%;
   width: 20%;
 }
 
 body .main .gifos-section .main-modal .modal {
-  display: none;
   position: fixed;
   z-index: 1;
   width: 100%;

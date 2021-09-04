@@ -360,11 +360,7 @@ body {
                         .fondoHover {
                             background-color: $main-color-blue;
                             grid-area: 1 / 1 / 2 / 2;
-                            :hover {
-                                color: $main-color-blue;
-                                opacity: 50%;
-                                z-index: 1000;
-                            }
+                            
                         }
 
                         img{
@@ -372,7 +368,7 @@ body {
                             width: 275px;
                             height: 275px;
                             grid-area: 1 / 1 / 2 / 2;
-                            
+                              
                         }
                     }
                 }
@@ -414,15 +410,15 @@ body {
             .main-modal {
                 width: 100%;
                 height: 100%;
-                .myBtn {
+
+                #myBtn {
                     color: #572EE5;
-    
-                    height: 30%;
+                    height: 60%;
                     width: 20%;  
                 }
 
                 .modal {
-                    display: none;
+                    //display: none;
                     position: fixed;
                     z-index: 1;
                     width: 100%;
