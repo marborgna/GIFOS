@@ -1,6 +1,7 @@
 $main-color-white: #ffffff;
 $main-color-blue: #572EE5;
 $main-color-green: #50E3C2;
+$main-color-grey: #37383C
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
 
@@ -10,6 +11,12 @@ body {
         background-color: $main-color-white;
         width: 100%;
         margin: 0px;
+        transition: .3s ease all;
+
+        &.dark {
+            background-color: $main-color-grey;
+        }
+
         header {
             background-color: $main-color-white;
             display: flex;
@@ -127,6 +134,7 @@ body {
             }
             
         }
+
         .sticky {
             position: fixed;
             top: 0;
@@ -485,12 +493,8 @@ body {
                                     
                                 }
                             }
-    
-                            
-                        }
-                }
-
-                
+                        }               
+                    }
                 }
             }
         } 

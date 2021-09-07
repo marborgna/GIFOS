@@ -14,6 +14,15 @@ function stickyNav() {
 }
 
 
+//DARK MODE
+
+let btnSwitch = document.getElementById('switch');
+
+btnSwitch.addEventListener('click', () =>{
+    document.body.classList.toggle('dark');
+    btnSwitch.classList.toggle('active');
+});
+
 
 //---> llamado API
 let apiKeyGIPHY = "bdbs9mjKP9hSl2LbvfTBkpX2CDuOaHeR";
@@ -201,7 +210,7 @@ var cerrar = document.getElementsByClassName('cerrar');
 
 var sticky = document.getElementsByClassName('sticky');
 
-boton.onclick = function() {
+boton.onclick = function() {                //ALGO ACÁ ESTA ROTO Y NO SÉ QUÉ ES
     modal.style.display = "block";
     sticky.style.display = "block";
 }
