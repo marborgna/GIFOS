@@ -44,9 +44,6 @@ body {
                 background: rgba(255,255,255,0.50);
                 overflow: hidden;  
                 
-                &.dark {
-                    background-color: $main-color-grey;
-                }
                     
                 .logo-desktop { 
                     img  {
@@ -65,7 +62,18 @@ body {
                         display: none;
                     }
                 }
+
+                .logo-desktop-noc {
+                    img {
+                        display: none;
+                    }
+                }
                 
+                .logo-mobile-noc {
+                    img {
+                        display: none;
+                    }
+                }
 
                 .menu {
                     display: none;

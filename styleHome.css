@@ -52,10 +52,6 @@ body .main header nav {
   overflow: hidden;
 }
 
-body .main header nav.dark {
-  background-color: #37383C;
-}
-
 body .main header nav .logo-desktop img {
   width: 59.1px;
   height: 59.1px;
@@ -69,6 +65,14 @@ body .main header nav .logo-desktop img {
 }
 
 body .main header nav .logo-mobile img {
+  display: none;
+}
+
+body .main header nav .logo-desktop-noc img {
+  display: none;
+}
+
+body .main header nav .logo-mobile-noc img {
   display: none;
 }
 
