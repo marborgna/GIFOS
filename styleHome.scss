@@ -1,8 +1,15 @@
 $main-color-white: #ffffff;
 $main-color-blue: #572EE5;
 $main-color-green: #50E3C2;
-$main-color-grey: #37383C
+$main-color-grey: #37383C;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+
+body.dark {
+    .main {
+        background-color: $main-color-grey;
+    }
+}
 
 
 body {
@@ -35,7 +42,11 @@ body {
                 align-content: center;
                 justify-content: space-around;  
                 background: rgba(255,255,255,0.50);
-                overflow: hidden;   
+                overflow: hidden;  
+                
+                &.dark {
+                    background-color: $main-color-grey;
+                }
                     
                 .logo-desktop { 
                     img  {
@@ -415,89 +426,8 @@ body {
 
             }
             
-            .main-modal {
-                width: 100%;
-                height: 100%;
-
-                #myBtn {
-                    color: #572EE5;
-                    height: 60%;
-                    width: 20%;  
-                }
-
-                .modal {
-                    //display: none;
-                    position: fixed;
-                    z-index: 1;
-                    width: 100%;
-                    height: 100%;
-                    overflow: auto;
-                    background-color: $main-color-white;
-
-                    .modal-content {
-                        margin: 15%;
-                        padding: 20px;
-                        width: 80%;
-                        
-                        .cerrar {
-                            float: right;
-                            color: $main-color-blue;
-                            font-weight: bold;
-                            width: 15.2px;
-                            height: 15.2px;
-                            text-decoration: none;
-                        }
-                        
-                        img {
-                            height: 385px;
-                            width: 695px;
-                        }
-    
-                        .botones {
-                            .right {
-                                background: url('img/button-slider-right.svg');
-                                right: 10px;
-                                &:hover {
-                                    background: url('img/button-slider-right-hover.svg');
-                                }
-                            }
-                    
-                            .left {
-                                background: url('img/button-slider-left.svg');
-                                left: 10px;
-                                &:hover {
-                                    background: url('img/button-slider-left-hover.svg');
-                                }
-                            }
-                        }
-    
-                        .barra-tareas {
-                            #user {
-                                font-family: 'Roboto', sans-serif;
-                                font-size: 15px;
-                            }
-    
-                            #titulo-GIFO {
-                                font-family: 'Roboto-black', sans-serif;
-                                font-size: 16px;
-                            }
-    
-                            a {
-                                img {
-                                    height: 32px;
-                                    width: 32px;
-                                    
-                                }
-                                :hover {
-                                    background: url('img/icon-fav-hover.svg');
-                                    
-                                }
-                            }
-                        }               
-                    }
-                }
-            }
         } 
+
 
         footer{
             height: 116px;
@@ -557,7 +487,92 @@ body {
             height: 5px;   
         }
     }
-    
+
+    .main-modal {
+        width: 100%;
+        height: 100%;
+        display: inline;
+
+        .myBtn {
+            color: #572EE5;
+            height: 60%;
+            width: 20%;  
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: $main-color-white;
+            top: 0;
+            left: 0;
+
+            .modal-content {
+                margin: 15%;
+                padding: 20px;
+                width: 80%;
+                
+                .cerrar {
+                    float: right;
+                    color: $main-color-blue;
+                    font-weight: bold;
+                    width: 15.2px;
+                    height: 15.2px;
+                    text-decoration: none;
+                }
+                
+                img {
+                    height: 385px;
+                    width: 695px;
+                }
+
+                .botones {
+                    .right {
+                        background: url('img/button-slider-right.svg');
+                        right: 10px;
+                        &:hover {
+                            background: url('img/button-slider-right-hover.svg');
+                        }
+                    }
+            
+                    .left {
+                        background: url('img/button-slider-left.svg');
+                        left: 10px;
+                        &:hover {
+                            background: url('img/button-slider-left-hover.svg');
+                        }
+                    }
+                }
+
+                .barra-tareas {
+                    #user {
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 15px;
+                    }
+
+                    #titulo-GIFO {
+                        font-family: 'Roboto-black', sans-serif;
+                        font-size: 16px;
+                    }
+
+                    a {
+                        img {
+                            height: 32px;
+                            width: 32px;
+                            
+                        }
+                        :hover {
+                            background: url('img/icon-fav-hover.svg');
+                            
+                        }
+                    }
+                }               
+            }
+        }
+    }
 }
 
 

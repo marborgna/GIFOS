@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
+body.dark .main {
+  background-color: #37383C;
+}
+
 body {
   margin: 0;
 }
@@ -7,6 +11,12 @@ body .main {
   background-color: #ffffff;
   width: 100%;
   margin: 0px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+body .main.dark {
+  background-color: #37383C;
 }
 
 body .main header {
@@ -40,6 +50,10 @@ body .main header nav {
       justify-content: space-around;
   background: rgba(255, 255, 255, 0.5);
   overflow: hidden;
+}
+
+body .main header nav.dark {
+  background-color: #37383C;
 }
 
 body .main header nav .logo-desktop img {
@@ -481,83 +495,6 @@ body .main .gifos-section .botones-slider .left:hover {
   background: url("img/button-slider-left-hover.svg");
 }
 
-body .main .gifos-section .main-modal {
-  width: 100%;
-  height: 100%;
-}
-
-body .main .gifos-section .main-modal #myBtn {
-  color: #572EE5;
-  height: 60%;
-  width: 20%;
-}
-
-body .main .gifos-section .main-modal .modal {
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: #ffffff;
-}
-
-body .main .gifos-section .main-modal .modal .modal-content {
-  margin: 15%;
-  padding: 20px;
-  width: 80%;
-}
-
-body .main .gifos-section .main-modal .modal .modal-content .cerrar {
-  float: right;
-  color: #572EE5;
-  font-weight: bold;
-  width: 15.2px;
-  height: 15.2px;
-  text-decoration: none;
-}
-
-body .main .gifos-section .main-modal .modal .modal-content img {
-  height: 385px;
-  width: 695px;
-}
-
-body .main .gifos-section .main-modal .modal .modal-content .botones .right {
-  background: url("img/button-slider-right.svg");
-  right: 10px;
-}
-
-body .main .gifos-section .main-modal .modal .modal-content .botones .right:hover {
-  background: url("img/button-slider-right-hover.svg");
-}
-
-body .main .gifos-section .main-modal .modal .modal-content .botones .left {
-  background: url("img/button-slider-left.svg");
-  left: 10px;
-}
-
-body .main .gifos-section .main-modal .modal .modal-content .botones .left:hover {
-  background: url("img/button-slider-left-hover.svg");
-}
-
-body .main .gifos-section .main-modal .modal .modal-content .barra-tareas #user {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-}
-
-body .main .gifos-section .main-modal .modal .modal-content .barra-tareas #titulo-GIFO {
-  font-family: 'Roboto-black', sans-serif;
-  font-size: 16px;
-}
-
-body .main .gifos-section .main-modal .modal .modal-content .barra-tareas a img {
-  height: 32px;
-  width: 32px;
-}
-
-body .main .gifos-section .main-modal .modal .modal-content .barra-tareas a :hover {
-  background: url("img/icon-fav-hover.svg");
-}
-
 body .main footer {
   height: 116px;
   width: 100%;
@@ -628,6 +565,87 @@ body .main .down-barra {
   background-color: #572EE5;
   width: 100%;
   height: 5px;
+}
+
+body .main-modal {
+  width: 100%;
+  height: 100%;
+  display: inline;
+}
+
+body .main-modal .myBtn {
+  color: #572EE5;
+  height: 60%;
+  width: 20%;
+}
+
+body .main-modal .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+}
+
+body .main-modal .modal .modal-content {
+  margin: 15%;
+  padding: 20px;
+  width: 80%;
+}
+
+body .main-modal .modal .modal-content .cerrar {
+  float: right;
+  color: #572EE5;
+  font-weight: bold;
+  width: 15.2px;
+  height: 15.2px;
+  text-decoration: none;
+}
+
+body .main-modal .modal .modal-content img {
+  height: 385px;
+  width: 695px;
+}
+
+body .main-modal .modal .modal-content .botones .right {
+  background: url("img/button-slider-right.svg");
+  right: 10px;
+}
+
+body .main-modal .modal .modal-content .botones .right:hover {
+  background: url("img/button-slider-right-hover.svg");
+}
+
+body .main-modal .modal .modal-content .botones .left {
+  background: url("img/button-slider-left.svg");
+  left: 10px;
+}
+
+body .main-modal .modal .modal-content .botones .left:hover {
+  background: url("img/button-slider-left-hover.svg");
+}
+
+body .main-modal .modal .modal-content .barra-tareas #user {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+body .main-modal .modal .modal-content .barra-tareas #titulo-GIFO {
+  font-family: 'Roboto-black', sans-serif;
+  font-size: 16px;
+}
+
+body .main-modal .modal .modal-content .barra-tareas a img {
+  height: 32px;
+  width: 32px;
+}
+
+body .main-modal .modal .modal-content .barra-tareas a :hover {
+  background: url("img/icon-fav-hover.svg");
 }
 
 @media screen and (max-device-width: 1000px) {

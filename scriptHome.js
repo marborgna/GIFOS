@@ -202,21 +202,21 @@ function pedirInfo() {
 
 // MODAL
 
-var modal = document.getElementsByClassName('modal');
+var modal = document.getElementsByClassName('modal')[0];
 
 var boton = document.getElementById('myBtn');
 
-var cerrar = document.getElementsByClassName('cerrar');
+var cerrar = document.getElementsByClassName('cerrar')[0];
 
-var sticky = document.getElementsByClassName('sticky');
 
-boton.onclick = function() {                //ALGO ACÁ ESTA ROTO Y NO SÉ QUÉ ES
+boton.onclick = function() {
     modal.style.display = "block";
-    sticky.style.display = "block";
+    var stickyBar = document.getElementsByClassName('sticky')[0];
+    stickyBar.style.display = "none";
 }
 
-cerrar.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+cerrar.onclick = function() {
+    modal.style.display = "none";
+    var stickyBar = document.getElementsByClassName('sticky')[0];
+    stickyBar.style.display = "inline";
 }
