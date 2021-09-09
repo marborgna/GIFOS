@@ -1,128 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
-body.dark .main {
-  background-color: #37383C;
-}
-
-body.dark .main header .up-barra {
-  background-color: #000000;
-}
-
-body.dark .main header nav {
-  background-color: #37383C;
-}
-
-body.dark .main header nav .logo-desktop {
-  display: none;
-}
-
-body.dark .main header nav .logo-mobile img {
-  display: none;
-}
-
-body.dark .main header nav .logo-desktop-noc img {
-  display: inline;
-  width: 59.1px;
-  height: 59.1px;
-  justify-items: flex-start;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-weight: bold;
-  margin-top: 25%;
-}
-
-body.dark .main header nav .logo-mobile-noc img {
-  display: none;
-}
-
-body.dark .main header nav .sections li {
-  color: #FFFFFF;
-}
-
-body.dark .main .sticky {
-  background-color: #37383C;
-}
-
-body.dark .main .sticky .barra {
-  border-color: #ffffff;
-}
-
-body.dark .main .main-section h1 {
-  color: #ffffff;
-}
-
-body.dark .main .main-section .barra {
-  border-color: #ffffff;
-}
-
-body.dark .main .trending-section h4 {
-  color: #ffffff;
-}
-
-body.dark .main .trending-section p {
-  color: #ffffff;
-}
-
-body.dark .main .gifos-section {
-  background-color: #222326;
-}
-
-body.dark .main .gifos-section h2 {
-  color: #ffffff;
-}
-
-body.dark .main .gifos-section h5 {
-  color: #ffffff;
-}
-
-body.dark .main .gifos-section .botones-slider {
-  display: none;
-}
-
-body.dark .main .gifos-section .botones-slider-noc .slider-btn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: #F3F5F8;
-  top: 40%;
-  -webkit-transform: translate(-13%);
-          transform: translate(-13%);
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-}
-
-body.dark .main .gifos-section .botones-slider-noc .right {
-  background: url("img/button-slider-right-md-noct.svg");
-  right: 10px;
-}
-
-body.dark .main .gifos-section .botones-slider-noc .right:hover {
-  background: url("img/button-close-hover-modo-noc.svg");
-}
-
-body.dark .main .gifos-section .botones-slider-noc .left {
-  background: url("img/button-slider-right-md-noct.svg");
-  left: 10px;
-}
-
-body.dark .main .gifos-section .botones-slider-noc .left:hover {
-  background: url("img/button-close-hover-modo-noc");
-}
-
-body.dark .main footer h3 {
-  color: #ffffff;
-}
-
-body.dark .main footer h2 {
-  color: #ffffff;
-}
-
-body.dark .main .down-barra {
-  background-color: #000000;
-}
-
 body {
   margin: 0;
 }
@@ -251,6 +127,7 @@ body .main header nav .sections li {
   text-decoration: none;
   outline: none;
   font-weight: bold;
+  text-decoration: none;
 }
 
 body .main header nav .sections li .separador {
@@ -994,5 +871,129 @@ body .main-modal .modal .modal-content .barra-tareas a :hover {
   body footer .footerB {
     margin-top: 3%;
   }
+}
+
+body.dark .main {
+  background-color: #37383C;
+}
+
+body.dark .main header .up-barra {
+  background-color: #000000;
+}
+
+body.dark .main header nav {
+  background-color: #37383C;
+}
+
+body.dark .main header nav .logo-desktop {
+  display: none;
+}
+
+body.dark .main header nav .logo-mobile img {
+  display: none;
+}
+
+body.dark .main header nav .logo-desktop-noc img {
+  display: inline;
+  width: 59.1px;
+  height: 59.1px;
+  justify-items: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-weight: bold;
+  margin-top: 25%;
+}
+
+body.dark .main header nav .logo-mobile-noc img {
+  display: none;
+}
+
+body.dark .main header nav .sections li {
+  color: #FFFFFF;
+}
+
+body.dark .main .sticky {
+  background-color: #37383C;
+}
+
+body.dark .main .sticky .barra {
+  border-color: #ffffff;
+}
+
+body.dark .main .main-section h1 {
+  color: #ffffff;
+}
+
+body.dark .main .main-section .barra {
+  border-color: #ffffff;
+}
+
+body.dark .main .trending-section h4 {
+  color: #ffffff;
+}
+
+body.dark .main .trending-section p {
+  color: #ffffff;
+}
+
+body.dark .main .gifos-section {
+  background-color: #222326;
+}
+
+body.dark .main .gifos-section h2 {
+  color: #ffffff;
+}
+
+body.dark .main .gifos-section h5 {
+  color: #ffffff;
+}
+
+body.dark .main .gifos-section .botones-slider {
+  display: none;
+}
+
+body.dark .main .gifos-section .botones-slider-noc .slider-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #F3F5F8;
+  top: 40%;
+  -webkit-transform: translate(-13%);
+          transform: translate(-13%);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+body.dark .main .gifos-section .botones-slider-noc .right {
+  background: url("img/button-slider-right-md-noct.svg");
+  right: 10px;
+}
+
+body.dark .main .gifos-section .botones-slider-noc .right:hover {
+  background: url("img/button-close-hover-modo-noc.svg");
+}
+
+body.dark .main .gifos-section .botones-slider-noc .left {
+  background: url("img/button-slider-right-md-noct.svg");
+  left: 10px;
+}
+
+body.dark .main .gifos-section .botones-slider-noc .left:hover {
+  background: url("img/button-close-hover-modo-noc");
+}
+
+body.dark .main footer h3 {
+  color: #ffffff;
+}
+
+body.dark .main footer h2 {
+  color: #ffffff;
+}
+
+body.dark .main .down-barra {
+  background-color: #000000;
 }
 /*# sourceMappingURL=styleHome.css.map */

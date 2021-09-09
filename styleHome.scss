@@ -5,148 +5,7 @@ $main-color-grey: #37383C;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
 
-body.dark {
-    .main {
-        background-color: $main-color-grey;
-        
-        header {
-                .up-barra {
-                    background-color: #000000;
-                }
 
-                nav {
-                    background-color: $main-color-grey;
-                    //SOLUCIONAR ESPACIO
-
-                    .logo-desktop {
-                        display: none;
-                    }
-
-                    .logo-mobile {
-                        img {
-                            display: none;
-                        }
-                    }
-    
-                    .logo-desktop-noc {
-                        img {
-                            display: inline;
-                            width: 59.1px;
-                            height: 59.1px;
-                            justify-items: flex-start;
-                            align-self: center;
-                            font-weight: bold;
-                            margin-top: 25%;
-                        }
-                    }
-                    
-                    .logo-mobile-noc {
-                        img {
-                            display: none;
-                        }
-                    }
-
-                    //FALTA .menu
-
-                    .sections {
-                        li {
-                            color: #FFFFFF;
-                        }
-                    }
-                }
-        }
-
-        .sticky {
-            background-color: $main-color-grey;
-            
-            .barra{
-                border-color: $main-color-white;
-            }
-        }
-
-        .main-section {
-            h1 {
-                color: $main-color-white;
-            }
-
-            .barra{
-                border-color: $main-color-white;
-            }
-        }
-
-        .trending-section {
-            h4 {
-                color: $main-color-white;
-            }
-
-            p {
-                color: $main-color-white;
-            }
-        }
-
-        .gifos-section {
-            background-color: #222326;
-
-            h2 {
-                color: $main-color-white;
-            }
-
-            h5 {
-                color: $main-color-white;
-            }
-
-            .botones-slider {
-                display: none;
-            }
-
-            .botones-slider-noc {
-                .slider-btn {
-                    position: absolute;
-                    width: 40px;
-                    height: 40px;
-                    background-color: #F3F5F8;
-                    top: 40%;
-                    transform: translate(-13%);
-                    font-size: 30px;
-                    font-weight: bold;
-                    text-align: center;
-                    cursor: pointer;
-
-                }
-
-                .right {
-                    background: url('img/button-slider-right-md-noct.svg');
-                    right: 10px;
-                    &:hover {
-                        background: url('img/button-close-hover-modo-noc.svg');
-                    }
-                }
-        
-                .left {
-                    background: url('img/button-slider-right-md-noct.svg');
-                    left: 10px;
-                    &:hover {
-                        background: url('img/button-close-hover-modo-noc');
-                    }
-                }
-            }
-            //NO FUNCIONA
-        }
-
-        footer {
-            h3 {
-                color: $main-color-white;
-            }
-            h2 {
-                color: $main-color-white;
-            }
-        }
-
-        .down-barra {
-            background-color: #000000;
-        }
-    }
-}
 
 
 body {
@@ -252,6 +111,7 @@ body {
                         text-decoration: none;
                         outline: none;
                         font-weight: bold;
+                        text-decoration: none;
 
                         
                         .separador {
@@ -720,7 +580,6 @@ body {
 }
 
 
-
 @media screen and (max-device-width: 1000px) {
     body {
         margin: 0%;
@@ -922,6 +781,150 @@ body {
             .footerB{
                 margin-top: 3%;
             }
+        }
+    }
+}
+
+
+body.dark {
+    .main {
+        background-color: $main-color-grey;
+        
+        header {
+                .up-barra {
+                    background-color: #000000;
+                }
+
+                nav {
+                    background-color: $main-color-grey;
+                    //SOLUCIONAR ESPACIO
+
+                    .logo-desktop {
+                        display: none;
+                    }
+
+                    .logo-mobile {
+                        img {
+                            display: none;
+                        }
+                    }
+    
+                    .logo-desktop-noc {
+                        img {
+                            display: inline;
+                            width: 59.1px;
+                            height: 59.1px;
+                            justify-items: flex-start;
+                            align-self: center;
+                            font-weight: bold;
+                            margin-top: 25%;
+                        }
+                    }
+                    
+                    .logo-mobile-noc {
+                        img {
+                            display: none;
+                        }
+                    }
+
+                    //FALTA .menu
+
+                    .sections {
+                        li {
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+        }
+
+        .sticky {
+            background-color: $main-color-grey;
+            
+            .barra{
+                border-color: $main-color-white;
+            }
+        }
+
+        .main-section {
+            h1 {
+                color: $main-color-white;
+            }
+
+            .barra{
+                border-color: $main-color-white;
+            }
+        }
+
+        .trending-section {
+            h4 {
+                color: $main-color-white;
+            }
+
+            p {
+                color: $main-color-white;
+            }
+        }
+
+        .gifos-section {
+            background-color: #222326;
+
+            h2 {
+                color: $main-color-white;
+            }
+
+            h5 {
+                color: $main-color-white;
+            }
+
+            .botones-slider {
+                display: none;
+            }
+
+            .botones-slider-noc {
+                .slider-btn {
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    background-color: #F3F5F8;
+                    top: 40%;
+                    transform: translate(-13%);
+                    font-size: 30px;
+                    font-weight: bold;
+                    text-align: center;
+                    cursor: pointer;
+
+                }
+
+                .right {
+                    background: url('img/button-slider-right-md-noct.svg');
+                    right: 10px;
+                    &:hover {
+                        background: url('img/button-close-hover-modo-noc.svg');
+                    }
+                }
+        
+                .left {
+                    background: url('img/button-slider-right-md-noct.svg');
+                    left: 10px;
+                    &:hover {
+                        background: url('img/button-close-hover-modo-noc');
+                    }
+                }
+            }
+            //NO FUNCIONA
+        }
+
+        footer {
+            h3 {
+                color: $main-color-white;
+            }
+            h2 {
+                color: $main-color-white;
+            }
+        }
+
+        .down-barra {
+            background-color: #000000;
         }
     }
 }
