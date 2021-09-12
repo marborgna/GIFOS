@@ -185,6 +185,11 @@ body header #navbar .sections li .separador {
   display: none;
 }
 
+body header #navbar .sections li a {
+  text-decoration: none;
+  color: #572EE5;
+}
+
 body header #navbar .sections li li:hover .separador {
   display: inline;
   color: #50E3C2;
@@ -226,6 +231,23 @@ body .favoritos h3 {
   font-family: 'Montserrat-Bold', sans-serif;
   color: #572EE5;
   font-size: 25px;
+}
+
+body .favoritos .container-favoritos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 260px 29px 260px 29px 260px 29px 260px 29px;
+      grid-template-columns: 260px 29px 260px 29px 260px 29px 260px 29px;
+  -ms-grid-rows: 200px 35px 200px 35px 200px 35px;
+      grid-template-rows: 200px 35px 200px 35px 200px 35px;
+}
+
+body .favoritos .container-favoritos .img-favorito {
+  width: 260px;
+  height: 200px;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 body .favoritos .barra {

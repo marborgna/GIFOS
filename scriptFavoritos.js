@@ -112,3 +112,12 @@ function posicionarImgsSlider() {
     primerImagen = slider.firstChild;
     primerImagen.style['margin-left'] = nuevoMargin + "px";
 }
+
+
+
+// LOCAL STORAGE
+
+function traerFavorito(urlImg) {
+    var listaImg = []
+    // TODO
+}

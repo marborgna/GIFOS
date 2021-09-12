@@ -148,6 +148,11 @@ body {
                         .separador {
                             display: none;
                         } 
+                        
+                        a {
+                            text-decoration: none;
+                            color: $main-color-blue;
+                        }
 
                         li:hover {
                             .separador{
@@ -191,6 +196,19 @@ body {
                 color: $main-color-blue; 
                 font-size: 25px;
             }
+
+            .container-favoritos { 
+                display: grid;
+                grid-template-columns: 260px 29px 260px 29px 260px 29px 260px 29px;
+                grid-template-rows: 200px 35px 200px 35px 200px 35px;
+                    .img-favorito {
+                        width: 260px;
+                        height: 200px;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                    }
+            }
+            //SEGUIR CON GRID
 
             .barra {
                 display: flex;                             

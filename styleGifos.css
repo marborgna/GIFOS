@@ -192,6 +192,11 @@ body header #navbar .sections li li:hover .separador {
   height: 1px;
 }
 
+body header #navbar .sections li a {
+  text-decoration: none;
+  color: #572EE5;
+}
+
 body header #navbar .sections li .marcado {
   color: #9CAFC3;
 }

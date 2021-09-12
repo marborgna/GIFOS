@@ -156,6 +156,11 @@ body {
                                 height: 1px;
                             }
                         }
+                        
+                        a {
+                            text-decoration: none;
+                            color: $main-color-blue;
+                        }
 
                         .marcado {
                             color: #9CAFC3;

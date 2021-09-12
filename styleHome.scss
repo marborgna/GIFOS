@@ -113,6 +113,11 @@ body {
                         font-weight: bold;
                         text-decoration: none;
 
+                        a {
+                            text-decoration: none;
+                            color: $main-color-blue;
+                        }
+
                         
                         .separador {
                             display: none;
@@ -363,26 +368,30 @@ body {
                     align-content: space-around;
                     overflow: hidden;
                     
+                    
 
                     .slider-section {
                         align-content: space-around;
                         display: grid;
                         height: 275px;
-                        display: block;
                         object-fit: cover;
                         margin-left: 7%;
                         transition: margin 700ms;
                         flex: 0 0 257px;  
-                        //grid-template-columns: 375px ;
-                        //grid-template-rows: ;
+                        
                         
                         .fondoHover {
-                            background-color: $main-color-blue;
                             grid-area: 1 / 1 / 2 / 2;
+                            &:hover {
+                                background-color: $main-color-blue;
+                                opacity: 50%;
+                                
+                            }
                             
                         }
+                        
 
-                        img{
+                        img {
                             object-fit: cover;
                             width: 275px;
                             height: 275px;
@@ -877,10 +886,6 @@ body.dark {
             }
 
             .botones-slider {
-                display: none;
-            }
-
-            .botones-slider-noc {
                 .slider-btn {
                     position: absolute;
                     width: 40px;

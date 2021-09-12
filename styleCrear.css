@@ -185,6 +185,11 @@ body header #navbar .sections li .separador {
   display: none;
 }
 
+body header #navbar .sections li a {
+  text-decoration: none;
+  color: #572EE5;
+}
+
 body header #navbar .sections li li:hover .separador {
   display: inline;
   color: #50E3C2;

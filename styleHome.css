@@ -130,6 +130,11 @@ body .main header nav .sections li {
   text-decoration: none;
 }
 
+body .main header nav .sections li a {
+  text-decoration: none;
+  color: #572EE5;
+}
+
 body .main header nav .sections li .separador {
   display: none;
 }
@@ -427,7 +432,6 @@ body .main .gifos-section .container-slider .slider .slider-section {
   display: -ms-grid;
   display: grid;
   height: 275px;
-  display: block;
   -o-object-fit: cover;
      object-fit: cover;
   margin-left: 7%;
@@ -439,12 +443,16 @@ body .main .gifos-section .container-slider .slider .slider-section {
 }
 
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover {
-  background-color: #572EE5;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1 / 1 / 2 / 2;
+}
+
+body .main .gifos-section .container-slider .slider .slider-section .fondoHover:hover {
+  background-color: #572EE5;
+  opacity: 50%;
 }
 
 body .main .gifos-section .container-slider .slider .slider-section img {
@@ -949,11 +957,7 @@ body.dark .main .gifos-section h5 {
   color: #ffffff;
 }
 
-body.dark .main .gifos-section .botones-slider {
-  display: none;
-}
-
-body.dark .main .gifos-section .botones-slider-noc .slider-btn {
+body.dark .main .gifos-section .botones-slider .slider-btn {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -967,21 +971,21 @@ body.dark .main .gifos-section .botones-slider-noc .slider-btn {
   cursor: pointer;
 }
 
-body.dark .main .gifos-section .botones-slider-noc .right {
+body.dark .main .gifos-section .botones-slider .right {
   background: url("img/button-slider-right-md-noct.svg");
   right: 10px;
 }
 
-body.dark .main .gifos-section .botones-slider-noc .right:hover {
+body.dark .main .gifos-section .botones-slider .right:hover {
   background: url("img/button-close-hover-modo-noc.svg");
 }
 
-body.dark .main .gifos-section .botones-slider-noc .left {
+body.dark .main .gifos-section .botones-slider .left {
   background: url("img/button-slider-right-md-noct.svg");
   left: 10px;
 }
 
-body.dark .main .gifos-section .botones-slider-noc .left:hover {
+body.dark .main .gifos-section .botones-slider .left:hover {
   background: url("img/button-close-hover-modo-noc");
 }
 

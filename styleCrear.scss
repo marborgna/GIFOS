@@ -148,6 +148,11 @@ body {
                         display: none;
                     } 
 
+                    a {
+                        text-decoration: none;
+                        color: $main-color-blue;
+                    }
+
                     li:hover {
                         .separador{
                             display: inline;

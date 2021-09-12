@@ -80,6 +80,8 @@ function insertarImagenSlider (url) {
     let currentDiv = document.getElementById("slider");
     currentDiv.appendChild(nuevoDiv);
     nuevoDiv.classList.add("slider-section");
+
+    let 
 }
 
 pedirGIFO();
@@ -219,4 +221,12 @@ cerrar.onclick = function() {
     modal.style.display = "none";
     var stickyBar = document.getElementsByClassName('sticky')[0];
     stickyBar.style.display = "inline";
+}
+
+
+// LOCAL STORAGE
+
+function agregarFavorito(urlImg) {
+    var listaImg = []
+    // TODO
 }
