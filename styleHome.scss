@@ -384,12 +384,43 @@ body {
                             grid-area: 1 / 1 / 2 / 2;
                             &:hover {
                                 background-color: $main-color-blue;
-                                opacity: 50%;
-                                
-                            }
+                                opacity: 0.6;
+                            
+                                .boton-favorito{
+                                    width: 32px;
+                                    height: 32px;
+                                    background-image: url('img/icon-fav.svg');
+
+                                    :hover {
+                                        background-image: url('img/icon-fav-hover.svg');
+                                    }
+                                } 
+
+                                .boton-descarga {
+                                    width: 32px;
+                                    height: 32px;
+                                    background-image: url('img/icon-download.svg');
+
+                                    :hover {
+                                        background-image: url('img/icon-download-hover.svg');
+                                    }
+                                }
+                            
+                                .boton-expandir {
+                                    width: 32px;
+                                    height: 32px;
+                                    background-image: url('img/icon-max-normal.svg');
+
+                                    :hover {
+                                        background-image: url('img/icon-max-hover.svg');
+                                    }
+                                }
+                            } 
                             
                         }
+
                         
+                                            
 
                         img {
                             object-fit: cover;

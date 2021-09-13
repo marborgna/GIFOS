@@ -81,7 +81,19 @@ function insertarImagenSlider (url) {
     currentDiv.appendChild(nuevoDiv);
     nuevoDiv.classList.add("slider-section");
 
-    let 
+    let botonFav = document.createElement("div");
+    let botonDesc = document.createElement("div");
+    let botonExpan = document.createElement("div");
+
+    nuevoHover.appendChild(botonFav);
+    botonExpan.classList.add("boton-favorito");
+
+    nuevoHover.appendChild(botonDesc);
+    botonExpan.classList.add("boton-descarga");
+
+    nuevoHover.appendChild(botonExpan);
+    botonExpan.classList.add("boton-expandir");
+
 }
 
 pedirGIFO();
@@ -196,6 +208,7 @@ function pedirInfo() {
         palabrasSugeridas = document.getElementById("sugerencia");
     })
 }
+
 
 //TERMINAR --->
 
