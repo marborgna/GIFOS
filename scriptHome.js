@@ -52,6 +52,8 @@ function pedirGIFO() {
 
         inicioSlider();
 
+        registrarBotonFav();
+
     }).catch(error => {
         console.log(error);
     });
@@ -87,6 +89,7 @@ function insertarImagenSlider (url) {
 
     nuevoHover.appendChild(botonFav);
     botonFav.classList.add("boton-favorito");
+    botonFav.dataset['urlImg'] = url;
 
     nuevoHover.appendChild(botonDesc);
     botonDesc.classList.add("boton-descarga");
@@ -236,10 +239,43 @@ cerrar.onclick = function() {
     stickyBar.style.display = "inline";
 }
 
+function abrirModal() {
+
+}
+
 
 // LOCAL STORAGE
 
-function agregarFavorito(urlImg) {
-    var listaImg = []
-    // TODO
+function registrarBotonFav() {
+    botonFav = document.querySelectorAll(".boton-favorito");
+
+    for (var i = 0; i < botonFav.lenght; i++) {
+        
+        var fav = botonFav[i];
+        fav.addEventListener('click', function() {
+            let valorURLImg = this.dataset['urlImg'];
+            agregarFavorito(valorURLImg);
+        });
+    }
 }
+
+function agregarFavorito(urlImg) {
+    var listaImg = cargarFavoritos();
+    listaImg.add(urlImg);
+    guardarFavoritos(listaImg);
+}
+
+function cargarFavoritos() {
+    var listaImg = window.localStorage.getItem('favoritos');
+    if (listaImg == null) {
+        listaImg = [];
+    } else {
+        listaImg = JSON.parse(listaImg);
+    }
+    return listaImg;
+}
+
+function guardarFavoritos(lista) {
+    window.localStorage.setItem('favoritos', JSON.stringify(lista));
+}
+

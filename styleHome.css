@@ -22,7 +22,7 @@ body .main header .up-barra {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #572ee5;
+  background-color: #572EE5;
   width: 100%;
   height: 5px;
   margin-top: 0%;
@@ -69,7 +69,7 @@ body .main header nav .logo-mobile-noc img {
 
 body .main header nav .menu {
   display: none;
-  color: #572ee5;
+  color: #572EE5;
   padding-right: 3px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -85,13 +85,13 @@ body .main header nav .menu .raya {
   display: none;
   height: 2px;
   width: 18px;
-  background-color: #572ee5;
+  background-color: #572EE5;
   margin-top: 3px;
 }
 
 body .main header nav .menu .cuadrado {
   display: none;
-  background-color: #572ee5;
+  background-color: #572EE5;
   width: 14px;
   height: 14px;
 }
@@ -123,7 +123,7 @@ body .main header nav .sections li {
   margin-right: 0px;
   font-family: 'Montserrat-Bold', sans-serif;
   text-transform: uppercase;
-  color: #572ee5;
+  color: #572EE5;
   text-decoration: none;
   outline: none;
   font-weight: bold;
@@ -132,7 +132,7 @@ body .main header nav .sections li {
 
 body .main header nav .sections li a {
   text-decoration: none;
-  color: #572ee5;
+  color: #572EE5;
 }
 
 body .main header nav .sections li .separador {
@@ -140,7 +140,7 @@ body .main header nav .sections li .separador {
 }
 
 body .main header nav .sections li li:visited {
-  color: #572ee5;
+  color: #572EE5;
 }
 
 body .main header nav .sections li li:hover .separador {
@@ -177,7 +177,7 @@ body .main .sticky .barra {
   width: 30%;
   min-width: 334px;
   height: 50px;
-  border-color: #572ee5;
+  border-color: #572EE5;
   border-radius: 27px;
   margin-left: auto;
   margin-right: auto;
@@ -207,7 +207,7 @@ body .main .sticky .barra input {
 }
 
 body .main .sticky .barra ul {
-  border: #572ee5;
+  border: #572EE5;
   border-radius: 27px;
 }
 
@@ -215,7 +215,7 @@ body .main .sticky .barra ul li {
   color: #9CAFC3;
   text-decoration: none;
   list-style: none;
-  border-color: #572ee5;
+  border-color: #572EE5;
   border-radius: 27px;
   font-family: 'Roboto-black', sans-serif;
 }
@@ -242,7 +242,7 @@ body .main .main-section {
 
 body .main .main-section h1 {
   font-family: 'Montserrat', sans-serif;
-  color: #572ee5;
+  color: #572EE5;
   text-align: center;
 }
 
@@ -281,7 +281,7 @@ body .main .main-section .barra {
   width: 40%;
   min-width: 551px;
   height: 150%;
-  border-color: #572ee5;
+  border-color: #572EE5;
   border-radius: 27px;
   margin-left: auto;
   margin-right: auto;
@@ -310,7 +310,7 @@ body .main .main-section .barra input {
 }
 
 body .main .main-section .barra ul {
-  border: #572ee5;
+  border: #572EE5;
   border-radius: 27px;
 }
 
@@ -318,7 +318,7 @@ body .main .main-section .barra ul li {
   color: #9CAFC3;
   text-decoration: none;
   list-style: none;
-  border-color: #572ee5;
+  border-color: #572EE5;
   border-radius: 27px;
   font-family: 'Roboto-black', sans-serif;
 }
@@ -346,7 +346,7 @@ body .main .trending-section {
 
 body .main .trending-section h4 {
   font-family: 'Montserrat', sans-serif;
-  color: #572ee5;
+  color: #572EE5;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -354,7 +354,7 @@ body .main .trending-section h4 {
 
 body .main .trending-section p {
   font-family: 'Montserrat', sans-serif;
-  color: #572ee5;
+  color: #572EE5;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -383,7 +383,7 @@ body .main .gifos-section {
 
 body .main .gifos-section h2 {
   font-family: 'Montserrat', sans-serif;
-  color: #572ee5;
+  color: #572EE5;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -443,6 +443,7 @@ body .main .gifos-section .container-slider .slider .slider-section {
 }
 
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover {
+  opacity: 0;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -451,7 +452,8 @@ body .main .gifos-section .container-slider .slider .slider-section .fondoHover 
 }
 
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover:hover {
-  background-color: #572ee5;
+  background-color: rgba(87, 46, 229, 0.6);
+  opacity: 1;
 }
 
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-favorito {
@@ -460,7 +462,7 @@ body .main .gifos-section .container-slider .slider .slider-section .fondoHover 
   background-image: url("img/icon-fav.svg");
 }
 
-body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-favorito :hover {
+body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-favorito:hover {
   background-image: url("img/icon-fav-hover.svg");
 }
 
@@ -470,7 +472,7 @@ body .main .gifos-section .container-slider .slider .slider-section .fondoHover 
   background-image: url("img/icon-download.svg");
 }
 
-body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-descarga :hover {
+body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-descarga:hover {
   background-image: url("img/icon-download-hover.svg");
 }
 
@@ -480,7 +482,7 @@ body .main .gifos-section .container-slider .slider .slider-section .fondoHover 
   background-image: url("img/icon-max-normal.svg");
 }
 
-body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-expandir :hover {
+body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-expandir:hover {
   background-image: url("img/icon-max-hover.svg");
 }
 
@@ -577,7 +579,7 @@ body .main footer .footerA ul li a .fab {
 }
 
 body .main footer .footerA ul .fab:hover {
-  color: #572ee5;
+  color: #572EE5;
 }
 
 body .main footer .footerB {
@@ -599,7 +601,7 @@ body .main footer .footerB h2 {
 
 body .main .down-barra {
   display: block;
-  background-color: #572ee5;
+  background-color: #572EE5;
   width: 100%;
   height: 5px;
 }
@@ -636,7 +638,7 @@ body .main-modal .modal .modal-content {
 
 body .main-modal .modal .modal-content .cerrar {
   float: right;
-  color: #572ee5;
+  color: #572EE5;
   font-weight: bold;
   width: 15.2px;
   height: 15.2px;
@@ -722,7 +724,7 @@ body .main-modal .modal .modal-content .barra-tareas a :hover {
   }
   body header nav .menu {
     background-color: #ffffff;
-    color: #572ee5;
+    color: #572EE5;
     padding-right: 3px;
     -ms-flex-item-align: center;
         align-self: center;
@@ -740,12 +742,12 @@ body .main-modal .modal .modal-content .barra-tareas a :hover {
     background-color: #ffffff;
     height: 2px;
     width: 18px;
-    background-color: #572ee5;
+    background-color: #572EE5;
     margin-top: 3px;
   }
   body header nav .menu .cuadrado {
     display: none;
-    background-color: #572ee5;
+    background-color: #572EE5;
     width: 14px;
     height: 14px;
     -webkit-clip-path: polygon(10% 0, 0 10%, 40% 51%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
@@ -753,7 +755,7 @@ body .main-modal .modal .modal-content .barra-tareas a :hover {
   }
   body header nav .sections {
     display: none;
-    background-color: #572ee5;
+    background-color: #572EE5;
     height: 60%;
     opacity: 90%;
     font-size: 16px;
@@ -809,7 +811,7 @@ body .main-modal .modal .modal-content .barra-tareas a :hover {
   body header nav #toggle:checked ~ .sections .raya {
     -webkit-clip-path: polygon(10% 0, 0 10%, 40% 51%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
             clip-path: polygon(10% 0, 0 10%, 40% 51%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
-    color: #572ee5;
+    color: #572EE5;
     height: 14px;
     width: 14px;
     display: inline;

@@ -1,5 +1,5 @@
 $main-color-white: #ffffff;
-$main-color-blue: rgb(87, 46, 229);
+$main-color-blue: #572EE5;
 $main-color-green: #50E3C2;
 $main-color-grey: #37383C;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
@@ -385,7 +385,7 @@ body {
                             grid-area: 1 / 1 / 2 / 2;
 
                             &:hover {
-                                background-color: rgb(87, 46, 229, 0.6);
+                                background-color: rgba(87, 46, 229, 0.6);
                                 opacity: 1;
                         
                             }
@@ -397,7 +397,7 @@ body {
                                 height: 32px;
                                 background-image: url('img/icon-fav.svg');
 
-                                :hover {
+                                &:hover {
                                     background-image: url('img/icon-fav-hover.svg');
                                 }
                             } 
@@ -407,7 +407,7 @@ body {
                                 height: 32px;
                                 background-image: url('img/icon-download.svg');
 
-                                :hover {
+                                &:hover {
                                     background-image: url('img/icon-download-hover.svg');
                                 }
                             }
@@ -417,7 +417,7 @@ body {
                                 height: 32px;
                                 background-image: url('img/icon-max-normal.svg');
 
-                                :hover {
+                                &:hover {
                                     background-image: url('img/icon-max-hover.svg');
                                 }
                             }
