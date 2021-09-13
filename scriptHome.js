@@ -86,10 +86,10 @@ function insertarImagenSlider (url) {
     let botonExpan = document.createElement("div");
 
     nuevoHover.appendChild(botonFav);
-    botonExpan.classList.add("boton-favorito");
+    botonFav.classList.add("boton-favorito");
 
     nuevoHover.appendChild(botonDesc);
-    botonExpan.classList.add("boton-descarga");
+    botonDesc.classList.add("boton-descarga");
 
     nuevoHover.appendChild(botonExpan);
     botonExpan.classList.add("boton-expandir");
