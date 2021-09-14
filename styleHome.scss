@@ -116,9 +116,20 @@ body {
                         a {
                             text-decoration: none;
                             color: $main-color-blue;
-                        }
 
+                            .boton-mas {
+                                height: 54px;
+                                width: 54px;
+                                background-image: url('img/button-crear-gifo.svg');
+                                
+                                &:hover {
+                                    
+                                    background-image: url('img/CTA-crear-gifo-hover.svg');
+                                }
+                            }
+                        }
                         
+                    
                         .separador {
                             display: none;
                         } 
@@ -137,7 +148,7 @@ body {
                         }
 
                         #last-button {
-                            
+                            background-image: url('img/button-crear-gifo.svg');
                             &:hover {
                                 background: url('img/CTA-crear-gifo-hover.svg');
                             }
@@ -220,6 +231,7 @@ body {
                 font-family: 'Montserrat', sans-serif;
                 color: $main-color-blue;
                 text-align: center;
+                text-decoration: none;
                 span {
                     color: $main-color-green;
                     display: inline;
@@ -383,6 +395,9 @@ body {
                         .fondoHover {
                             opacity: 0;
                             grid-area: 1 / 1 / 2 / 2;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-end;
 
                             &:hover {
                                 background-color: rgba(87, 46, 229, 0.6);
@@ -392,7 +407,7 @@ body {
                             
                             
                             .boton-favorito{
-                                
+                                margin: 2%;
                                 width: 32px;
                                 height: 32px;
                                 background-image: url('img/icon-fav.svg');
@@ -403,6 +418,7 @@ body {
                             } 
 
                             .boton-descarga {
+                                margin: 2%;
                                 width: 32px;
                                 height: 32px;
                                 background-image: url('img/icon-download.svg');
@@ -413,6 +429,7 @@ body {
                             }
                         
                             .boton-expandir {
+                                margin: 2%;
                                 width: 32px;
                                 height: 32px;
                                 background-image: url('img/icon-max-normal.svg');

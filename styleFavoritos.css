@@ -190,6 +190,16 @@ body header #navbar .sections li a {
   color: #572EE5;
 }
 
+body header #navbar .sections li a .boton-mas {
+  height: 54px;
+  width: 54px;
+  background-image: url("img/button-crear-gifo.svg");
+}
+
+body header #navbar .sections li a .boton-mas:hover {
+  background-image: url("img/CTA-crear-gifo-hover.svg");
+}
+
 body header #navbar .sections li li:hover .separador {
   display: inline;
   color: #50E3C2;

@@ -152,6 +152,17 @@ body {
                         a {
                             text-decoration: none;
                             color: $main-color-blue;
+
+                            .boton-mas {
+                                height: 54px;
+                                width: 54px;
+                                background-image: url('img/button-crear-gifo.svg');
+                            
+                                &:hover {
+                                    
+                                    background-image: url('img/CTA-crear-gifo-hover.svg');
+                                }
+                            }
                         }
 
                         li:hover {

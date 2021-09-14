@@ -96,6 +96,7 @@ function insertarImagenSlider (url) {
 
     nuevoHover.appendChild(botonExpan);
     botonExpan.classList.add("boton-expandir");
+    botonExpan.id.add('myBtn');
 
 }
 
