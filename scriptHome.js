@@ -96,10 +96,10 @@ function insertarImagenSlider (url) {
 
     nuevoHover.appendChild(botonExpan);
     botonExpan.classList.add("boton-expandir");
-    botonExpan.id.add('myBtn');
-
+    
 }
 
+//HAY QUE AGREGAR #myBtn a botonExpan para que funcione el modal
 pedirGIFO();
 
 
