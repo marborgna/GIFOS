@@ -178,25 +178,21 @@ body {
     }
 
     .main {
-        display: flex;
-        justify-content: flex-start;
-        padding-left: 15%;
+        //padding-left: 15%;
         padding-top: 3%;
+        display: block;
+        
+
         .camara {
-            img {
+            
+            .camara-uno {
                 height: 163px;
                 width: 123px;
             }
-            .gradiente {
-                //width: 91px;
-                //height: 151px;
-                //background: rgb(136,243,226);
-                //background: linear-gradient(270deg, rgba(136,243,226,0) 0%, rgba(80,227,194,1) 100%);
-                border-top: 50px solid transparent;
-                border-right: 100px solid;
-                border-bottom: 50px solid transparent;
-                width: 0;
-                height: 0;
+            .camara-luz {
+                width: 91px;
+                height: 30px;
+                margin-left: -4px;
             }
         }
 
@@ -206,12 +202,33 @@ body {
             border-color: $main-color-blue;
             height: 390px;
             width: 688px;
+            flex-direction: column;
+            text-align: center;
             align-items: center;
-            justify-self: center;
-            padding: 4%;
+            justify-content: space-around;
+
+            #borde-sup-izq {  
+                display: flex;
+                justify-self: flex-start;
+                width: 25px;
+                height: 27px;
+                border-top: 1px solid;
+                border-left: 1px solid;
+                border-color: $main-color-green;
+            }
+
+            #borde-sup-der {
+                width: 25px;
+                height: 27px;
+                border-top: 1px solid;
+                border-right: 1px solid;
+                border-color: $main-color-green;
+            }
+
             h2 {
                 font-family: 'Montserrat', sans-serif;
                 color: $main-color-blue;
+                //padding-top: 15%;
                 span {
                     color: $main-color-green;
                 }
@@ -220,9 +237,27 @@ body {
             p {
                 font-family: 'Roboto', sans-serif;
             } 
+
+            #borde-inf-izq {
+                width: 25px;
+                height: 27px;
+                border-bottom: 1px solid;
+                border-left: 1px solid;
+                border-color: $main-color-green;
+            }
+
+            #borde-inf-der {
+                width: 25px;
+                height: 27px;
+                border-bottom: 1px solid;
+                border-right: 1px solid;
+                border-color: $main-color-green;
+            }
         } 
 
         .botones-numeros {
+            text-align: center;
+            align-items: center;
             input {
                 border: 1px solid;
                 border-color: $main-color-blue;

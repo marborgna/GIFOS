@@ -320,6 +320,16 @@ body .favoritos .barra input ::placeholder {
   font-family: 'Montserrat-Bold', sans-serif;
 }
 
+body .favoritos .barra-prueba {
+  width: 127px;
+  height: 50px;
+  background-image: url("img/CTA-ver-mas.svg");
+}
+
+body .favoritos .barra-prueba :hover {
+  background-image: url("img/CTA-ver-mas-hover.svg");
+}
+
 body .favoritos .vacio {
   text-align: center;
 }

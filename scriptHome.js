@@ -21,7 +21,16 @@ let btnSwitch = document.getElementById('switch');
 btnSwitch.addEventListener('click', () =>{
     document.body.classList.toggle('dark');
     btnSwitch.classList.toggle('active');
+
+    if (document.body.classList == 'dark') {
+        btnSwitch.innerHTML="Modo Diurno";
+    } else {
+        btnSwitch.innerHTML="Modo Nocturno";
+    }
+    
 });
+
+
 
 
 //---> llamado API
@@ -53,6 +62,8 @@ function pedirGIFO() {
         inicioSlider();
 
         registrarBotonFav();
+
+        registrarBotonExpandir();
 
     }).catch(error => {
         console.log(error);
@@ -96,6 +107,7 @@ function insertarImagenSlider (url) {
 
     nuevoHover.appendChild(botonExpan);
     botonExpan.classList.add("boton-expandir");
+    botonExpan.dataset['urlImg'] = url;
     
 }
 
@@ -223,25 +235,40 @@ function pedirInfo() {
 
 var modal = document.getElementsByClassName('modal')[0];
 
-var boton = document.getElementById('myBtn');
-
 var cerrar = document.getElementsByClassName('cerrar')[0];
 
 
-boton.onclick = function() {
-    modal.style.display = "block";
-    var stickyBar = document.getElementsByClassName('sticky')[0];
-    stickyBar.style.display = "none";
-}
+
 
 cerrar.onclick = function() {
     modal.style.display = "none";
-    var stickyBar = document.getElementsByClassName('sticky')[0];
+    var stickyBar = document.getElementsByClassName('navbar')[0];
     stickyBar.style.display = "inline";
 }
 
-function abrirModal() {
+function registrarBotonExpandir () {
+    var botonExpandir = document.getElementsByClassName('boton-expandir');
 
+    for (var i = 0; i < botonExpandir.length; ++i) {
+
+        var expandir = botonExpandir[i];
+        expandir.addEventListener('click', function() {
+            let valorURLImg = this.dataset['urlImg'];
+            abrirModal(valorURLImg);
+        })
+    }
+}
+
+
+function abrirModal(urlImg) {
+    var modal = document.getElementsByClassName('modal')[0];
+
+    modal.style.display = "block";
+    var stickyBar = document.getElementsByClassName('navbar')[0];
+    stickyBar.style.display = "none";
+
+    var imgModal = document.getElementById('img-modal');
+    imgModal.setAttribute('src', urlImg);
 }
 
 
@@ -250,10 +277,11 @@ function abrirModal() {
 function registrarBotonFav() {
     botonFav = document.querySelectorAll(".boton-favorito");
 
-    for (var i = 0; i < botonFav.lenght; i++) {
+    for (var i = 0; i < botonFav.length; i++) {
         
         var fav = botonFav[i];
         fav.addEventListener('click', function() {
+            // <div data-urlImg='http://giphy.com/…'></div>
             let valorURLImg = this.dataset['urlImg'];
             agregarFavorito(valorURLImg);
         });
@@ -262,7 +290,7 @@ function registrarBotonFav() {
 
 function agregarFavorito(urlImg) {
     var listaImg = cargarFavoritos();
-    listaImg.add(urlImg);
+    listaImg.push(urlImg);
     guardarFavoritos(listaImg);
 }
 

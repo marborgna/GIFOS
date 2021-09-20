@@ -206,27 +206,19 @@ body header #navbar #toggle {
 }
 
 body .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding-left: 15%;
   padding-top: 3%;
+  display: block;
 }
 
-body .main .camara img {
+body .main .camara .camara-uno {
   height: 163px;
   width: 123px;
 }
 
-body .main .camara .gradiente {
-  border-top: 50px solid transparent;
-  border-right: 100px solid;
-  border-bottom: 50px solid transparent;
-  width: 0;
-  height: 0;
+body .main .camara .camara-luz {
+  width: 91px;
+  height: 30px;
+  margin-left: -4px;
 }
 
 body .main .cuadro {
@@ -237,11 +229,36 @@ body .main .cuadro {
   border-color: #572EE5;
   height: 390px;
   width: 688px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-self: center;
-  padding: 4%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .main .cuadro #borde-sup-izq {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-start;
+  width: 25px;
+  height: 27px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-color: #50E3C2;
+}
+
+body .main .cuadro #borde-sup-der {
+  width: 25px;
+  height: 27px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-color: #50E3C2;
 }
 
 body .main .cuadro h2 {
@@ -255,6 +272,29 @@ body .main .cuadro h2 span {
 
 body .main .cuadro p {
   font-family: 'Roboto', sans-serif;
+}
+
+body .main .cuadro #borde-inf-izq {
+  width: 25px;
+  height: 27px;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-color: #50E3C2;
+}
+
+body .main .cuadro #borde-inf-der {
+  width: 25px;
+  height: 27px;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-color: #50E3C2;
+}
+
+body .main .botones-numeros {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .main .botones-numeros input {

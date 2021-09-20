@@ -260,6 +260,15 @@ body {
 
             }
 
+            .barra-prueba {
+                width: 127px;
+                height: 50px;
+                background-image: url('img/CTA-ver-mas.svg');
+                :hover {
+                    background-image: url('img/CTA-ver-mas-hover.svg');
+                }
+            }
+
             .vacio {
                 text-align: center;
                 img {
