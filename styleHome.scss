@@ -562,12 +562,6 @@ body {
         height: 100%;
         display: inline;
 
-        //.myBtn {
-        //    color: #572EE5;
-        //    height: 60%;
-        //    width: 20%;  
-        //}
-
         .modal {
             display: none;
             position: fixed;
@@ -581,6 +575,7 @@ body {
 
 
             .modal-content {
+                
                 margin: 15%;
                 padding: 20px;
                 width: 80%;
@@ -592,14 +587,32 @@ body {
                     width: 15.2px;
                     height: 15.2px;
                     text-decoration: none;
+                    
                 }
                 
                 img {
                     height: 385px;
                     width: 695px;
+                    text-align: center;
+                   
                 }
 
+
                 .botones {
+                    .slider-btn {
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        background-color: #F3F5F8;
+                        top: 40%;
+                        transform: translate(-13%);
+                        font-size: 30px;
+                        font-weight: bold;
+                        text-align: center;
+                        cursor: pointer;
+    
+                    }
+    
                     .right {
                         background: url('img/button-slider-right.svg');
                         right: 10px;

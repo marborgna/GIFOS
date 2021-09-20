@@ -694,6 +694,21 @@ body .main-modal .modal .modal-content .cerrar {
 body .main-modal .modal .modal-content img {
   height: 385px;
   width: 695px;
+  text-align: center;
+}
+
+body .main-modal .modal .modal-content .botones .slider-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #F3F5F8;
+  top: 40%;
+  -webkit-transform: translate(-13%);
+          transform: translate(-13%);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
 }
 
 body .main-modal .modal .modal-content .botones .right {
