@@ -54,6 +54,7 @@ function pedirGIFO() {
         for(idGifo in response.data) {
             let gifo = response.data[idGifo];
             let urlDelElemento = gifo.images.original.url;
+            let idDelElemento = gifo.id;
             listaURLSGIFOS.push(urlDelElemento);
         }
 
@@ -79,7 +80,7 @@ function crearElementosGIFOS (listaUrls) {
 }
 
 
-function insertarImagenSlider (url) {
+function insertarImagenSlider (url, id) {
     let nuevoDiv = document.createElement("div");
     let nuevoHover = document.createElement("div");
     let nuevaImg = document.createElement("img");
@@ -100,18 +101,17 @@ function insertarImagenSlider (url) {
 
     nuevoHover.appendChild(botonFav);
     botonFav.classList.add("boton-favorito");
-    botonFav.dataset['urlImg'] = url;
+    botonFav.dataset['idImg'] = id;
 
     nuevoHover.appendChild(botonDesc);
     botonDesc.classList.add("boton-descarga");
 
     nuevoHover.appendChild(botonExpan);
     botonExpan.classList.add("boton-expandir");
-    botonExpan.dataset['urlImg'] = url;
+    botonExpan.dataset['idImg'] = id;
     
 }
 
-//HAY QUE AGREGAR #myBtn a botonExpan para que funcione el modal
 pedirGIFO();
 
 
@@ -210,7 +210,7 @@ function addUlSuggestions(sugerencia) {
 
 // Trending endpoint
 
-function pedirInfo() {
+function pedirTrendingSearchTerms() {
     async function getInfo() {
         let url = `https://api.giphy.com/v1/trending/searches?api_key=${apiKeyGIPHY}`;
         const resp = await fetch(url);
@@ -223,10 +223,28 @@ function pedirInfo() {
         console.log(response);
         palabrasSugeridas = document.getElementById("sugerencia");
     })
+
+    let listaTrending = [];
+    let listaUrl = [];
+
+    for (i in response.data) {
+        listaTrending.add(i);
+        i = i.replace(" ", "-");
+        listaUrl.add("https://giphy.com/search/" + i); //DIRECCIONA A LINKD E CADA ELEMENTO
+    }
+
+
+    for (var i = 0; i <= listaTrending.length(); i++) {
+        palabrasSugeridas.setAttribute("href", listaUrl[i])
+        //ASIGNAR A PALABRAS SUGERIDASD UN VALOr
+        //cambair ID por class
+        //sumar a
+        
+        if(i = 5) { 
+            break; 
+        }
+    }
 }
-
-
-//TERMINAR --->
 
 
 
@@ -288,23 +306,6 @@ function registrarBotonFav() {
     }
 }
 
-function agregarFavorito(urlImg) {
-    var listaImg = cargarFavoritos();
-    listaImg.push(urlImg);
-    guardarFavoritos(listaImg);
-}
 
-function cargarFavoritos() {
-    var listaImg = window.localStorage.getItem('favoritos');
-    if (listaImg == null) {
-        listaImg = [];
-    } else {
-        listaImg = JSON.parse(listaImg);
-    }
-    return listaImg;
-}
 
-function guardarFavoritos(lista) {
-    window.localStorage.setItem('favoritos', JSON.stringify(lista));
-}
 

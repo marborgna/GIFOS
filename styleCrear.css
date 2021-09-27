@@ -206,22 +206,46 @@ body header #navbar #toggle {
 }
 
 body .main {
-  padding-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1%;
   display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body .main .camara .camara-uno {
+body .main .central {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
+}
+
+body .main .central .camara {
+  padding-top: 5%;
+}
+
+body .main .central .camara .camara-uno {
   height: 163px;
   width: 123px;
 }
 
-body .main .camara .camara-luz {
+body .main .central .camara .camara-luz {
   width: 91px;
-  height: 30px;
+  height: 151px;
   margin-left: -4px;
 }
 
-body .main .cuadro {
+body .main .central .cuadro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,15 +261,22 @@ body .main .cuadro {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
-body .main .cuadro #borde-sup-izq {
+body .main .central .cuadro .superior {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-self: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .main .central .cuadro .superior #borde-sup-izq {
+  justify-items: flex-start;
   width: 25px;
   height: 27px;
   border-top: 1px solid;
@@ -253,7 +284,7 @@ body .main .cuadro #borde-sup-izq {
   border-color: #50E3C2;
 }
 
-body .main .cuadro #borde-sup-der {
+body .main .central .cuadro .superior #borde-sup-der {
   width: 25px;
   height: 27px;
   border-top: 1px solid;
@@ -261,20 +292,29 @@ body .main .cuadro #borde-sup-der {
   border-color: #50E3C2;
 }
 
-body .main .cuadro h2 {
+body .main .central .cuadro h2 {
   font-family: 'Montserrat', sans-serif;
   color: #572EE5;
 }
 
-body .main .cuadro h2 span {
+body .main .central .cuadro h2 span {
   color: #50E3C2;
 }
 
-body .main .cuadro p {
+body .main .central .cuadro p {
   font-family: 'Roboto', sans-serif;
 }
 
-body .main .cuadro #borde-inf-izq {
+body .main .central .cuadro .inferior {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .main .central .cuadro .inferior #borde-inf-izq {
   width: 25px;
   height: 27px;
   border-bottom: 1px solid;
@@ -282,7 +322,7 @@ body .main .cuadro #borde-inf-izq {
   border-color: #50E3C2;
 }
 
-body .main .cuadro #borde-inf-der {
+body .main .central .cuadro .inferior #borde-inf-der {
   width: 25px;
   height: 27px;
   border-bottom: 1px solid;
@@ -290,39 +330,45 @@ body .main .cuadro #borde-inf-der {
   border-color: #50E3C2;
 }
 
-body .main .botones-numeros {
+body .main .central .botones-numeros {
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
-body .main .botones-numeros input {
+body .main .central .botones-numeros div {
   border: 1px solid;
   border-color: #572EE5;
+  font-family: 'Roboto-Medium', sans-serif;
+  color: #572EE5;
   border-radius: 70%;
   text-align: center;
   height: 32px;
   width: 32px;
 }
 
-body .main .botones-numeros input ::-webkit-input-placeholder {
+body .main .central .botones-numeros div ::-webkit-input-placeholder {
   color: #572EE5;
 }
 
-body .main .botones-numeros input :-ms-input-placeholder {
+body .main .central .botones-numeros div :-ms-input-placeholder {
   color: #572EE5;
 }
 
-body .main .botones-numeros input ::-ms-input-placeholder {
+body .main .central .botones-numeros div ::-ms-input-placeholder {
   color: #572EE5;
 }
 
-body .main .botones-numeros input ::placeholder {
+body .main .central .botones-numeros div ::placeholder {
   color: #572EE5;
 }
 
 body .main .separador {
+  width: 795.9px;
+  height: 6.9px;
   color: #572EE5;
 }
 
@@ -330,8 +376,9 @@ body .main .comenzar {
   height: 50px;
   width: 127px;
   color: #572EE5;
+  font-family: 'Montserrat-Bold', sans-serif;
   border: 1px solid;
-  border-radius: 25%;
+  border-radius: 25px;
   text-align: center;
 }
 

@@ -121,3 +121,4 @@ function traerFavorito(urlImg) {
     var listaImg = []
     // TODO
 }
+

@@ -178,103 +178,130 @@ body {
     }
 
     .main {
-        //padding-left: 15%;
-        padding-top: 3%;
+        display: flex;
+        padding-top: 1%;
         display: block;
-        
+        align-items: center; 
+        justify-content: center;
 
-        .camara {
-            
-            .camara-uno {
-                height: 163px;
-                width: 123px;
-            }
-            .camara-luz {
-                width: 91px;
-                height: 30px;
-                margin-left: -4px;
-            }
-        }
-
-        .cuadro {
+        .central {
             display: flex;
-            border: 1px solid;
-            border-color: $main-color-blue;
-            height: 390px;
-            width: 688px;
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-            justify-content: space-around;
-
-            #borde-sup-izq {  
-                display: flex;
-                justify-self: flex-start;
-                width: 25px;
-                height: 27px;
-                border-top: 1px solid;
-                border-left: 1px solid;
-                border-color: $main-color-green;
-            }
-
-            #borde-sup-der {
-                width: 25px;
-                height: 27px;
-                border-top: 1px solid;
-                border-right: 1px solid;
-                border-color: $main-color-green;
-            }
-
-            h2 {
-                font-family: 'Montserrat', sans-serif;
-                color: $main-color-blue;
-                //padding-top: 15%;
-                span {
-                    color: $main-color-green;
+            justify-content: center;
+            align-content: baseline;
+            .camara {
+                padding-top: 5%;
+                .camara-uno {
+                    height: 163px;
+                    width: 123px;
+                }
+                .camara-luz {
+                    width: 91px;
+                    height: 151px;
+                    margin-left: -4px;
                 }
             }
-
-            p {
-                font-family: 'Roboto', sans-serif;
-            } 
-
-            #borde-inf-izq {
-                width: 25px;
-                height: 27px;
-                border-bottom: 1px solid;
-                border-left: 1px solid;
-                border-color: $main-color-green;
-            }
-
-            #borde-inf-der {
-                width: 25px;
-                height: 27px;
-                border-bottom: 1px solid;
-                border-right: 1px solid;
-                border-color: $main-color-green;
-            }
-        } 
-
-        .botones-numeros {
-            text-align: center;
-            align-items: center;
-            input {
+            .cuadro {
+                display: flex;
+                //padding: 1%;
                 border: 1px solid;
                 border-color: $main-color-blue;
-                border-radius: 70%;
+                height: 390px;
+                width: 688px;
+                flex-direction: column;
                 text-align: center;
-                height: 32px;
-                width: 32px;
-                ::placeholder {
+                align-items: center;
+                align-items: baseline;
+
+                .superior {
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    #borde-sup-izq {  
+                    
+                        justify-items: flex-start;
+                        width: 25px;
+                        height: 27px;
+                        border-top: 1px solid;
+                        border-left: 1px solid;
+                        border-color: $main-color-green;
+                    }
+        
+                    #borde-sup-der {
+                        
+                        width: 25px;
+                        height: 27px;
+                        border-top: 1px solid;
+                        border-right: 1px solid;
+                        border-color: $main-color-green;
+                    }
+                }
+    
+                
+    
+                h2 {
+                    font-family: 'Montserrat', sans-serif;
                     color: $main-color-blue;
+                    //padding-top: 8%;
+                    span {
+                        color: $main-color-green;
+                    }
+                }
+    
+                p {
+                    font-family: 'Roboto', sans-serif;
+                } 
+
+                .inferior {
+                    display: flex;
+                    justify-content: space-between;
+                    //padding-top: 18%;
+                    
+                    #borde-inf-izq {
+                        width: 25px;
+                        height: 27px;
+                        border-bottom: 1px solid;
+                        border-left: 1px solid;
+                        border-color: $main-color-green;
+                    }
+        
+                    #borde-inf-der {
+                        
+                        width: 25px;
+                        height: 27px;
+                        border-bottom: 1px solid;
+                        border-right: 1px solid;
+                        border-color: $main-color-green;
+                    }
+                }
+    
+                
+            } 
+    
+            .botones-numeros {
+                text-align: center;
+                align-self: center;
+                align-content: center;
+                div {
+                    border: 1px solid;
+                    border-color: $main-color-blue;
+                    font-family: 'Roboto-Medium', sans-serif;
+                    color: $main-color-blue;
+                    border-radius: 70%;
+                    text-align: center;
+                    height: 32px;
+                    width: 32px;
+                    ::placeholder {
+                        color: $main-color-blue;
+                    }
                 }
             }
         }
+        
 
         .separador {
-            //width: 60%;
-            //min-width: 795.9px;
-            //height: 6.9px;
+            
+            width: 795.9px;
+            height: 6.9px;
             color: $main-color-blue;
         }
 
@@ -282,9 +309,11 @@ body {
             height: 50px;
             width: 127px;
             color: $main-color-blue;
+            font-family: 'Montserrat-Bold', sans-serif;
             border: 1px solid;
-            border-radius: 25%;
+            border-radius: 25px;
             text-align: center;
+            
         }
     }
 
