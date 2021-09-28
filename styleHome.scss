@@ -327,13 +327,11 @@ body {
                 align-self: center;
             }
 
-            p {
+            a {
                 font-family: 'Montserrat', sans-serif;
                 color: $main-color-blue;
                 align-self: center;
-                br {
-                    display: none;
-                }
+                font-size: 25px;
                 
             }
 

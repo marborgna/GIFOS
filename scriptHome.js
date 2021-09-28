@@ -210,6 +210,7 @@ function addUlSuggestions(sugerencia) {
 
 // Trending endpoint
 
+
 function pedirTrendingSearchTerms() {
     async function getInfo() {
         let url = `https://api.giphy.com/v1/trending/searches?api_key=${apiKeyGIPHY}`;
@@ -218,34 +219,46 @@ function pedirTrendingSearchTerms() {
         return info;
     }
 
+    var response;
+    var listaTrending = [];
+    var listaUrl = [];
+    var palabrasSugeridas = document.getElementsByClassName("sugerencia");
+
     let info = getInfo();
     info.then(response => {
         console.log(response);
-        palabrasSugeridas = document.getElementById("sugerencia");
-    })
 
-    let listaTrending = [];
-    let listaUrl = [];
-
-    for (i in response.data) {
-        listaTrending.add(i);
-        i = i.replace(" ", "-");
-        listaUrl.add("https://giphy.com/search/" + i); //DIRECCIONA A LINKD E CADA ELEMENTO
-    }
-
-
-    for (var i = 0; i <= listaTrending.length(); i++) {
-        palabrasSugeridas.setAttribute("href", listaUrl[i])
-        //ASIGNAR A PALABRAS SUGERIDASD UN VALOr
-        //cambair ID por class
-        //sumar a
-        
-        if(i = 5) { 
-            break; 
+        for (var element in response.data) {
+            console.log(response.data[element]);
+            listaTrending.push(response.data[element]);
+            var elementCaptured = response.data[element].replaceAll(" ", "-");
+            listaUrl.push("https://giphy.com/search/" + elementCaptured); //DIRECCIONA A LINKD E CADA ELEMENTO
         }
-    }
+    
+        console.log(listaTrending.length);
+
+        for (var i = 0; i < listaTrending.length; i++) {
+            palabrasSugeridas[i].setAttribute("href", listaUrl[i]);
+            palabrasSugeridas[i].innerHTML = listaTrending[i];
+            console.log(i);
+            //ASIGNAR A PALABRAS SUGERIDASD UN VALOr
+            //cambair ID por class
+            //sumar a
+            
+            if(i == 5) { 
+                break; 
+            }
+        }
+
+    }).catch(error => {
+        console.log(error);
+    });
+   
+    
+    
 }
 
+pedirTrendingSearchTerms();
 
 
 
