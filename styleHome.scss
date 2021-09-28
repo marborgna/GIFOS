@@ -320,6 +320,7 @@ body {
             display: flex;
             flex-direction: column;
             align-content: center;
+            padding-bottom: 8%;
             
             h4 {
                 font-family: 'Montserrat', sans-serif;
@@ -327,20 +328,18 @@ body {
                 align-self: center;
             }
 
-            a {
-                font-family: 'Montserrat', sans-serif;
-                color: $main-color-blue;
+            .contenedor-sugerencias {
                 align-self: center;
-                font-size: 25px;
-                
+                a {
+                    font-family: 'Montserrat', sans-serif;
+                    color: $main-color-blue;
+                    font-size: 16px;
+                    text-decoration: none;
+                    display: inline-block;
+                }
             }
+            
 
-            .resultado-busqueda {
-                display: block;
-                width: 100%;
-                height: 73px;
-                
-            }
 
         }
 

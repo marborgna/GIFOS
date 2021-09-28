@@ -239,14 +239,15 @@ function pedirTrendingSearchTerms() {
 
         for (var i = 0; i < listaTrending.length; i++) {
             palabrasSugeridas[i].setAttribute("href", listaUrl[i]);
-            palabrasSugeridas[i].innerHTML = listaTrending[i];
-            console.log(i);
-            //ASIGNAR A PALABRAS SUGERIDASD UN VALOr
-            //cambair ID por class
-            //sumar a
             
-            if(i == 5) { 
+            console.log(i);
+            
+            if(i == 4) { 
+                palabrasSugeridas[i].innerHTML = listaTrending[i];
                 break; 
+
+            } else {
+                palabrasSugeridas[i].innerHTML = listaTrending[i] + ",";
             }
         }
 
