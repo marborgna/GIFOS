@@ -96,7 +96,7 @@ function insertarImagenSlider (url, id) {
     nuevoDiv.classList.add("slider-section");
 
     let botonFav = document.createElement("div");
-    let botonDesc = document.createElement("div");
+    let botonDesc = document.createElement("a");
     let botonExpan = document.createElement("div");
 
     nuevoHover.appendChild(botonFav);
@@ -105,6 +105,8 @@ function insertarImagenSlider (url, id) {
 
     nuevoHover.appendChild(botonDesc);
     botonDesc.classList.add("boton-descarga");
+    botonDesc.setAttribute("href", id + ".jpg"); 
+    botonDesc.setAttribute("download", id);
 
     nuevoHover.appendChild(botonExpan);
     botonExpan.classList.add("boton-expandir");
