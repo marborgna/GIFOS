@@ -210,66 +210,47 @@ body {
 
             .container-favoritos { 
                 display: grid;
-                grid-template-columns: 260px 29px 260px 29px 260px 29px 260px 29px;
-                grid-template-rows: 200px 35px 200px 35px 200px 35px;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-row-gap: 35px;
+                grid-column-gap: 29px;
                     .img-favorito {
                         width: 260px;
                         height: 200px;
-                        grid-row-start: 1;
-                        grid-row-end: 2;
                     }
             }
-            //SEGUIR CON GRID
 
-            .barra {
-                display: flex;                             
-                white-space: nowrap;
-                border: 2px solid;
-                width: 10%;
-                height: 15%;
-                border-color: $main-color-blue;
-                border-radius: 27px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 5%;
+
+            
+
+            .contenedor-ver-mas {
+                display: flex;
+                align-self: center;
+                margin-top: 4%;
+                margin-bottom: 4%;
                 
-                :focus {
-                    outline: none;
-                }
-
-                
-
-                input {
+                .ver-mas {
                     display: flex;
-                    text-align: center; 
-                    border: none;
-                    font-family: 'Montserrat-Bold', sans-serif;
-                    margin: none;
-                    width: 100%;
-                    height: 100%;
+                    height: 50px;
+                    width: 127px;
+                    color: $main-color-blue;
+                    font-family: 'Montserrat-bold', sans-serif;
+                    font-size: 13px;
+                    border: 1px solid;
+                    border-radius: 25px;
+                    text-align: center;
+                    justify-content: center;
                     align-items: center;
-                    border-radius: 27px;
-                    padding: 10%;
-                    ::placeholder{
-                        background-color: green;
-                        color: #572EE5;
-                        font-family: 'Montserrat-Bold', sans-serif;
-                    }
                     
                 }
-
-            }
-
-            .barra-prueba {
-                width: 127px;
-                height: 50px;
-                background-image: url('img/CTA-ver-mas.svg');
                 :hover {
-                    background-image: url('img/CTA-ver-mas-hover.svg');
+                    background-color: $main-color-blue;
+                    color: $main-color-white;
                 }
             }
 
             .vacio {
+                display: none;
                 text-align: center;
                 img {
                     height: 151px;

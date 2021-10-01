@@ -233,67 +233,59 @@ body .mis-GIFOS h3 {
   color: #572EE5;
 }
 
-body .mis-GIFOS .barra {
+body .mis-GIFOS .container-favoritos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-row-gap: 35px;
+  grid-column-gap: 29px;
+}
+
+body .mis-GIFOS .container-favoritos .img-favorito {
+  width: 260px;
+  height: 200px;
+}
+
+body .mis-GIFOS .contenedor-ver-mas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  white-space: nowrap;
-  border: 2px solid;
-  width: 10%;
-  height: 15%;
-  border-color: #572EE5;
-  border-radius: 27px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
 
-body .mis-GIFOS .barra :focus {
-  outline: none;
-}
-
-body .mis-GIFOS .barra input {
+body .mis-GIFOS .contenedor-ver-mas .ver-mas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: none;
-  font-family: 'Montserrat-Bold', sans-serif;
-  margin: none;
-  width: 100%;
-  height: 100%;
+  height: 50px;
+  width: 127px;
+  color: #572EE5;
+  font-family: 'Montserrat-bold', sans-serif;
+  font-size: 13px;
+  border: 1px solid;
+  border-radius: 25px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 27px;
-  padding: 10%;
-  text-align: center;
 }
 
-body .mis-GIFOS .barra input ::-webkit-input-placeholder {
-  background-color: green;
-  color: #572EE5;
-  font-family: 'Montserrat-Bold', sans-serif;
-}
-
-body .mis-GIFOS .barra input :-ms-input-placeholder {
-  background-color: green;
-  color: #572EE5;
-  font-family: 'Montserrat-Bold', sans-serif;
-}
-
-body .mis-GIFOS .barra input ::-ms-input-placeholder {
-  background-color: green;
-  color: #572EE5;
-  font-family: 'Montserrat-Bold', sans-serif;
-}
-
-body .mis-GIFOS .barra input ::placeholder {
-  background-color: green;
-  color: #572EE5;
-  font-family: 'Montserrat-Bold', sans-serif;
+body .mis-GIFOS .contenedor-ver-mas :hover {
+  background-color: #572EE5;
+  color: #ffffff;
 }
 
 body .mis-GIFOS .vacio {
+  display: none;
   text-align: center;
 }
 
