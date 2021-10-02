@@ -4,19 +4,33 @@ var imagenes = {};
 // LOCAL STORAGE
 
 function cargarFavoritos() {
-    var listaImg = window.localStorage.getItem('favoritos');
-    if (listaImg == null) {
-        listaImg = [];
+    var listIds = window.localStorage.getItem('favoritos');
+    if (listIds == null) {
+        listIds = [];
     } else {
-        listaImg = JSON.parse(listaImg);
+        listIds = JSON.parse(listIds);
     }
-    return listaImg;
+    return listIds;
 }
 
-function agregarFavorito(urlImg) {
-    var listaImg = cargarFavoritos();
-    listaImg.push(urlImg);
-    guardarFavoritos(listaImg);
+function esFavorito(idImg) {  
+    var listaIds = cargarFavoritos();
+    var estaEnFavoritos = listaIds.includes(idImg);
+    return estaEnFavoritos; 
+}
+    
+function agregarFavorito(idImg) {
+    var listaIds = cargarFavoritos();
+    if(!esFavorito(idImg)) {
+        listaIds.push(idImg);
+    }
+    guardarFavoritos(listaIds);
+}
+
+function removerFavorito(idImg) {
+    var listaIds = cargarFavoritos();
+    listaIds = listaIds.filter(f => f != idImg);
+    guardarFavoritos(listaIds);
 }
 
 function guardarFavoritos(lista) {
@@ -34,8 +48,14 @@ function registrarBotonFav() {
         var fav = botonFav[i];
         fav.addEventListener('click', function() {
             // <div data-urlImg='http://giphy.com/…'></div>
-            let valorURLImg = this.dataset['urlImg'];
-            agregarFavorito(valorURLImg);
+            let valorIDImg = this.dataset['idImg'];
+            if (esFavorito(valorIDImg)) {
+                removerFavorito(valorIDImg);
+                this.classList.remove('favoritos-active');
+            } else {
+                agregarFavorito(valorIDImg);
+                this.classList.add('favoritos-active');
+            }
         });
     }
 }
@@ -113,6 +133,9 @@ function insertarImagenSlider (url, id) {
     nuevoHover.appendChild(botonFav);
     botonFav.classList.add("boton-favorito");
     botonFav.dataset['idImg'] = id;
+    if(esFavorito(id)) {
+        botonFav.classList.add('favoritos-active');
+    }
 
     nuevoHover.appendChild(botonDesc);
     botonDesc.classList.add("boton-descarga");

@@ -417,6 +417,11 @@ body {
                                 &:hover {
                                     background-image: url('img/icon-fav-hover.svg');
                                 }
+                                &.favoritos-active {
+                                    background-image: url('img/icon-fav-active.svg');
+                                    width: 32px;
+                                    height: 32px;
+                                }
                             } 
 
                             .boton-descarga {

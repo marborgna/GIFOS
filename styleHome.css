@@ -496,6 +496,12 @@ body .main .gifos-section .container-slider .slider .slider-section .fondoHover 
   background-image: url("img/icon-fav-hover.svg");
 }
 
+body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-favorito.favoritos-active {
+  background-image: url("img/icon-fav-active.svg");
+  width: 32px;
+  height: 32px;
+}
+
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-descarga {
   margin: 2%;
   width: 32px;
