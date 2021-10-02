@@ -1,3 +1,18 @@
+// NAV sticky
+
+window.onscroll = function() {stickyNav()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function stickyNav() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
 
 var imagenes = {};
 
@@ -40,8 +55,8 @@ function guardarFavoritos(lista) {
 //let url = `https://api.giphy.com/v1/trending/searches?api_key=${apiKeyGIPHY}?gif_id=${bananan}`;
 
 
-function registrarBotonFav() {
-    botonFav = document.querySelectorAll(".boton-favorito");
+function registrarBotonFav(container) {
+    botonFav = container.querySelectorAll(".boton-favorito");
 
     for (var i = 0; i < botonFav.length; i++) {
         
@@ -98,12 +113,14 @@ function getInfoImgSlider() {
 
         inicioSlider();
 
-        registrarBotonFav();
-
+        var container = document.getElementsByClassName('container-slider')[0];
         var modal = document.getElementsByClassName('modalSlider')[0];
         modal.listaIds = listaIds;
         modal.posicion = 0;
-        registrarBotonExpandir(modal);
+
+        registrarBotonFav(container);
+        registrarBotonFav(modal);
+        registrarBotonExpandir(modal, container);
 
     }).catch(error => {
         console.log(error);
@@ -233,8 +250,8 @@ for (var i = 0; i < botonLeft.length; ++i) {
 
 
 
-function registrarBotonExpandir (modal) {
-    var botonExpandir = document.getElementsByClassName('boton-expandir');
+function registrarBotonExpandir (modal, container) {
+    var botonExpandir = container.getElementsByClassName('boton-expandir');
 
     for (var i = 0; i < botonExpandir.length; ++i) {
 
