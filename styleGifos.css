@@ -495,4 +495,94 @@ body .down-barra {
   width: 100%;
   height: 5px;
 }
+
+body .main-modal {
+  width: 100%;
+  height: 100%;
+  display: inline;
+}
+
+body .main-modal .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+}
+
+body .main-modal .modal .modal-content {
+  margin: 15%;
+  padding: 20px;
+  width: 80%;
+}
+
+body .main-modal .modal .modal-content .cerrar {
+  float: right;
+  color: #572EE5;
+  font-weight: bold;
+  width: 15.2px;
+  height: 15.2px;
+  text-decoration: none;
+}
+
+body .main-modal .modal .modal-content img {
+  height: 385px;
+  width: 695px;
+  text-align: center;
+}
+
+body .main-modal .modal .modal-content .botones .slider-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #F3F5F8;
+  top: 40%;
+  -webkit-transform: translate(-13%);
+          transform: translate(-13%);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+body .main-modal .modal .modal-content .botones .right {
+  background: url("img/button-slider-right.svg");
+  right: 10px;
+}
+
+body .main-modal .modal .modal-content .botones .right:hover {
+  background: url("img/button-slider-right-hover.svg");
+}
+
+body .main-modal .modal .modal-content .botones .left {
+  background: url("img/button-slider-left.svg");
+  left: 10px;
+}
+
+body .main-modal .modal .modal-content .botones .left:hover {
+  background: url("img/button-slider-left-hover.svg");
+}
+
+body .main-modal .modal .modal-content .barra-tareas #user {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+body .main-modal .modal .modal-content .barra-tareas #titulo-GIFO {
+  font-family: 'Roboto-black', sans-serif;
+  font-size: 16px;
+}
+
+body .main-modal .modal .modal-content .barra-tareas a img {
+  height: 32px;
+  width: 32px;
+}
+
+body .main-modal .modal .modal-content .barra-tareas a :hover {
+  background: url("img/icon-fav-hover.svg");
+}
 /*# sourceMappingURL=styleGifos.css.map */
