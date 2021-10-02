@@ -22,7 +22,7 @@ body header #navbar {
       align-content: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background: rgba(255, 255, 255, 0.5);
+  background: white;
   overflow: hidden;
 }
 
@@ -219,6 +219,81 @@ body header #navbar #toggle {
   display: none;
 }
 
+body .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-box-shadow: 0px 2px 4px 1px #9CAFC3;
+          box-shadow: 0px 2px 4px 1px #9CAFC3;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .sticky .barra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: right;
+  white-space: nowrap;
+  border: 2px solid;
+  width: 30%;
+  min-width: 334px;
+  height: 50px;
+  border-color: #572EE5;
+  border-radius: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+}
+
+body .sticky .barra :focus {
+  outline: none;
+}
+
+body .sticky .barra input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  font-family: 'Roboto-black', sans-serif;
+  background: url(img/icon-search.svg) no-repeat scroll 97%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: none;
+  width: 160%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 3%;
+}
+
+body .sticky .barra ul {
+  border: #572EE5;
+  border-radius: 27px;
+}
+
+body .sticky .barra ul li {
+  color: #9CAFC3;
+  text-decoration: none;
+  list-style: none;
+  border-color: #572EE5;
+  border-radius: 27px;
+  font-family: 'Roboto-black', sans-serif;
+}
+
+body .sticky .barra ul li img {
+  height: 15.8px;
+  width: 15.8px;
+  color: #9CAFC3;
+  -webkit-filter: grayscale(100%) brightness(0.8) opacity(35%);
+          filter: grayscale(100%) brightness(0.8) opacity(35%);
+}
+
 body .favoritos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -372,7 +447,6 @@ body .gifos-section .container-slider .slider .slider-section {
   display: -ms-grid;
   display: grid;
   height: 275px;
-  display: block;
   -o-object-fit: cover;
      object-fit: cover;
   margin-left: 7%;
@@ -384,12 +458,66 @@ body .gifos-section .container-slider .slider .slider-section {
 }
 
 body .gifos-section .container-slider .slider .slider-section .fondoHover {
-  background-color: #572EE5;
+  opacity: 0;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1 / 1 / 2 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .gifos-section .container-slider .slider .slider-section .fondoHover:hover {
+  background-color: rgba(87, 46, 229, 0.6);
+  opacity: 1;
+}
+
+body .gifos-section .container-slider .slider .slider-section .fondoHover .boton-favorito {
+  margin: 2%;
+  width: 32px;
+  height: 32px;
+  background-image: url("img/icon-fav.svg");
+}
+
+body .gifos-section .container-slider .slider .slider-section .fondoHover .boton-favorito:hover {
+  background-image: url("img/icon-fav-hover.svg");
+}
+
+body .gifos-section .container-slider .slider .slider-section .fondoHover .boton-favorito.favoritos-active {
+  background-image: url("img/icon-fav-active.svg");
+  width: 32px;
+  height: 32px;
+}
+
+body .gifos-section .container-slider .slider .slider-section .fondoHover .boton-descarga {
+  margin: 2%;
+  width: 32px;
+  height: 32px;
+  background-image: url("img/icon-download.svg");
+}
+
+body .gifos-section .container-slider .slider .slider-section .fondoHover .boton-descarga:hover {
+  background-image: url("img/icon-download-hover.svg");
+}
+
+body .gifos-section .container-slider .slider .slider-section .fondoHover .boton-expandir {
+  margin: 2%;
+  width: 32px;
+  height: 32px;
+  background-image: url("img/icon-max-normal.svg");
+}
+
+body .gifos-section .container-slider .slider .slider-section .fondoHover .boton-expandir:hover {
+  background-image: url("img/icon-max-hover.svg");
 }
 
 body .gifos-section .container-slider .slider .slider-section img {
@@ -545,7 +673,7 @@ body .main-modal .modal .modal-content img {
   text-align: center;
 }
 
-body .main-modal .modal .modal-content .botones .slider-btn {
+body .main-modal .modal .modal-content .botones .modal-btn {
   position: absolute;
   width: 40px;
   height: 40px;

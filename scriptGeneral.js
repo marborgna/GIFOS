@@ -196,12 +196,14 @@ function posicionarImgsSlider() {
 // MODAL
 
 
-var cerrar = document.getElementsByClassName('cerrar')[0];
-cerrar.onclick = function() {
-    var modal = this.closest(".modal");
-    modal.style.display = "none";
-    var stickyBar = document.getElementsByClassName('navbar')[0];
-    stickyBar.style.display = "inline";
+var cerrar = document.getElementsByClassName('cerrar');
+for (var i = 0; i < cerrar.length; ++i) {
+    cerrar[i].onclick = function() {
+        var modal = this.closest(".modal");
+        modal.style.display = "none";
+        var stickyBar = document.getElementsByClassName('navbar')[0];
+        stickyBar.style.display = "inline";
+    }
 }
 
 botonRight = document.getElementsByClassName('modal-btn right');
@@ -270,5 +272,13 @@ function mostrarImgSliderModal(modal, idImg) {
 
     if (imagenes[idImg].username == "") {
         usernameElem.textContent = "Usuario no encontrado";
+    }
+
+    let botonFav = modal.getElementsByClassName('boton-favorito')[0];
+    botonFav.dataset['idImg'] = idImg;
+    if(esFavorito(idImg)) {
+        botonFav.classList.add('favoritos-active');
+    } else {
+        botonFav.classList.remove('favoritos-active');
     }
 }
