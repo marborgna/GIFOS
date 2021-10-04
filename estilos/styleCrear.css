@@ -293,6 +293,18 @@ body .main .central .cuadro .superior #borde-sup-der {
   border-color: #50E3C2;
 }
 
+body .main .central .cuadro .main-cuadro .img-carga {
+  display: none;
+  width: 22px;
+  height: 22px;
+}
+
+body .main .central .cuadro .main-cuadro .img-listo {
+  display: none;
+  width: 22px;
+  height: 22px;
+}
+
 body .main .central .cuadro .main-cuadro h2 {
   font-family: 'Montserrat', sans-serif;
   color: #572EE5;
@@ -398,18 +410,25 @@ body .main .adicional .repetir {
   cursor: pointer;
 }
 
-body .main .adicional .subrayado {
-  display: none;
+body .main .adicional .repetir .subrayado {
   height: 1px;
   width: 122.9px;
   color: #50E3C2;
 }
 
 body .main .adicional .contador {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   display: none;
   color: #572EE5;
   font-family: 'Montserrat-Bold', sans-serif;
   font-size: 15px;
+  text-align: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: 25%;
 }
 
 body .main .separador {

@@ -13,6 +13,8 @@ var botonFinalizar = document.getElementsByClassName('finalizar')[0];
 var botonSubir = document.getElementsByClassName('subir')[0];
 var botonRepetir = document.getElementsByClassName('repetir')[0];
 var contador = document.getElementsByClassName('contador')[0];
+var imgCarga = document.getElementsByClassName('img-carga')[0];
+var imgListo = document.getElementsByClassName('img-listo')[0];
 
 var stream;
 var recorder;
@@ -87,7 +89,12 @@ botonFinalizar.addEventListener('click', () => {
 botonSubir.addEventListener('click', () => {
    botonSubir.style.display = "none";
    uploadGif();
-   //estilod e cuando esta cargando
+   tres.classList.add("seleccionado");
+   texto.style.display = "flex";
+   texto.textContent = "Estamos subiendo tu GIFO";
+   imgCarga.style.display = "flex";
+   cuadro.style.background-color: #572EE5;
+   cuadro.style.opacity = 0.6;
 })
 
 function uploadGif() {
@@ -107,6 +114,11 @@ function uploadGif() {
             let idImg = response.data.id;
             agregarGifs(idImg); 
 
+            cuadro.style.background-color: #572EE5;
+            cuadro.style.opacity = 0.6;
+            imgListo.style.display = "flex";
+            imgCarga.style.display = "none";
+            texto.textContent = "GIFO subido con éxito";
             //TERMINO DE SUBIR
         }
     }
@@ -135,7 +147,6 @@ function detenerContador() {
 }
 
 function avanzarContador() {
-   //avanza por segundo
    segundosContador++;
    let segs = (segundosContador % 60).toString();
    let mins = (Math.floor(segundosContador / 60) % 60).toString();

@@ -237,10 +237,23 @@ body {
                         border-top: 1px solid;
                         border-right: 1px solid;
                         border-color: $main-color-green;
+                        
                     }
                 }
 
                 .main-cuadro {
+                    .img-carga {
+                        display: none;
+                        width: 22px;
+                        height: 22px;
+                    }
+
+                    .img-listo {
+                        display: none;
+                        width: 22px;
+                        height: 22px;
+                    }
+
                     h2 {
                         font-family: 'Montserrat', sans-serif;
                         color: $main-color-blue;
@@ -295,6 +308,7 @@ body {
             justify-content: flex-end;
             margin-right: 400px; //A SOLUCIONAR
             margin-top: -20px;
+            
             img {
                 width: 142px;
                 height: 89px;
@@ -327,6 +341,7 @@ body {
                 background-color: $main-color-blue;
                 color: $main-color-white;
             }
+
         }
 
         .adicional {
@@ -343,12 +358,15 @@ body {
                     color: $main-color-green;
                 }
             }   
-
             .contador {
+                display: flex;
                 display: none;
                 color: $main-color-blue;
                 font-family: 'Montserrat-Bold', sans-serif;
                 font-size: 15px;
+                text-align: center;
+                justify-content: flex-end;
+                margin-left: 25%;
             }
         }
 
