@@ -136,8 +136,11 @@ function pedirTrendingSearchTerms() {
 
 pedirTrendingSearchTerms();
 
+// SLIDER
+getInfoImgSlider();
 
-
+// MODAL 
+initModal()
 
 
 

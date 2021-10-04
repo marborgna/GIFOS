@@ -3,6 +3,7 @@ $main-color-blue: #572EE5;
 $main-color-green: #50E3C2;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
+
 body {
     margin: 0;
     background-color: $main-color-white;
@@ -89,7 +90,7 @@ body {
                             display: flex;
                             border: none;
                             font-family: 'Roboto-black', sans-serif;
-                            background: url(img/icon-search.svg) no-repeat scroll 97%;   
+                            background: url('/img/icon-search.svg') no-repeat scroll 97%;   
                             justify-content: space-around;  
                             margin: none;
                             width: 160%;
@@ -147,6 +148,22 @@ body {
                         .separador {
                             display: none;
                         } 
+                        
+                        a {
+                            text-decoration: none;
+                            color: $main-color-blue;
+
+                            .boton-mas {
+                                height: 54px;
+                                width: 54px;
+                                background-image: url('/img/button-crear-gifo.svg');
+                            
+                                &:hover {
+                                    
+                                    background-image: url('/img/CTA-crear-gifo-hover.svg');
+                                }
+                            }
+                        }
 
                         li:hover {
                             .separador{
@@ -156,11 +173,6 @@ body {
                                 height: 1px;
                             }
                         }
-                        
-                        a {
-                            text-decoration: none;
-                            color: $main-color-blue;
-                        }
 
                         .marcado {
                             color: #9CAFC3;
@@ -169,7 +181,7 @@ body {
                         #last-button {
                             
                             &:hover {
-                                background: url('img/CTA-crear-gifo-hover.svg');
+                                background: url('/img/CTA-crear-gifo-hover.svg');
                             }
                         }                
                     }
@@ -211,7 +223,7 @@ body {
                 display: flex;
                 border: none;
                 font-family: 'Roboto-black', sans-serif;
-                background: url(img/icon-search.svg) no-repeat scroll 97%;   
+                background: url('/img/icon-search.svg') no-repeat scroll 97%;   
                 justify-content: space-around;  
                 margin: none;
                 width: 160%;
@@ -244,80 +256,153 @@ body {
 
         }
     }
-
-    .mis-GIFOS {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        img {
-            height: 22px;
-            width: 22px;
-        }
-
-        h3 {
-            font-size: 25px;
-            font-family: 'Montserrat-Bold', sans-serif;
-            color: $main-color-blue;
-        }
-
-        .container-favoritos { 
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-row-gap: 35px;
-            grid-column-gap: 29px;
-                .img-favorito {
-                    width: 100%;
-                    height: 100%;
-                    img {
-                        width: 260px;
-                        height: 260px;
-                        min-width: 260px;
-                    }
-                }
-        }
-
-        .contenedor-ver-mas {
+    
+    .favoritos {
             display: flex;
-            align-self: center;
-            margin-top: 4%;
-            margin-bottom: 4%;
-            
-            .ver-mas {
-                display: flex;
-                height: 50px;
-                width: 127px;
-                color: $main-color-blue;
-                font-family: 'Montserrat-bold', sans-serif;
-                font-size: 13px;
-                border: 1px solid;
-                border-radius: 25px;
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-                
-            }
-            :hover {
-                background-color: $main-color-blue;
-                color: $main-color-white;
-            }
-        }
-
-        .vacio {
-            display: none;
-            text-align: center;
-            img {
-                height: 151px;
-                width: 150px;
+            flex-direction: column;
+            align-items: center;
+            .corazon {
+                height: 21px;
+                width: 28px;
             }
 
-            p {
-                color: $main-color-green;
+            h3 {
                 font-family: 'Montserrat-Bold', sans-serif;
-                font-size: 22px;
+                color: $main-color-blue; 
+                font-size: 25px;
             }
-        }
+
+            .container-favoritos { 
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                /* grid-template-rows: 1fr 1fr 1fr; */
+                grid-row-gap: 35px;
+                grid-column-gap: 29px;
+                    .img-favorito {
+                        width: 260px;
+                        height: 200px;
+                        img {
+                            width: 260px;
+                            height: 200px;
+                        }
+                        align-content: space-around;
+                        display: grid;
+                        height: 275px;
+                        object-fit: cover;
+                        margin-left: 7%;
+                        transition: margin 700ms;
+                        flex: 0 0 257px;  
+                        
+                        
+                        .fondoHover {
+                            opacity: 0;
+                            grid-area: 1 / 1 / 2 / 2;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-end;
+
+                            &:hover {
+                                background-color: rgba(87, 46, 229, 0.6);
+                                opacity: 1;
+                        
+                            }
+                            
+                            
+                            .boton-favorito{
+                                margin: 2%;
+                                width: 32px;
+                                height: 32px;
+                                background-image: url('/img/icon-fav.svg');
+
+                                &:hover {
+                                    background-image: url('/img/icon-fav-hover.svg');
+                                }
+                                &.favoritos-active {
+                                    background-image: url('/img/icon-fav-active.svg');
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            } 
+
+                            .boton-descarga {
+                                margin: 2%;
+                                width: 32px;
+                                height: 32px;
+                                background-image: url('/img/icon-download.svg');
+
+                                &:hover {
+                                    background-image: url('img/icon-download-hover.svg');
+                                }
+                            }
+                        
+                            .boton-expandir {
+                                margin: 2%;
+                                width: 32px;
+                                height: 32px;
+                                background-image: url('/img/icon-max-normal.svg');
+
+                                &:hover {
+                                    background-image: url('/img/icon-max-hover.svg');
+                                }
+                            }
+
+                        }                                   
+
+                        img {
+                            object-fit: cover;
+                            width: 275px;
+                            height: 275px;
+                            grid-area: 1 / 1 / 2 / 2;
+                              
+                        }
+                    }
+                    
+            }
+
+
+            
+
+            .contenedor-ver-mas {
+                display: flex;
+                align-self: center;
+                margin-top: 4%;
+                margin-bottom: 4%;
+                
+                .ver-mas {
+                    display: flex;
+                    height: 50px;
+                    width: 127px;
+                    color: $main-color-blue;
+                    font-family: 'Montserrat-bold', sans-serif;
+                    font-size: 13px;
+                    border: 1px solid;
+                    border-radius: 25px;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+                :hover {
+                    background-color: $main-color-blue;
+                    color: $main-color-white;
+                }
+            }
+
+            .vacio {
+                display: none;
+                text-align: center;
+                img {
+                    height: 151px;
+                    width: 150px;
+                }
+
+                p {
+                    color: $main-color-green;
+                    font-family: 'Montserrat-Bold', sans-serif;
+                    font-size: 22px;
+                }
+            }
+            
     }
 
     .gifos-section{
@@ -389,13 +474,13 @@ body {
                             margin: 2%;
                             width: 32px;
                             height: 32px;
-                            background-image: url('img/icon-fav.svg');
+                            background-image: url('/img/icon-fav.svg');
 
                             &:hover {
-                                background-image: url('img/icon-fav-hover.svg');
+                                background-image: url('/img/icon-fav-hover.svg');
                             }
                             &.favoritos-active {
-                                background-image: url('img/icon-fav-active.svg');
+                                background-image: url('/img/icon-fav-active.svg');
                                 width: 32px;
                                 height: 32px;
                             }
@@ -405,10 +490,10 @@ body {
                             margin: 2%;
                             width: 32px;
                             height: 32px;
-                            background-image: url('img/icon-download.svg');
+                            background-image: url('/img/icon-download.svg');
 
                             &:hover {
-                                background-image: url('img/icon-download-hover.svg');
+                                background-image: url('/img/icon-download-hover.svg');
                             }
                         }
                     
@@ -416,10 +501,10 @@ body {
                             margin: 2%;
                             width: 32px;
                             height: 32px;
-                            background-image: url('img/icon-max-normal.svg');
+                            background-image: url('/img/icon-max-normal.svg');
 
                             &:hover {
-                                background-image: url('img/icon-max-hover.svg');
+                                background-image: url('/img/icon-max-hover.svg');
                             }
                         }
 
@@ -452,18 +537,18 @@ body {
             }
 
             .right {
-                background: url('img/button-slider-right.svg');
+                background: url('/img/button-slider-right.svg');
                 right: 10px;
                 &:hover {
-                    background: url('img/button-slider-right-hover.svg');
+                    background: url('/img/button-slider-right-hover.svg');
                 }
             }
     
             .left {
-                background: url('img/button-slider-left.svg');
+                background: url('/img/button-slider-left.svg');
                 left: 10px;
                 &:hover {
-                    background: url('img/button-slider-left-hover.svg');
+                    background: url('/img/button-slider-left-hover.svg');
                 }
             }
 
@@ -517,7 +602,7 @@ body {
         
         
     }
-
+    
     .down-barra {
         display: block;
         background-color: $main-color-blue;
@@ -582,18 +667,18 @@ body {
                     }
     
                     .right {
-                        background: url('img/button-slider-right.svg');
+                        background: url('/img/button-slider-right.svg');
                         right: 10px;
                         &:hover {
-                            background: url('img/button-slider-right-hover.svg');
+                            background: url('/img/button-slider-right-hover.svg');
                         }
                     }
             
                     .left {
-                        background: url('img/button-slider-left.svg');
+                        background: url('/img/button-slider-left.svg');
                         left: 10px;
                         &:hover {
-                            background: url('img/button-slider-left-hover.svg');
+                            background: url('/img/button-slider-left-hover.svg');
                         }
                     }
                 }
@@ -616,7 +701,7 @@ body {
                             
                         }
                         :hover {
-                            background: url('img/icon-fav-hover.svg');
+                            background: url('/img/icon-fav-hover.svg');
                             
                         }
                     }

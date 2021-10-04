@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleCrear.css">
+    <link rel="stylesheet" href="estilos/styleCrear.css"/>
     <script src="https://kit.fontawesome.com/b05626f699.js" crossorigin="anonymous"></script>
     <title>GIFOS</title>
 </head>
@@ -43,9 +43,10 @@
                     <div id="borde-sup-izq"></div>
                     <div id="borde-sup-der"></div>
                 </div>
-                <div>
-                    <h2>Aquí podrás <br> crear tus propios <span>GIFOS</span></h2>
-                    <p>¡Crea tu GIFO en sólo 3 pasos! <br> (sólo necesitas una cámara para grabar un video) </p>
+                <div class="main-cuadro">
+                    <h2 id="titulo">Aquí podrás <br> crear tus propios <span>GIFOS</span></h2>
+                    <p id="texto">¡Crea tu GIFO en sólo 3 pasos! <br> (sólo necesitas una cámara para grabar un video) </p>
+                    <video id="video"></video>
                 </div>
                 <div class="inferior">
                     <div id="borde-inf-izq"></div>
@@ -54,16 +55,27 @@
             </div>
         </div>
         <div class="contenedor-img-pelicula">
-            <img src="img/pelicula.svg" alt="pelicula">
+            <img src="img/pelicula.svg" alt="pelicula"/>
         </div>
         <div class="botones-numeros">
-            <div class="numeros">1</div>
-            <div class="numeros">2</div>
-            <div class="numeros">3</div>
+            <div class="numeros" id="uno">1</div>
+            <div class="numeros" id="dos">2</div>
+            <div class="numeros" id="tres">3</div>
         </div>  
+        <div class="adicional">
+            <div class="repetir">
+                <div >REPETIR CAPTURA</div>
+                <div class="subrayado"></div>
+            </div>
+            <div class="contador"></div>
+        </div>
         <div class="separador"></div>
         <div class="contenedor-comenzar">
-            <div class="comenzar">COMENZAR</div>
+            <div class="comenzar boton">COMENZAR</div>
+            <div class="grabar boton">GRABAR</div>
+            <div class="finalizar boton">FINALIZAR</div>
+            <div class="subir boton">SUBIR GIFO</div>
+
         </div>
         
     </section>
@@ -77,9 +89,13 @@
             </ul>
         </div>        
         <div class="footerB">
-            <h2>© GIFOS 2020 All Rights Reserved.</h2>
+            <h2>© GIFOS 2021 All Rights Reserved.</h2>
         </div>
     </footer>
     <div class="down-barra"></div>
+
+    <script src="scriptGeneral.js"></script>   
+    <script src="scriptCrear.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>   
 </body>
 </html>

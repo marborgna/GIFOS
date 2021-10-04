@@ -6,20 +6,22 @@ var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
 function stickyNav() {
-  if (window.pageYOffset > sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
+    var navbar = document.getElementById("navbar");
+    if (window.pageYOffset > sticky) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
 }
 
 
 var imagenes = {};
 
 // LOCAL STORAGE
+//FAVORITOS
 
 function cargarFavoritos() {
-    var listIds = window.localStorage.getItem('favoritos');
+    let listIds = window.localStorage.getItem('favoritos');
     if (listIds == null) {
         listIds = [];
     } else {
@@ -29,13 +31,13 @@ function cargarFavoritos() {
 }
 
 function esFavorito(idImg) {  
-    var listaIds = cargarFavoritos();
-    var estaEnFavoritos = listaIds.includes(idImg);
+    let listaIds = cargarFavoritos();
+    let estaEnFavoritos = listaIds.includes(idImg);
     return estaEnFavoritos; 
 }
     
 function agregarFavorito(idImg) {
-    var listaIds = cargarFavoritos();
+    let listaIds = cargarFavoritos();
     if(!esFavorito(idImg)) {
         listaIds.push(idImg);
     }
@@ -43,7 +45,7 @@ function agregarFavorito(idImg) {
 }
 
 function removerFavorito(idImg) {
-    var listaIds = cargarFavoritos();
+    let listaIds = cargarFavoritos();
     listaIds = listaIds.filter(f => f != idImg);
     guardarFavoritos(listaIds);
 }
@@ -52,7 +54,42 @@ function guardarFavoritos(lista) {
     window.localStorage.setItem('favoritos', JSON.stringify(lista));
 }
 
-//let url = `https://api.giphy.com/v1/trending/searches?api_key=${apiKeyGIPHY}?gif_id=${bananan}`;
+// MIS GIFS
+
+function cargarGifs() {
+    let listIds = window.localStorage.getItem('misGifs');
+    if (listIds == null) {
+        listIds = [];
+    } else {
+        listIds = JSON.parse(listIds);
+    }
+    return listIds;
+}
+
+function esGifs(idImg) {  
+    let listaIds = cargarGifs();
+    let estaEnGifs = listaIds.includes(idImg);
+    return estaEnGifs; 
+}
+    
+function agregarGifs(idImg) {
+    let listaIds = cargarGifs();
+    if(!esGifs(idImg)) {
+        listaIds.push(idImg);
+    }
+    guardarFavoritos(listaIds);
+}
+
+function removerGifs(idImg) {
+    let listaIds = cargarGifs();
+    listaIds = listaIds.filter(f => f != idImg);
+    guardarGifs(listaIds);
+}
+
+function guardarGifs(lista) {
+    window.localStorage.setItem('misGifs', JSON.stringify(lista));
+}
+
 
 
 function registrarBotonFav(container) {
@@ -166,7 +203,7 @@ function insertarImagenSlider (url, id) {
     
 }
 
-getInfoImgSlider();
+
 
 
 
@@ -212,43 +249,42 @@ function posicionarImgsSlider() {
 
 // MODAL
 
-
-var cerrar = document.getElementsByClassName('cerrar');
-for (var i = 0; i < cerrar.length; ++i) {
-    cerrar[i].onclick = function() {
-        var modal = this.closest(".modal");
-        modal.style.display = "none";
-        var stickyBar = document.getElementsByClassName('navbar')[0];
-        stickyBar.style.display = "inline";
+function initModal() {
+    var cerrar = document.getElementsByClassName('cerrar');
+    for (var i = 0; i < cerrar.length; ++i) {
+        cerrar[i].onclick = function() {
+            var modal = this.closest(".modal");
+            modal.style.display = "none";
+            var stickyBar = document.getElementsByClassName('navbar')[0];
+            stickyBar.style.display = "inline";
+        }
     }
-}
-
-botonRight = document.getElementsByClassName('modal-btn right');
-botonLeft = document.getElementsByClassName('modal-btn left');
-
-for (var i = 0; i < botonRight.length; ++i) {
-    botonRight[i].onclick = function() {
-        var modal = this.closest(".modal");
-        if (modal.posicion < modal.listaIds.length-1) {
-            modal.posicion++;
-            let idImg = modal.listaIds[modal.posicion];
-            mostrarImgSliderModal(modal, idImg);
+    
+    botonRight = document.getElementsByClassName('modal-btn right');
+    botonLeft = document.getElementsByClassName('modal-btn left');
+    
+    for (var i = 0; i < botonRight.length; ++i) {
+        botonRight[i].onclick = function() {
+            var modal = this.closest(".modal");
+            if (modal.posicion < modal.listaIds.length-1) {
+                modal.posicion++;
+                let idImg = modal.listaIds[modal.posicion];
+                mostrarImgSliderModal(modal, idImg);
+            }
+        }
+    }
+    
+    for (var i = 0; i < botonLeft.length; ++i) {
+        botonLeft[i].onclick = function() {
+            var modal = this.closest(".modal");
+            if (modal.posicion > 0) {
+                modal.posicion--;
+                let idImg = modal.listaIds[modal.posicion];
+                mostrarImgSliderModal(modal, idImg);
+            }
         }
     }
 }
-
-for (var i = 0; i < botonLeft.length; ++i) {
-    botonLeft[i].onclick = function() {
-        var modal = this.closest(".modal");
-        if (modal.posicion > 0) {
-            modal.posicion--;
-            let idImg = modal.listaIds[modal.posicion];
-            mostrarImgSliderModal(modal, idImg);
-        }
-    }
-}
-
-
 
 function registrarBotonExpandir (modal, container) {
     var botonExpandir = container.getElementsByClassName('boton-expandir');

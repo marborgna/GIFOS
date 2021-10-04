@@ -1,10 +1,27 @@
 // LOCAL STORAGE
 
+var favoritosTraidos = 0;
+var verMas = document.getElementsByClassName("ver-mas")[0];
+var contenidoVacio = document.getElementsByClassName("vacio")[0];
+
+function checkearSiHayContenido() {
+    if (cargarFavoritos().length == 0) {
+        contenidoVacio.style.display = "flex"
+        verMas.style.display = "none";
+    } else {
+        traerFavoritos();
+    }
+}
+
 function traerFavoritos(urlImg) {
 
     async function getFavs() {
         var listaIds = cargarFavoritos();
-        // TODO: Pedir a lo sumo 12
+        listaIds.slice(favoritosTraidos, favoritosTraidos+12);
+        favoritosTraidos += 12;
+        if(favoritosTraidos >= listaIds.length) {
+            verMas.style.display = "none";
+        }
         let ids = listaIds.join();
         let url = `https://api.giphy.com/v1/gifs?api_key=${apiKeyGIPHY}&ids=${ids}`;
         const resp = await fetch(url);
@@ -48,8 +65,6 @@ function traerFavoritos(urlImg) {
     });
 }
 
-traerFavoritos();
-
 function insertarImagenListaFavs(url, id) {
     let nuevoDiv = document.createElement("div");
     let nuevoHover = document.createElement("div");
@@ -86,3 +101,16 @@ function insertarImagenListaFavs(url, id) {
     botonExpan.dataset['idImg'] = id;
     botonExpan.dataset['urlImg'] = url;
 }
+
+verMas.addEventListener('click', () => {
+    traerFavoritos();
+})
+
+
+
+// SLIDER
+getInfoImgSlider();
+
+// MODAL 
+initModal()
+
