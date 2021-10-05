@@ -135,7 +135,7 @@ function buscarMas() {
         console.log("Respuesta busqueda resultados", response);
 
         if(response.data.length == 0 && resultadosTraidos == 12) {
-                contenidoVacio.style.display = "flex";
+            contenidoVacio.style.display = "flex";
         }
         if(response.data.length < 12) {
             verMas.style.display = "none";
@@ -227,7 +227,7 @@ function pedirTrendingSearchTerms() {
 
     var response;
     var listaTrending = [];
-    var listaUrl = [];
+    var listaTags = [];
     var palabrasSugeridas = document.getElementsByClassName("sugerencia");
 
     let info = getInfo();
@@ -237,14 +237,17 @@ function pedirTrendingSearchTerms() {
         for (var element in response.data) {
             console.log(response.data[element]);
             listaTrending.push(response.data[element]);
-            var elementCaptured = response.data[element].replaceAll(" ", "-");
-            listaUrl.push("https://giphy.com/search/" + elementCaptured); //DIRECCIONA A LINKD E CADA ELEMENTO
+            var elementCaptured = response.data[element];
+            listaTags.push(elementCaptured);
         }
     
         console.log(listaTrending.length);
 
         for (var i = 0; i < listaTrending.length; i++) {
-            palabrasSugeridas[i].setAttribute("href", listaUrl[i]);
+            palabrasSugeridas[i].tag = listaTags[i];
+            palabrasSugeridas[i].addEventListener('click', function() {
+                buscar(this.tag);
+            })
             
             console.log(i);
             

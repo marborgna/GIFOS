@@ -387,6 +387,7 @@ body .main .trending-section .contenedor-sugerencias a {
   font-size: 16px;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 body .main .resultados {
