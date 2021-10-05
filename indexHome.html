@@ -23,10 +23,10 @@
                         <span class="raya"></span>
                         <span class="cuadrado"></span>
                     </label>
-                    <div class="barra">               
-                        <input type="search" id="search" placeholder="Busca GIFOS y más"></input>
+                    <form class="barra">             
+                        <input type="search" class="search" placeholder="Busca GIFOS y más"></input>
                         <ul id="lista-search" class="lista-search"></ul>
-                    </div>
+                    </form>
                     <ul class="sections">
                         <li><div class="switch" id="switch">Modo Nocturno</div></li>
                         <li><div class="separador"></div></li>
@@ -42,10 +42,10 @@
             <section class="main-section">
                 <h1>Inspírate, busca,<br class="mobile-break"> guarda, y crea<br class="desktop-break"> los <br class="mobile-break">mejores <span>GIFOS</span></h1>
                 <img src="img/ilustra_header.svg">
-                <div class="barra">               
-                    <input type="search" id="search" placeholder="Busca GIFOS y más"></input>
+                <form class="barra">               
+                    <input type="search" class="search" placeholder="Busca GIFOS y más"></input>
                     <ul id="lista-search" class="lista-search"></ul>
-                </div>
+                </form>
             </section>
 
             <section class="trending-section">
@@ -59,6 +59,18 @@
                 </div>
                 
 
+            </section>
+
+            <section class="resultados">
+                <h3 class="titulo-resultado"></h3>
+                <div class="container-resultados"></div>
+                <div class="contenedor-ver-mas">
+                    <div class="ver-mas">VER MAS</div>
+                </div>   
+                <div class="vacio">
+                    <img src="img/icon-busqueda-sin-resultado.svg">
+                    <p>Intenta con otra búsqueda.</p>
+                </div>
             </section>
 
             <section class="gifos-section">
@@ -89,6 +101,27 @@
             </footer>
 
             <div class="down-barra"></div>
+        </div>
+
+        <div class="main-modal">
+            <div class="modalResultados modal">
+            
+                <div class="modal-content">
+                    <div class="cerrar">&times;</div>
+                    <div class="botones">
+                        <div class="modal-btn left"></div>
+                        <div class="modal-btn right"></div>
+                    </div>
+                    <img class="img-modal">
+                    <div class="barra-tareas">
+                        <h4 class="user"></h3>
+                        <h3 class="titulo-GIFO"></h4>
+                        <a class="boton fav boton-favorito"><img src="img/icon-fav.svg" alt="favorito"></a>
+                        <a class="boton descarga"><img src="img/icon-download.svg" alt="icon-download"></a>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <div class="main-modal">

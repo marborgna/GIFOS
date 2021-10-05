@@ -343,6 +343,126 @@ body {
 
         }
 
+        .resultados {
+            flex-direction: column;
+            align-items: center;
+            display: none;
+
+            .titulo-resultado {
+                font-family: 'Montserrat-Bold', sans-serif;
+                color: $main-color-blue;
+                font-size: 35px;
+            }
+
+
+
+            .container-resultados { 
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-row-gap: 35px;
+                grid-column-gap: 29px;
+                    .img-favorito {
+                        width: 260px;
+                        height: 200px;
+                        align-content: space-around;
+                        display: grid;
+                        height: 275px;
+                        object-fit: cover;
+                        margin-left: 7%;
+                        transition: margin 700ms;
+                        flex: 0 0 257px;  
+
+                        img {
+                            object-fit: cover;
+                            width: 275px;
+                            height: 275px;
+                            grid-area: 1 / 1 / 2 / 2;
+                        }
+                        
+                        .fondoHover {
+                            opacity: 0;
+                            grid-area: 1 / 1 / 2 / 2;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-end;
+
+                            &:hover {
+                                background-color: rgba(87, 46, 229, 0.6);
+                                opacity: 1;
+                        
+                            }
+                            
+                            
+                            .boton-favorito{
+                                margin: 2%;
+                                width: 32px;
+                                height: 32px;
+                                background-image: url('/img/icon-fav.svg');
+
+                                &:hover {
+                                    background-image: url('/img/icon-fav-hover.svg');
+                                }
+                                &.favoritos-active {
+                                    background-image: url('/img/icon-fav-active.svg');
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            } 
+
+                            .boton-descarga {
+                                margin: 2%;
+                                width: 32px;
+                                height: 32px;
+                                background-image: url('/img/icon-download.svg');
+
+                                &:hover {
+                                    background-image: url('img/icon-download-hover.svg');
+                                }
+                            }
+                        
+                            .boton-expandir {
+                                margin: 2%;
+                                width: 32px;
+                                height: 32px;
+                                background-image: url('/img/icon-max-normal.svg');
+
+                                &:hover {
+                                    background-image: url('/img/icon-max-hover.svg');
+                                }
+                            }
+
+                        }
+                    }
+                    
+            }
+
+            .contenedor-ver-mas {
+                .ver-mas {
+                        display: flex;
+                        height: 50px;
+                        width: 127px;
+                        color: $main-color-blue;
+                        font-family: 'Montserrat-bold', sans-serif;
+                        font-size: 13px;
+                        border: 1px solid;
+                        border-radius: 25px;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        
+                    :hover {
+                        background-color: $main-color-blue;
+                        color: $main-color-white;
+                    }
+                }
+                
+            }
+
+            .vacio {
+                display: none;
+            }
+        }
+
         .gifos-section{
             display: flex;
             flex-direction: column;

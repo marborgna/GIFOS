@@ -17,6 +17,8 @@ function stickyNav() {
 
 var imagenes = {};
 
+
+
 // LOCAL STORAGE
 //FAVORITOS
 

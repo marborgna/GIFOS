@@ -346,8 +346,15 @@ body .favoritos .container-favoritos .img-favorito {
 }
 
 body .favoritos .container-favoritos .img-favorito img {
-  width: 260px;
-  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 275px;
+  height: 275px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 body .favoritos .container-favoritos .img-favorito .fondoHover {
@@ -411,18 +418,6 @@ body .favoritos .container-favoritos .img-favorito .fondoHover .boton-expandir {
 
 body .favoritos .container-favoritos .img-favorito .fondoHover .boton-expandir:hover {
   background-image: url("/img/icon-max-hover.svg");
-}
-
-body .favoritos .container-favoritos .img-favorito img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 275px;
-  height: 275px;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 1 / 2 / 2;
 }
 
 body .favoritos .contenedor-ver-mas {

@@ -389,6 +389,154 @@ body .main .trending-section .contenedor-sugerencias a {
   display: inline-block;
 }
 
+body .main .resultados {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+body .main .resultados .titulo-resultado {
+  font-family: 'Montserrat-Bold', sans-serif;
+  color: #572EE5;
+  font-size: 35px;
+}
+
+body .main .resultados .container-resultados {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 35px;
+  grid-column-gap: 29px;
+}
+
+body .main .resultados .container-resultados .img-favorito {
+  width: 260px;
+  height: 200px;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 7%;
+  -webkit-transition: margin 700ms;
+  transition: margin 700ms;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 257px;
+          flex: 0 0 257px;
+}
+
+body .main .resultados .container-resultados .img-favorito img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 275px;
+  height: 275px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+body .main .resultados .container-resultados .img-favorito .fondoHover {
+  opacity: 0;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .main .resultados .container-resultados .img-favorito .fondoHover:hover {
+  background-color: rgba(87, 46, 229, 0.6);
+  opacity: 1;
+}
+
+body .main .resultados .container-resultados .img-favorito .fondoHover .boton-favorito {
+  margin: 2%;
+  width: 32px;
+  height: 32px;
+  background-image: url("/img/icon-fav.svg");
+}
+
+body .main .resultados .container-resultados .img-favorito .fondoHover .boton-favorito:hover {
+  background-image: url("/img/icon-fav-hover.svg");
+}
+
+body .main .resultados .container-resultados .img-favorito .fondoHover .boton-favorito.favoritos-active {
+  background-image: url("/img/icon-fav-active.svg");
+  width: 32px;
+  height: 32px;
+}
+
+body .main .resultados .container-resultados .img-favorito .fondoHover .boton-descarga {
+  margin: 2%;
+  width: 32px;
+  height: 32px;
+  background-image: url("/img/icon-download.svg");
+}
+
+body .main .resultados .container-resultados .img-favorito .fondoHover .boton-descarga:hover {
+  background-image: url("img/icon-download-hover.svg");
+}
+
+body .main .resultados .container-resultados .img-favorito .fondoHover .boton-expandir {
+  margin: 2%;
+  width: 32px;
+  height: 32px;
+  background-image: url("/img/icon-max-normal.svg");
+}
+
+body .main .resultados .container-resultados .img-favorito .fondoHover .boton-expandir:hover {
+  background-image: url("/img/icon-max-hover.svg");
+}
+
+body .main .resultados .contenedor-ver-mas .ver-mas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  width: 127px;
+  color: #572EE5;
+  font-family: 'Montserrat-bold', sans-serif;
+  font-size: 13px;
+  border: 1px solid;
+  border-radius: 25px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main .resultados .contenedor-ver-mas .ver-mas :hover {
+  background-color: #572EE5;
+  color: #ffffff;
+}
+
+body .main .resultados .vacio {
+  display: none;
+}
+
 body .main .gifos-section {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -6,7 +6,7 @@ var contenidoVacio = document.getElementsByClassName("vacio")[0];
 
 function checkearSiHayContenido() {
     if (cargarFavoritos().length == 0) {
-        contenidoVacio.style.display = "flex"
+        contenidoVacio.style.display = "flex";
         verMas.style.display = "none";
     } else {
         traerFavoritos();

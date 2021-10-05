@@ -31,12 +31,10 @@ btnSwitch.addEventListener('click', () =>{
 });
 
 
-
 //BARRA BUSQUEDA
 
-function askSearchSuggestions() {
-    async function getSearch() {
-        inputBusqueda = document.getElementById('search');
+function askSearchSuggestions(inputBusqueda) {
+    async function getSearch(inputBusqueda) {
         valueInput = inputBusqueda.value;
 
         let url = `https://api.giphy.com/v1/tags/related/${valueInput}?api_key=${apiKeyGIPHY}`;
@@ -45,16 +43,16 @@ function askSearchSuggestions() {
         return info;
     }
 
-    let info = getSearch();
+    let info = getSearch(inputBusqueda);
     info.then(response => {
         console.log(response);
-        listaSugerencias = document.getElementById('lista-search');
+        listaSugerencias = inputBusqueda.parentNode.getElementsByClassName('lista-search')[0];
         listaSugerencias.textContent = '';
 
         for(indiceElement in response.data) {
             let element = response.data[indiceElement];
             let nameDelElemento = element.name;
-            addUlSuggestions(nameDelElemento);
+            addUlSuggestions(listaSugerencias, inputBusqueda, nameDelElemento);
         }
          
 
@@ -66,15 +64,25 @@ function askSearchSuggestions() {
 
 }
 
-inputBusqueda = document.getElementById('search');
-inputBusqueda.addEventListener('input', askSearchSuggestions);
+inputBusqueda = document.getElementsByClassName('search');
+for (var i = 0; i < inputBusqueda.length; ++i) {
+    inputBusqueda[i].addEventListener('input', (e) => {
+        askSearchSuggestions(e.target);
+    });
+}
 
-function addUlSuggestions(sugerencia) {
-    listaSugerencias = document.getElementById('lista-search');
+function addUlSuggestions(listaSugerencias, inputBusqueda, sugerencia) {
     let nuevaSugerencia = document.createElement('li');
     listaSugerencias.appendChild(nuevaSugerencia);
 
     nuevaSugerencia.innerHTML = sugerencia;
+
+    nuevaSugerencia.sugerencia = sugerencia;
+    nuevaSugerencia.inputBusqueda = inputBusqueda;
+    nuevaSugerencia.addEventListener('click', function() {
+        this.inputBusqueda.textContent = this.sugerencia;
+        buscar(this.sugerencia);
+    })
 
     let img = document.createElement("img");
     img.src = "img/icon-search.svg";
@@ -82,6 +90,129 @@ function addUlSuggestions(sugerencia) {
     nuevaSugerencia.appendChild(img);
 }
 
+
+// Resultados
+
+var busqueda = "";
+var resultadosTraidos = 0;
+var resultados = document.getElementsByClassName("resultados")[0];
+var containerResultados = document.getElementsByClassName("container-resultados")[0];
+var tituloResultados = document.getElementsByClassName("titulo-resultado")[0];
+var verMas = document.getElementsByClassName("ver-mas")[0];
+var contenidoVacio = document.getElementsByClassName("vacio")[0];
+
+function buscar(palabra) {
+    busqueda = palabra;
+    resultadosTraidos = 0;
+    tituloResultados.textContent = palabra;
+    resultados.style.display = "flex";
+    containerResultados.innerHTML = "";
+    contenidoVacio.style.display = "none";
+    
+    buscarMas();
+}
+
+barraBusqueda = document.getElementsByClassName('barra');
+for (var i = 0; i < barraBusqueda.length; ++i) {
+    barraBusqueda[i].addEventListener('submit', (e) => {
+        e.preventDefault();
+        inputBusqueda = e.target.getElementsByClassName("search")[0];
+        buscar(inputBusqueda.value);
+    });
+}
+
+function buscarMas() {
+    async function getRes() {
+        let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKeyGIPHY}&q=${busqueda}&limit=12&offset=${resultadosTraidos}`;
+        const resp = await fetch(url);
+        const info = await resp.json();
+        resultadosTraidos += 12;
+        return info;
+    }
+
+    let info = getRes();
+    info.then(response =>{
+        console.log("Respuesta busqueda resultados", response);
+
+        if(response.data.length == 0 && resultadosTraidos == 12) {
+                contenidoVacio.style.display = "flex";
+        }
+        if(response.data.length < 12) {
+            verMas.style.display = "none";
+        }
+
+        var listaIds = [];
+
+        for(idGifo in response.data) {
+            let gifo = response.data[idGifo];
+            let urlDelElemento = gifo.images.original.url;
+            let idDelElemento = gifo.id;
+            listaIds.push(idDelElemento);
+            let username = gifo.username;
+            let title = gifo.title;
+            insertarImagenListaResultados(urlDelElemento, idDelElemento);
+
+            imagenes[idDelElemento] = {
+                "username": username,
+                "title": title,
+                "url": urlDelElemento,
+            };
+        }
+
+        var container = document.getElementsByClassName('container-resultados')[0];
+        var modal = document.getElementsByClassName('modalResultados')[0];
+        modal.listaIds = listaIds;
+        modal.posicion = 0;
+
+        registrarBotonFav(container);
+        registrarBotonFav(modal);
+        registrarBotonExpandir(modal, container);
+
+    }).catch(error => {
+        console.log(error);
+    });
+}
+
+function insertarImagenListaResultados(url, id) {
+    let nuevoDiv = document.createElement("div");
+    let nuevoHover = document.createElement("div");
+    let nuevaImg = document.createElement("img");
+    nuevoDiv.appendChild(nuevaImg);
+    nuevoDiv.appendChild(nuevoHover);
+
+    nuevoHover.classList.add("fondoHover");
+
+    nuevaImg.setAttribute("src", url);
+
+    let currentDiv = document.getElementsByClassName("container-resultados")[0];
+    currentDiv.appendChild(nuevoDiv);
+    nuevoDiv.classList.add('img-favorito');
+
+    let botonFav = document.createElement("div");
+    let botonDesc = document.createElement("a");
+    let botonExpan = document.createElement("div");
+
+    nuevoHover.appendChild(botonFav);
+    botonFav.classList.add("boton-favorito");
+    botonFav.dataset['idImg'] = id;
+    if(esFavorito(id)) {
+        botonFav.classList.add('favoritos-active');
+    }
+
+    nuevoHover.appendChild(botonDesc);
+    botonDesc.classList.add("boton-descarga");
+    botonDesc.setAttribute("href", id); 
+    botonDesc.setAttribute("download", id + ".jpg");
+
+    nuevoHover.appendChild(botonExpan);
+    botonExpan.classList.add("boton-expandir");
+    botonExpan.dataset['idImg'] = id;
+    botonExpan.dataset['urlImg'] = url;
+}
+
+verMas.addEventListener('click', () => {
+    buscarMas();
+})
 
 // Trending endpoint
 
