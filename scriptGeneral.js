@@ -54,6 +54,8 @@ function guardarFavoritos(lista) {
     window.localStorage.setItem('favoritos', JSON.stringify(lista));
 }
 
+
+
 // MIS GIFS
 
 function cargarGifs() {
@@ -77,7 +79,7 @@ function agregarGifs(idImg) {
     if(!esGifs(idImg)) {
         listaIds.push(idImg);
     }
-    guardarFavoritos(listaIds);
+    guardarGifs(listaIds);
 }
 
 function removerGifs(idImg) {

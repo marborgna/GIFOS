@@ -90,11 +90,12 @@ botonSubir.addEventListener('click', () => {
    botonSubir.style.display = "none";
    uploadGif();
    tres.classList.add("seleccionado");
+   dos.classList.remove("seleccionado");
    texto.style.display = "flex";
    texto.textContent = "Estamos subiendo tu GIFO";
    imgCarga.style.display = "flex";
-   cuadro.style.background-color: #572EE5;
-   cuadro.style.opacity = 0.6;
+   //cuadro.style.background-color: #572EE5;
+   //cuadro.style.opacity = 0.6;
 })
 
 function uploadGif() {
@@ -114,8 +115,8 @@ function uploadGif() {
             let idImg = response.data.id;
             agregarGifs(idImg); 
 
-            cuadro.style.background-color: #572EE5;
-            cuadro.style.opacity = 0.6;
+            //cuadro.style.background-color: #572EE5;
+            //cuadro.style.opacity = 0.6;
             imgListo.style.display = "flex";
             imgCarga.style.display = "none";
             texto.textContent = "GIFO subido con éxito";
@@ -143,7 +144,7 @@ function empezarContador() {
 
 function detenerContador() {
    contador.style.display = "none";
-   stopInterval(intervaloContador);
+   clearInterval(intervaloContador);
 }
 
 function avanzarContador() {

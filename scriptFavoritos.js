@@ -17,12 +17,12 @@ function traerFavoritos(urlImg) {
 
     async function getFavs() {
         var listaIds = cargarFavoritos();
-        listaIds.slice(favoritosTraidos, favoritosTraidos+12);
+        listaIds12 = listaIds.slice(favoritosTraidos, favoritosTraidos+12);
         favoritosTraidos += 12;
         if(favoritosTraidos >= listaIds.length) {
             verMas.style.display = "none";
         }
-        let ids = listaIds.join();
+        let ids = listaIds12.join();
         let url = `https://api.giphy.com/v1/gifs?api_key=${apiKeyGIPHY}&ids=${ids}`;
         const resp = await fetch(url);
         const info = await resp.json();
@@ -106,7 +106,7 @@ verMas.addEventListener('click', () => {
     traerFavoritos();
 })
 
-
+checkearSiHayContenido();
 
 // SLIDER
 getInfoImgSlider();

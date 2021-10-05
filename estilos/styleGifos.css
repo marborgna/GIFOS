@@ -313,8 +313,6 @@ body .mis-GIFOS .container-favoritos {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
   grid-row-gap: 35px;
   grid-column-gap: 29px;
 }
@@ -322,12 +320,94 @@ body .mis-GIFOS .container-favoritos {
 body .mis-GIFOS .container-favoritos .img-favorito {
   width: 100%;
   height: 100%;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 7%;
+  -webkit-transition: margin 700ms;
+  transition: margin 700ms;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 257px;
+          flex: 0 0 257px;
 }
 
 body .mis-GIFOS .container-favoritos .img-favorito img {
-  width: 260px;
-  height: 260px;
-  min-width: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 275px;
+  height: 275px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+body .mis-GIFOS .container-favoritos .img-favorito .fondoHover {
+  opacity: 0;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .mis-GIFOS .container-favoritos .img-favorito .fondoHover:hover {
+  background-color: rgba(87, 46, 229, 0.6);
+  opacity: 1;
+}
+
+body .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-favorito {
+  margin: 2%;
+  width: 32px;
+  height: 32px;
+  background-image: url("/img/icon-fav.svg");
+}
+
+body .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-favorito:hover {
+  background-image: url("/img/icon-fav-hover.svg");
+}
+
+body .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-favorito.favoritos-active {
+  background-image: url("/img/icon-fav-active.svg");
+  width: 32px;
+  height: 32px;
+}
+
+body .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-descarga {
+  margin: 2%;
+  width: 32px;
+  height: 32px;
+  background-image: url("/img/icon-download.svg");
+}
+
+body .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-descarga:hover {
+  background-image: url("img/icon-download-hover.svg");
+}
+
+body .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-expandir {
+  margin: 2%;
+  width: 32px;
+  height: 32px;
+  background-image: url("/img/icon-max-normal.svg");
+}
+
+body .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-expandir:hover {
+  background-image: url("/img/icon-max-hover.svg");
 }
 
 body .mis-GIFOS .contenedor-ver-mas {

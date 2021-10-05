@@ -275,16 +275,11 @@ body {
             .container-favoritos { 
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
-                /* grid-template-rows: 1fr 1fr 1fr; */
                 grid-row-gap: 35px;
                 grid-column-gap: 29px;
                     .img-favorito {
                         width: 260px;
                         height: 200px;
-                        img {
-                            width: 260px;
-                            height: 200px;
-                        }
                         align-content: space-around;
                         display: grid;
                         height: 275px;
@@ -292,7 +287,13 @@ body {
                         margin-left: 7%;
                         transition: margin 700ms;
                         flex: 0 0 257px;  
-                        
+
+                        img {
+                            object-fit: cover;
+                            width: 275px;
+                            height: 275px;
+                            grid-area: 1 / 1 / 2 / 2;
+                        }
                         
                         .fondoHover {
                             opacity: 0;
@@ -346,14 +347,6 @@ body {
                                 }
                             }
 
-                        }                                   
-
-                        img {
-                            object-fit: cover;
-                            width: 275px;
-                            height: 275px;
-                            grid-area: 1 / 1 / 2 / 2;
-                              
                         }
                     }
                     

@@ -1,19 +1,12 @@
-// SLIDER
-getInfoImgSlider();
-
-// MODAL 
-initModal()
-
-
 
 //GIFOS
 
-var GifosTraidos = 0;
+var gifosTraidos = 0;
 var verMas = document.getElementsByClassName("ver-mas")[0];
 var contenidoVacio = document.getElementsByClassName("vacio")[0];
 
 function checkearSiHayContenido() {
-    if (cargarFavoritos().length == 0) {
+    if (cargarGifs().length == 0) {
         contenidoVacio.style.display = "flex"
         verMas.style.display = "none";
     } else {
@@ -24,20 +17,20 @@ function checkearSiHayContenido() {
 function traerGifos(urlImg) {
 
     async function getGifs() {
-        var listaIds = cargarGifos();
-        listaIds.slice(gifosTraidos, gifosTraidos+12);
+        var listaIds = cargarGifs();
+        listaIds12 = listaIds.slice(gifosTraidos, gifosTraidos+12);
         gifosTraidos += 12;
         if(gifosTraidos >= listaIds.length) {
             verMas.style.display = "none";
         }
-        let ids = listaIds.join();
+        let ids = listaIds12.join();
         let url = `https://api.giphy.com/v1/gifs?api_key=${apiKeyGIPHY}&ids=${ids}`;
         const resp = await fetch(url);
         const info = await resp.json();
         return info;
     }
 
-    let info = getGifos();
+    let info = getGifs();
     info.then(response =>{
         console.log("Respuesta imagenes gifos", response);
 
@@ -64,8 +57,8 @@ function traerGifos(urlImg) {
         modal.listaIds = listaIds;
         modal.posicion = 0;
 
-        registrarBotonGif(container);
-        registrarBotonGif(modal);
+        registrarBotonFav(container);
+        registrarBotonFav(modal);
         registrarBotonExpandir(modal, container);
 
     }).catch(error => {
@@ -113,3 +106,11 @@ function insertarImagenListaGifos(url, id) {
 verMas.addEventListener('click', () => {
     traerGifos();
 })
+
+checkearSiHayContenido();
+
+// SLIDER
+getInfoImgSlider();
+
+// MODAL 
+initModal()
