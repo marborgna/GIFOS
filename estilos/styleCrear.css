@@ -293,6 +293,32 @@ body .main .central .cuadro .superior #borde-sup-der {
   border-color: #50E3C2;
 }
 
+body .main .central .cuadro .main-cuadro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  /*display: none;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-content: center;
+                        background-color: rgba(87, 46, 229, 0.6);
+                        opacity: 1;
+                        position: relative;
+                        z-index: 1;*/
+}
+
 body .main .central .cuadro .main-cuadro .img-carga {
   display: none;
   width: 22px;
@@ -305,21 +331,50 @@ body .main .central .cuadro .main-cuadro .img-listo {
   height: 22px;
 }
 
-body .main .central .cuadro .main-cuadro h2 {
+body .main .central .cuadro .main-cuadro #titulo {
   font-family: 'Montserrat', sans-serif;
   color: #572EE5;
 }
 
-body .main .central .cuadro .main-cuadro h2 span {
+body .main .central .cuadro .main-cuadro #titulo span {
   color: #50E3C2;
 }
 
-body .main .central .cuadro .main-cuadro p {
+body .main .central .cuadro .main-cuadro #texto {
   font-family: 'Roboto', sans-serif;
 }
 
 body .main .central .cuadro .main-cuadro video {
   height: 100%;
+  display: none;
+}
+
+body .main .central .cuadro .main-cuadro .fondo-acceso {
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: rgba(87, 46, 229, 0.6);
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+body .main .central .cuadro .main-cuadro .fondo-acceso .acceso {
+  font-family: 'Montserrat-Bold', sans-serif;
+  background-color: red;
+  font-size: 15px;
+  z-index: 2;
+  position: absolute;
 }
 
 body .main .central .cuadro .inferior {

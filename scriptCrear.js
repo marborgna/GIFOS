@@ -15,6 +15,8 @@ var botonRepetir = document.getElementsByClassName('repetir')[0];
 var contador = document.getElementsByClassName('contador')[0];
 var imgCarga = document.getElementsByClassName('img-carga')[0];
 var imgListo = document.getElementsByClassName('img-listo')[0];
+var acceso = document.getElementsByClassName('acceso')[0];
+//var fondoAcceso = document.getElementsByClassName('fondo-acceso')[0];
 
 var stream;
 var recorder;
@@ -31,6 +33,7 @@ function getStream () {
       }
    }).then(function(str) {
       stream = str;
+      video.style.display = "block";
       video.srcObject = stream;
       video.play()
       
@@ -49,6 +52,8 @@ botonComenzar.addEventListener('click', () => {
     botonComenzar.style.display = "none";
     titulo.textContent = "¿Nos das acceso a tu cámara?";
     texto.textContent = "El acceso a tu camara será válido sólo por el tiempo en el que estés creando el GIFO.";
+    titulo.classList.add("acceso");
+    texto.classList.add("acceso");
     uno.classList.add('seleccionado');
     getStream();
 })
@@ -94,8 +99,9 @@ botonSubir.addEventListener('click', () => {
    texto.style.display = "flex";
    texto.textContent = "Estamos subiendo tu GIFO";
    imgCarga.style.display = "flex";
-   //cuadro.style.background-color: #572EE5;
-   //cuadro.style.opacity = 0.6;
+   cuadro.classList.add("fondo-acceso"); 
+   //fondoAcceso.appendChild(acceso); 
+   
 })
 
 function uploadGif() {

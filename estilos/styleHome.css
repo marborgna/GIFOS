@@ -215,7 +215,7 @@ body .main .sticky .barra input {
   display: flex;
   border: none;
   font-family: 'Roboto-black', sans-serif;
-  background: url(img/icon-search.svg) no-repeat scroll 97%;
+  background: url("img/icon-search.svg") no-repeat scroll 97%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: none;
@@ -303,7 +303,6 @@ body .main .main-section .barra {
           justify-content: flex-start;
   border: 2px solid;
   width: 40%;
-  min-width: 551px;
   height: 150%;
   border-color: #572EE5;
   border-radius: 27px;
@@ -528,7 +527,7 @@ body .main .resultados .container-resultados .img-favorito .fondoHover .boton-fa
 }
 
 body .main .resultados .container-resultados .img-favorito .fondoHover .boton-favorito.favoritos-active {
-  background-image: url("/img/icon-fav-active.svg");
+  background-image: url("/img/icon-fav-active.svg") no-repeat;
   width: 32px;
   height: 32px;
 }
@@ -874,13 +873,21 @@ body .main-modal .modal {
 }
 
 body .main-modal .modal .modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 15%;
-  padding: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
   width: 80%;
 }
 
 body .main-modal .modal .modal-content .cerrar {
-  float: right;
+  margin-left: 60%;
   color: #572EE5;
   font-weight: bold;
   width: 15.2px;
@@ -911,6 +918,7 @@ body .main-modal .modal .modal-content .botones .modal-btn {
 body .main-modal .modal .modal-content .botones .right {
   background: url("/img/button-slider-right.svg");
   right: 10px;
+  margin-right: 20%;
 }
 
 body .main-modal .modal .modal-content .botones .right:hover {
@@ -920,19 +928,20 @@ body .main-modal .modal .modal-content .botones .right:hover {
 body .main-modal .modal .modal-content .botones .left {
   background: url("/img/button-slider-left.svg");
   left: 10px;
+  margin-left: 20%;
 }
 
 body .main-modal .modal .modal-content .botones .left:hover {
   background: url("/img/button-slider-left-hover.svg");
 }
 
-body .main-modal .modal .modal-content .barra-tareas #user {
+body .main-modal .modal .modal-content .barra-tareas .user {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
 
-body .main-modal .modal .modal-content .barra-tareas #titulo-GIFO {
-  font-family: 'Roboto-black', sans-serif;
+body .main-modal .modal .modal-content .barra-tareas .titulo-GIFO {
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
 
