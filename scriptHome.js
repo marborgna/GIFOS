@@ -72,7 +72,9 @@ for (var i = 0; i < inputBusqueda.length; ++i) {
 }
 
 function addUlSuggestions(listaSugerencias, inputBusqueda, sugerencia) {
+    //let division = document.createElement('div'); //LO CREA CANTIDAD DE VECES COMO LI HAY
     let nuevaSugerencia = document.createElement('li');
+    //listaSugerencias.appendChild(division)
     listaSugerencias.appendChild(nuevaSugerencia);
 
     nuevaSugerencia.innerHTML = sugerencia;
