@@ -298,9 +298,9 @@ body .main .main-section .barra {
   display: flex;
   text-align: right;
   white-space: nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border: 2px solid;
   width: 40%;
   min-width: 551px;
@@ -309,26 +309,17 @@ body .main .main-section .barra {
   border-radius: 27px;
   margin-left: auto;
   margin-right: auto;
-  background: url("/img/icon-search.svg") no-repeat scroll 97%;
-}
-
-body .main .main-section .barra :focus {
-  outline: none;
-  background-image: url("/img/close.svg") no-repeat scroll 97%;
 }
 
 body .main .main-section .barra input {
-  margin: .5em;
+  margin: .7em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border: none;
   font-family: 'Roboto-black', sans-serif;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-left: 20px;
-  margin: none;
-  width: 70%;
+  margin-top: 1%;
+  width: 80%;
   height: 120%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -352,6 +343,18 @@ body .main .main-section .barra input ::-webkit-search-results-decoration {
   display: none;
 }
 
+body .main .main-section .barra .boton-search {
+  background: url("/img/icon-search.svg");
+  width: 20px;
+  height: 20px;
+  margin-left: -15%;
+  margin-top: 1%;
+}
+
+body .main .main-section .barra .boton-search :active {
+  background: url("/img/close.svg");
+}
+
 body .main .main-section .barra ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -366,8 +369,8 @@ body .main .main-section .barra ul {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 10%;
-  margin-left: -75%;
   margin-top: 3%;
+  margin-left: -39%;
   text-align: left;
 }
 
@@ -391,6 +394,7 @@ body .main .main-section .barra ul li {
       -ms-flex-order: 1;
           order: 1;
   cursor: pointer;
+  text-align: left;
 }
 
 body .main .main-section .barra ul li img {
@@ -405,14 +409,8 @@ body .main .main-section .barra ul li img {
   margin-right: 5%;
 }
 
-body .main .main-section .boton-search {
-  background: url("/img/icon-search.svg");
-  width: 20px;
-  height: 20px;
-}
-
-body .main .main-section .boton-search :hover {
-  background: url("/img/close.svg");
+body .main .main-section .barra :focus {
+  outline: none;
 }
 
 body .main .trending-section {
