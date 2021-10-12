@@ -755,10 +755,9 @@ body {
             .modal-content {
                 display: flex;
                 flex-direction: column;
-                margin: 15%;
-                margin-left: 20%;
-                margin-right: 20%;
-                width: 80%;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10%;
                 
                 .cerrar {
                     margin-left: 60%;
@@ -788,7 +787,7 @@ body {
                         transform: translate(-13%);
                         font-size: 30px;
                         font-weight: bold;
-                        text-align: center;
+                        //text-align: center;
                         cursor: pointer;
                         
     
@@ -814,10 +813,16 @@ body {
                 }
 
                 .barra-tareas {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 40%;
                     .user {
                         font-family: 'Roboto', sans-serif;
                         font-size: 15px;
                     }
+
+                    //FALTA PONER A AMBOS EN UN CONTENEDOR 
 
                     .titulo-GIFO {
                         font-family: 'Roboto', sans-serif;

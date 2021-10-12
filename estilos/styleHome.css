@@ -892,10 +892,13 @@ body .main-modal .modal .modal-content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 15%;
-  margin-left: 20%;
-  margin-right: 20%;
-  width: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10%;
 }
 
 body .main-modal .modal .modal-content .cerrar {
@@ -923,7 +926,6 @@ body .main-modal .modal .modal-content .botones .modal-btn {
           transform: translate(-13%);
   font-size: 30px;
   font-weight: bold;
-  text-align: center;
   cursor: pointer;
 }
 
@@ -945,6 +947,20 @@ body .main-modal .modal .modal-content .botones .left {
 
 body .main-modal .modal .modal-content .botones .left:hover {
   background: url("/img/button-slider-left-hover.svg");
+}
+
+body .main-modal .modal .modal-content .barra-tareas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
 }
 
 body .main-modal .modal .modal-content .barra-tareas .user {
