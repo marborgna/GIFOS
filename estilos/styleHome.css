@@ -365,19 +365,10 @@ body .main .main-section .barra ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   width: 10%;
   margin-top: 3%;
-  margin-left: -39%;
   text-align: left;
-}
-
-body .main .main-section .barra ul div {
-  color: #9CAFC3;
-  width: 505px;
-  height: 3px;
+  padding: 0%;
 }
 
 body .main .main-section .barra ul li {
@@ -407,6 +398,12 @@ body .main .main-section .barra ul li img {
       -ms-flex-order: -1;
           order: -1;
   margin-right: 5%;
+}
+
+body .main .main-section .barra .separador-lista {
+  background-color: #9CAFC3;
+  width: 505px;
+  height: 3px;
 }
 
 body .main .main-section .barra :focus {

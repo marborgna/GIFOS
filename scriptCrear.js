@@ -86,7 +86,7 @@ botonFinalizar.addEventListener('click', () => {
     recorder.stopRecording(() => {
       console.log("stopped");
       botonSubir.style.display = "flex";
-      botonRepetir.style.display = "flex";
+      botonRepetir.style.display = "block";
       detenerContador();
    }); 
 })

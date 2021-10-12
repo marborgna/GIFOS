@@ -344,12 +344,14 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-            margin-right: 400px; //A SOLUCIONAR
             margin-top: -20px;
+            justify-content: flex-end;
+            padding-right: 15%;
             
             img {
                 width: 142px;
                 height: 89px;
+                position: static;
             }
         }
         
@@ -383,6 +385,11 @@ body {
         }
 
         .adicional {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-right: 30%;
+            margin-top: -25px;
             .repetir {
                 display: none;
                 color: $main-color-blue;
@@ -393,18 +400,17 @@ body {
                 .subrayado {
                     height: 1px;
                     width: 122.9px;
-                    color: $main-color-green;
+                    background-color: $main-color-green;
                 }
             }   
             .contador {
-                display: flex;
                 display: none;
-                color: $main-color-blue;
+                background-color: $main-color-blue;
                 font-family: 'Montserrat-Bold', sans-serif;
-                font-size: 15px;
+                font-size: 125px;
                 text-align: center;
                 justify-content: flex-end;
-                margin-left: 25%;
+                //margin-left: 25%;
             }
         }
 

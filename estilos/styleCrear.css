@@ -413,13 +413,15 @@ body .main .contenedor-img-pelicula {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-right: 400px;
   margin-top: -20px;
+  justify-content: flex-end;
+  padding-right: 15%;
 }
 
 body .main .contenedor-img-pelicula img {
   width: 142px;
   height: 89px;
+  position: static;
 }
 
 body .main .botones-numeros {
@@ -457,6 +459,21 @@ body .main .botones-numeros .seleccionado {
   color: #ffffff;
 }
 
+body .main .adicional {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 30%;
+  margin-top: -25px;
+}
+
 body .main .adicional .repetir {
   display: none;
   color: #572EE5;
@@ -468,22 +485,18 @@ body .main .adicional .repetir {
 body .main .adicional .repetir .subrayado {
   height: 1px;
   width: 122.9px;
-  color: #50E3C2;
+  background-color: #50E3C2;
 }
 
 body .main .adicional .contador {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   display: none;
-  color: #572EE5;
+  background-color: #572EE5;
   font-family: 'Montserrat-Bold', sans-serif;
-  font-size: 15px;
+  font-size: 125px;
   text-align: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-left: 25%;
 }
 
 body .main .separador {
