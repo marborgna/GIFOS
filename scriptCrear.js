@@ -16,13 +16,45 @@ var contador = document.getElementsByClassName('contador')[0];
 var imgCarga = document.getElementsByClassName('img-carga')[0];
 var imgListo = document.getElementsByClassName('img-listo')[0];
 var acceso = document.getElementsByClassName('acceso')[0];
-//var fondoAcceso = document.getElementsByClassName('fondo-acceso')[0];
+
 
 var stream;
 var recorder;
 
 var segundosContador;
 var intervaloContador;
+
+
+function botonesFinal(id) {
+   let url = "https://giphy.com/gifs/" + id
+
+   let contenedorBotonesTerminados = document.createElement("div");
+   contenedorBotonesTerminados.classList.add('contenedor-botones');
+   cuadro.appendChild(contenedorBotonesTerminados);
+
+   let botonDescarga = document.createElement("div");
+   botonDescarga.classList.add('boton-descarga');
+   botonDescarga.setAttribute("href", url); 
+   botonDescarga.setAttribute("download", id + ".jpg");
+   contenedorBotonesTerminados.appendChild(botonDescarga);
+   botonDescarga.url = "GIFO";
+   
+   let botonCopiar = document.createElement("div");
+   botonCopiar.classList.add('boton-copiar');
+   botonCopiar.dataset['idImg'] = id;
+   botonCopiar.dataset['urlImg'] = url;
+   contenedorBotonesTerminados.appendChild(botonCopiar);
+
+
+   botonCopiar.addEventListener('click', (e) => {
+      navigator.clipboard.writeText(e.target.dataset['urlImg']);
+   })
+}
+
+
+
+
+
 
 
 function getStream () { 
@@ -93,14 +125,13 @@ botonFinalizar.addEventListener('click', () => {
 
 botonSubir.addEventListener('click', () => {
    botonSubir.style.display = "none";
-   uploadGif();
+   uploadGif();   //CUANDO ESTE BIEN SACAR COMENTARIO
    tres.classList.add("seleccionado");
    dos.classList.remove("seleccionado");
    texto.style.display = "flex";
    texto.textContent = "Estamos subiendo tu GIFO";
    imgCarga.style.display = "flex";
    cuadro.classList.add("fondo-acceso"); 
-   //fondoAcceso.appendChild(acceso); 
    
 })
 
@@ -121,11 +152,12 @@ function uploadGif() {
             let idImg = response.data.id;
             agregarGifs(idImg); 
 
-            //cuadro.style.background-color: #572EE5;
-            //cuadro.style.opacity = 0.6;
             imgListo.style.display = "flex";
             imgCarga.style.display = "none";
             texto.textContent = "GIFO subido con éxito";
+
+            botonesFinal(idImg);
+            
             //TERMINO DE SUBIR
         }
     }

@@ -159,13 +159,14 @@ function buscarMas() {
             listaIds.push(idDelElemento);
             let username = gifo.username;
             let title = gifo.title;
-            insertarImagenListaResultados(urlDelElemento, idDelElemento);
 
             imagenes[idDelElemento] = {
                 "username": username,
                 "title": title,
                 "url": urlDelElemento,
+                "download": gifo.images.original.url,
             };
+            insertarImagenListaResultados(urlDelElemento, idDelElemento);
         }
 
         var container = document.getElementsByClassName('container-resultados')[0];
@@ -210,7 +211,7 @@ function insertarImagenListaResultados(url, id) {
 
     nuevoHover.appendChild(botonDesc);
     botonDesc.classList.add("boton-descarga");
-    botonDesc.setAttribute("href", id); 
+    botonDesc.setAttribute("href", imagenes[id].download); 
     botonDesc.setAttribute("download", id + ".jpg");
 
     nuevoHover.appendChild(botonExpan);

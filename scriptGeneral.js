@@ -143,13 +143,15 @@ function getInfoImgSlider() {
             listaIds.push(idDelElemento);
             let username = gifo.username;
             let title = gifo.title;
-            insertarImagenSlider(urlDelElemento, idDelElemento);
 
             imagenes[idDelElemento] = {
                 "username": username,
                 "title": title,
                 "url": urlDelElemento,
+                "download": gifo.images.original.url,
             };
+
+            insertarImagenSlider(urlDelElemento, idDelElemento);
         }
 
         inicioSlider();
@@ -197,7 +199,7 @@ function insertarImagenSlider (url, id) {
 
     nuevoHover.appendChild(botonDesc);
     botonDesc.classList.add("boton-descarga");
-    botonDesc.setAttribute("href", id); 
+    botonDesc.setAttribute("href", imagenes[id].download); 
     botonDesc.setAttribute("download", id + ".jpg");
 
     nuevoHover.appendChild(botonExpan);

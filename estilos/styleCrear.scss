@@ -248,15 +248,13 @@ body {
                     justify-content: center;
                     position: relative;
 
-                    /*display: none;
-                        display: flex;
-                        flex-direction: column;
+                    &.fondo-acceso {
+                        background-color: $main-color-blue;
                         justify-content: center;
-                        align-content: center;
-                        background-color: rgba(87, 46, 229, 0.6);
-                        opacity: 1;
-                        position: relative;
-                        z-index: 1;*/
+                        opacity: 0.6;
+                        position: absolute;
+                        z-index: 10;
+                    }
 
                     .img-carga {
                         display: none;
@@ -289,23 +287,32 @@ body {
                         display: none;
                     }
 
-
-                    .fondo-acceso {
-                        display: none;
+                    
+                    .contenedor-botones {
                         display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-content: center;
-                        background-color: rgba(87, 46, 229, 0.6);
-                        opacity: 1;
-                        position: relative;
-                        z-index: 1;
-                        .acceso {
-                            font-family: 'Montserrat-Bold', sans-serif;
-                            background-color: red;
-                            font-size: 15px;
-                            z-index: 2;
-                            position: absolute;
+                        flex-direction: row;
+                        justify-content: flex-end;
+
+                        .boton-descarga {
+                            margin: 2%;
+                            width: 32px;
+                            height: 32px;
+                            background-image: url('/img/icon-download.svg');
+
+                            &:hover {
+                                background-image: url('/img/icon-download-hover.svg');
+                            }
+                        }
+
+                        .boton-copiar {
+                            margin: 2%;
+                            width: 32px;
+                            height: 32px;
+                            background-image: url('/img/icon-link-normal.svg');
+
+                            &:hover {
+                                background-image: url('/img/icon-link-hover.svg');
+                            }
                         }
                     }
                     

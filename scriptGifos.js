@@ -43,13 +43,15 @@ function traerGifos(urlImg) {
             listaIds.push(idDelElemento);
             let username = gifo.username;
             let title = gifo.title;
-            insertarImagenListaGifos(urlDelElemento, idDelElemento);
 
             imagenes[idDelElemento] = {
                 "username": username,
                 "title": title,
                 "url": urlDelElemento,
+                "download": gifo.images.original.url,
             };
+
+            insertarImagenListaGifos(urlDelElemento, idDelElemento);
         }
 
         var container = document.getElementsByClassName('container-favoritos')[0];
@@ -94,7 +96,7 @@ function insertarImagenListaGifos(url, id) {
 
     nuevoHover.appendChild(botonDesc);
     botonDesc.classList.add("boton-descarga");
-    botonDesc.setAttribute("href", id); 
+    botonDesc.setAttribute("href", imagenes[id].download); 
     botonDesc.setAttribute("download", id + ".jpg");
 
     nuevoHover.appendChild(botonExpan);
