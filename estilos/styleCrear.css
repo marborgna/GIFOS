@@ -472,6 +472,7 @@ body .main .adicional {
           justify-content: flex-end;
   margin-right: 30%;
   margin-top: -25px;
+  text-align: center;
 }
 
 body .main .adicional .repetir {
@@ -489,14 +490,9 @@ body .main .adicional .repetir .subrayado {
 }
 
 body .main .adicional .contador {
-  display: none;
-  background-color: #572EE5;
+  color: #572EE5;
   font-family: 'Montserrat-Bold', sans-serif;
-  font-size: 125px;
-  text-align: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  font-size: 15px;
 }
 
 body .main .separador {

@@ -354,6 +354,7 @@ body {
                 }
 
                 .separador-lista {
+                    display: none;
                     background-color: #9CAFC3;
                     width: 505px;
                     height: 3px;
@@ -769,7 +770,7 @@ body {
                     
                 }
                 
-                img {
+                .img-modal {
                     height: 385px;
                     width: 695px;
                     text-align: center;
@@ -789,6 +790,7 @@ body {
                         font-weight: bold;
                         //text-align: center;
                         cursor: pointer;
+                        margin: 5%;
                         
     
                     }
@@ -815,29 +817,40 @@ body {
                 .barra-tareas {
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
+                    //justify-content: space-between;
                     width: 40%;
-                    .user {
-                        font-family: 'Roboto', sans-serif;
-                        font-size: 15px;
-                    }
+                    height: 50%;
+                    background-color: red;
 
-                    //FALTA PONER A AMBOS EN UN CONTENEDOR 
-
-                    .titulo-GIFO {
-                        font-family: 'Roboto', sans-serif;
-                        font-size: 16px;
-                    }
-
-                    a {
-                        img {
-                            height: 32px;
-                            width: 32px;
-                            
+                    .bloque-usuario {
+                        display: flex;
+                        width: 20%;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        h4 {
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 15px;
                         }
-                        :hover {
-                            background: url('/img/icon-fav-hover.svg');
-                            
+    
+                        h3 {
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 16px;
+                        }
+                    }
+                    
+                    .bloque-botones {
+                        display: flex;
+                        justify-content: flex-end;
+                        a {
+                            img {
+                                height: 32px;
+                                width: 32px;
+                                
+                            }
+                            :hover {
+                                background: url('/img/icon-fav-hover.svg');
+                                
+                            }
                         }
                     }
                 }               

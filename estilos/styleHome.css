@@ -401,6 +401,7 @@ body .main .main-section .barra ul li img {
 }
 
 body .main .main-section .barra .separador-lista {
+  display: none;
   background-color: #9CAFC3;
   width: 505px;
   height: 3px;
@@ -910,7 +911,7 @@ body .main-modal .modal .modal-content .cerrar {
   text-decoration: none;
 }
 
-body .main-modal .modal .modal-content img {
+body .main-modal .modal .modal-content .img-modal {
   height: 385px;
   width: 695px;
   text-align: center;
@@ -927,6 +928,7 @@ body .main-modal .modal .modal-content .botones .modal-btn {
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
+  margin: 5%;
 }
 
 body .main-modal .modal .modal-content .botones .right {
@@ -957,28 +959,50 @@ body .main-modal .modal .modal-content .barra-tareas {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 40%;
+  height: 50%;
+  background-color: red;
 }
 
-body .main-modal .modal .modal-content .barra-tareas .user {
+body .main-modal .modal .modal-content .barra-tareas .bloque-usuario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .main-modal .modal .modal-content .barra-tareas .bloque-usuario h4 {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
 
-body .main-modal .modal .modal-content .barra-tareas .titulo-GIFO {
+body .main-modal .modal .modal-content .barra-tareas .bloque-usuario h3 {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
 
-body .main-modal .modal .modal-content .barra-tareas a img {
+body .main-modal .modal .modal-content .barra-tareas .bloque-botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .main-modal .modal .modal-content .barra-tareas .bloque-botones a img {
   height: 32px;
   width: 32px;
 }
 
-body .main-modal .modal .modal-content .barra-tareas a :hover {
+body .main-modal .modal .modal-content .barra-tareas .bloque-botones a :hover {
   background: url("/img/icon-fav-hover.svg");
 }
 

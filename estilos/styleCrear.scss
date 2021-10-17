@@ -390,6 +390,8 @@ body {
             justify-content: flex-end;
             margin-right: 30%;
             margin-top: -25px;
+            text-align: center;
+
             .repetir {
                 display: none;
                 color: $main-color-blue;
@@ -403,15 +405,13 @@ body {
                     background-color: $main-color-green;
                 }
             }   
+
             .contador {
-                display: none;
-                background-color: $main-color-blue;
+                color: $main-color-blue;
                 font-family: 'Montserrat-Bold', sans-serif;
-                font-size: 125px;
-                text-align: center;
-                justify-content: flex-end;
-                //margin-left: 25%;
+                font-size: 15px;
             }
+            
         }
 
         .separador {

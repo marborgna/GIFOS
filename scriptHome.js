@@ -48,13 +48,20 @@ function askSearchSuggestions(inputBusqueda) {
         console.log(response);
         listaSugerencias = inputBusqueda.parentNode.getElementsByClassName('lista-search')[0];
         listaSugerencias.textContent = '';
+        
+        if (response.data.length != 0){
+            separador = inputBusqueda.parentNode.getElementsByClassName('separador-lista')[0];
+            separador.style.display = "flex";
+        } else {
+            separador.style.display = "none";
+        }
+
 
         for(indiceElement in response.data) {
             let element = response.data[indiceElement];
             let nameDelElemento = element.name;
             addUlSuggestions(listaSugerencias, inputBusqueda, nameDelElemento);
         }
-         
 
     }).catch(error => {
         console.log(error);
@@ -72,9 +79,9 @@ for (var i = 0; i < inputBusqueda.length; ++i) {
 }
 
 function addUlSuggestions(listaSugerencias, inputBusqueda, sugerencia) {
-    //let division = document.createElement('div'); //LO CREA CANTIDAD DE VECES COMO LI HAY
+    let division = document.createElement('div'); //LO CREA CANTIDAD DE VECES COMO LI HAY
     let nuevaSugerencia = document.createElement('li');
-    //listaSugerencias.appendChild(division)
+    listaSugerencias.appendChild(division)
     listaSugerencias.appendChild(nuevaSugerencia);
 
     nuevaSugerencia.innerHTML = sugerencia;
