@@ -394,6 +394,9 @@ body .favoritos .container-favoritos .img-favorito .fondoHover .boton-favorito:h
 
 body .favoritos .container-favoritos .img-favorito .fondoHover .boton-favorito.favoritos-active {
   background-image: url("/img/icon-fav-active.svg");
+  background-repeat: no-repeat;
+  margin-top: 4%;
+  margin-right: -0.5%;
   width: 32px;
   height: 32px;
 }
