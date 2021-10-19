@@ -304,7 +304,7 @@ body .main .main-section .barra {
   border: 2px solid;
   width: 40%;
   min-width: 551px;
-  height: 150%;
+  height: 120%;
   border-color: #572EE5;
   border-radius: 27px;
   margin-left: auto;
@@ -347,7 +347,6 @@ body .main .main-section .barra .boton-search {
   background: url("/img/icon-search.svg");
   width: 20px;
   height: 20px;
-  margin-left: -15%;
   margin-top: 1%;
 }
 
@@ -404,7 +403,10 @@ body .main .main-section .barra .separador-lista {
   display: none;
   background-color: #9CAFC3;
   width: 505px;
-  height: 3px;
+  height: 1px;
+  opacity: 0.5;
+  margin-top: 5%;
+  margin-left: -110%;
 }
 
 body .main .main-section .barra :focus {
@@ -705,6 +707,9 @@ body .main .gifos-section .container-slider .slider .slider-section .fondoHover 
 
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-favorito.favoritos-active {
   background-image: url("/img/icon-fav-active.svg");
+  background-repeat: no-repeat;
+  margin-top: 1%;
+  margin-left: 1%;
   width: 32px;
   height: 32px;
 }
