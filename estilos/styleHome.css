@@ -708,8 +708,8 @@ body .main .gifos-section .container-slider .slider .slider-section .fondoHover 
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-favorito.favoritos-active {
   background-image: url("/img/icon-fav-active.svg");
   background-repeat: no-repeat;
-  margin-top: 1%;
-  margin-left: 1%;
+  margin-top: 4%;
+  margin-right: -0.5%;
   width: 32px;
   height: 32px;
 }
