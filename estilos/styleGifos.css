@@ -735,21 +735,48 @@ body .main-modal .modal {
 }
 
 body .main-modal .modal .modal-content {
-  margin: 15%;
-  padding: 20px;
-  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10%;
 }
 
-body .main-modal .modal .modal-content .cerrar {
-  float: right;
+body .main-modal .modal .modal-content .container-cerrar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 34px;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 25%;
+}
+
+body .main-modal .modal .modal-content .container-cerrar .cerrar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #572EE5;
-  font-weight: bold;
   width: 15.2px;
   height: 15.2px;
-  text-decoration: none;
+  justify-self: flex-end;
+  background-image: url("/img/close.svg");
+  cursor: pointer;
+  background-repeat: no-repeat;
 }
 
-body .main-modal .modal .modal-content img {
+body .main-modal .modal .modal-content .img-modal {
   height: 385px;
   width: 695px;
   text-align: center;
@@ -765,13 +792,14 @@ body .main-modal .modal .modal-content .botones .modal-btn {
           transform: translate(-13%);
   font-size: 30px;
   font-weight: bold;
-  text-align: center;
   cursor: pointer;
+  margin: 5%;
 }
 
 body .main-modal .modal .modal-content .botones .right {
   background: url("/img/button-slider-right.svg");
   right: 10px;
+  margin-right: 20%;
 }
 
 body .main-modal .modal .modal-content .botones .right:hover {
@@ -781,28 +809,102 @@ body .main-modal .modal .modal-content .botones .right:hover {
 body .main-modal .modal .modal-content .botones .left {
   background: url("/img/button-slider-left.svg");
   left: 10px;
+  margin-left: 20%;
 }
 
 body .main-modal .modal .modal-content .botones .left:hover {
   background: url("/img/button-slider-left-hover.svg");
 }
 
-body .main-modal .modal .modal-content .barra-tareas #user {
+body .main-modal .modal .modal-content .barra-tareas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  max-width: 695px;
+  height: 50%;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+body .main-modal .modal .modal-content .barra-tareas .bloque-usuario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: -15%;
+}
+
+body .main-modal .modal .modal-content .barra-tareas .bloque-usuario h4 {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
+  width: 100%;
 }
 
-body .main-modal .modal .modal-content .barra-tareas #titulo-GIFO {
-  font-family: 'Roboto-black', sans-serif;
+body .main-modal .modal .modal-content .barra-tareas .bloque-usuario h3 {
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  width: 100%;
+  margin-top: -2%;
 }
 
-body .main-modal .modal .modal-content .barra-tareas a img {
-  height: 32px;
+body .main-modal .modal .modal-content .barra-tareas .bloque-botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 5%;
+  width: 12%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favorito {
+  margin: 2%;
   width: 32px;
+  height: 32px;
+  background-image: url("/img/icon-fav.svg");
+  border: 1px solid #CED7E1;
+  border-radius: 6px;
 }
 
-body .main-modal .modal .modal-content .barra-tareas a :hover {
-  background: url("/img/icon-fav-hover.svg");
+body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favorito:hover {
+  background-image: url("/img/icon-fav-hover.svg");
+}
+
+body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favorito.favoritos-active {
+  background-image: url("/img/icon-fav-active.svg");
+  background-repeat: no-repeat;
+  padding-top: 3%;
+  padding-left: 3%;
+  width: 32px;
+  height: 32px;
+}
+
+body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-descarga {
+  margin: 2%;
+  width: 32px;
+  height: 32px;
+  background-image: url("/img/icon-download.svg");
+  border: 1px solid #CED7E1;
+  border-radius: 6px;
+}
+
+body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-descarga:hover {
+  background-image: url("img/icon-download-hover.svg");
 }
 /*# sourceMappingURL=styleGifos.css.map */

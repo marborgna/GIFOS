@@ -765,16 +765,26 @@ body {
                 justify-content: center;
                 align-items: center;
                 margin-top: 10%;
-                
-                .cerrar {
-                    margin-left: 60%;
-                    color: $main-color-blue;
-                    font-weight: bold;
-                    width: 15.2px;
-                    height: 15.2px;
-                    text-decoration: none;
-                    
+
+                .container-cerrar {
+                    display: flex;
+                    height: 34px;
+                    width: 100%;
+                    justify-content: flex-end;
+                    padding-right: 25%;
+                    .cerrar {
+                        display: flex;
+                        color: $main-color-blue;
+                        width: 15.2px;
+                        height: 15.2px;
+                        justify-self: flex-end;
+                        background-image: url('/img/close.svg');
+                        cursor: pointer;
+                        background-repeat: no-repeat;
+                    }
                 }
+                
+                
                 
                 .img-modal {
                     height: 385px;
@@ -823,41 +833,74 @@ body {
                 .barra-tareas {
                     display: flex;
                     flex-direction: row;
-                    //justify-content: space-between;
-                    width: 40%;
+                    justify-content: space-between;
+                    width: 70%;
+                    max-width: 695px;
                     height: 50%;
-                    background-color: red;
+                    align-items: baseline;
+
 
                     .bloque-usuario {
                         display: flex;
-                        width: 20%;
+                        width: 70%;
                         flex-direction: column;
-                        justify-content: flex-start;
+                        margin-top: -15%;
+
                         h4 {
                             font-family: 'Roboto', sans-serif;
                             font-size: 15px;
+                            width: 100%;
                         }
     
                         h3 {
                             font-family: 'Roboto', sans-serif;
                             font-size: 16px;
+                            width: 100%;
+                            margin-top: -2%;
                         }
                     }
                     
                     .bloque-botones {
                         display: flex;
                         justify-content: flex-end;
-                        a {
-                            img {
-                                height: 32px;
-                                width: 32px;
-                                
+                        margin-top: 5%;
+                        width: 12%;
+                        justify-content: space-around;
+
+                        .boton-favorito{
+                            margin: 2%;
+                            width: 32px;
+                            height: 32px;
+                            background-image: url('/img/icon-fav.svg');
+                            border: 1px solid #CED7E1;
+                            border-radius: 6px;
+
+                            &:hover {
+                                background-image: url('/img/icon-fav-hover.svg');
                             }
-                            :hover {
-                                background: url('/img/icon-fav-hover.svg');
-                                
+                            &.favoritos-active {
+                                background-image: url('/img/icon-fav-active.svg');
+                                background-repeat: no-repeat;
+                                padding-top: 3%;
+                                padding-left: 3%;
+                                width: 32px;
+                                height: 32px;
+                            }
+                        } 
+
+                        .boton-descarga {
+                            margin: 2%;
+                            width: 32px;
+                            height: 32px;
+                            background-image: url('/img/icon-download.svg');
+                            border: 1px solid #CED7E1;
+                            border-radius: 6px;
+
+                            &:hover {
+                                background-image: url('img/icon-download-hover.svg');
                             }
                         }
+
                     }
                 }               
             }
@@ -1066,6 +1109,24 @@ body {
             }
             .footerB{
                 margin-top: 3%;
+            }
+        }
+    }
+
+    .main-modal {
+        .modalSlider {
+            .modal-content {
+                .botones {
+                    display: none;
+                }
+
+                .img-modal {
+                    margin: 2%;
+                    //min-height: 245px;
+                    height: 25%;
+                    //min-width: 318px;
+                    width: 20%;
+                }
             }
         }
     }
