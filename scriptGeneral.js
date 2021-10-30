@@ -18,6 +18,20 @@ function stickyNav() {
 var imagenes = {};
 
 
+//MENU HAMBURGUESA
+
+botonHamburguesa = document.getElementsByClassName('boton-hamburguesa')[0];
+
+botonHamburguesa.addEventListener('click', () => {
+    let menuMobile = document.getElementsByClassName('sections-mobile')[0];
+    
+    if(menuMobile.matches('.expanded')) {
+        menuMobile.classList.remove('expanded');
+    } else {
+        menuMobile.classList.add('expanded');
+    }
+});
+
 
 // LOCAL STORAGE
 //FAVORITOS

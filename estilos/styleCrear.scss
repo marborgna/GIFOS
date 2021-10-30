@@ -219,6 +219,8 @@ body {
                     
                     display: flex;
                     justify-content: space-between;
+                    height: 0;
+                    overflow: visible;
                     
                     #borde-sup-izq {  
                     
@@ -242,56 +244,68 @@ body {
                 }
 
                 .main-cuadro {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
                     position: relative;
-
-                    &.fondo-acceso {
-                        background-color: $main-color-blue;
-                        justify-content: center;
-                        opacity: 0.6;
-                        position: absolute;
-                        z-index: 10;
-                    }
-
-                    .img-carga {
-                        display: none;
-                        width: 22px;
-                        height: 22px;
-                    }
-
-                    .img-listo {
-                        display: none;
-                        width: 22px;
-                        height: 22px;
-                    }
-
-                    #titulo {
-                        font-family: 'Montserrat', sans-serif;
-                        color: $main-color-blue;
-                        
-                        span {
-                            color: $main-color-green;
-                        }
-                    }
-        
-                    #texto {
-                        
-                        font-family: 'Roboto', sans-serif;
-                    } 
-
+                    display: grid;
+    
                     video {
                         height: 100%;
+                        width: 100%;
                         display: none;
+                        grid-area: 1 / 1 / 2 / 2;
                     }
 
-                    
+                    .fondoHover {
+                        grid-area: 1 / 1 / 2 / 2;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100%;
+
+                        &.fondo-acceso {
+                            background-color: $main-color-blue;
+                            justify-content: center;
+                            opacity: 0.6;
+                            position: absolute;
+                            
+                        }
+
+                        .img-carga {
+                            display: none;
+                            width: 22px;
+                            height: 22px;
+                        }
+    
+                        .img-listo {
+                            display: none;
+                            width: 22px;
+                            height: 22px;
+                        }
+    
+                        #titulo {
+                            font-family: 'Montserrat', sans-serif;
+                            color: $main-color-blue;
+                            
+                            span {
+                                color: $main-color-green;
+                            }
+                        }
+            
+                        #texto {
+                            
+                            font-family: 'Roboto', sans-serif;
+                        } 
+    
+                    }    
+                        
                     .contenedor-botones {
+                        grid-area: 1 / 1 / 2 / 2;
                         display: flex;
                         flex-direction: row;
                         justify-content: flex-end;
+                        width: 100%;
+                        z-index: 10;
 
                         .boton-descarga {
                             margin: 2%;
@@ -315,14 +329,13 @@ body {
                             }
                         }
                     }
-                    
                 }
     
-                
-
                 .inferior {
                     display: flex;
                     justify-content: space-between;
+                    height: 0;
+                    overflow: visible;
                     
                     #borde-inf-izq {
                         width: 25px;
@@ -330,6 +343,7 @@ body {
                         border-bottom: 1px solid;
                         border-left: 1px solid;
                         border-color: $main-color-green;
+                        margin-top: -26px;
                     }
         
                     #borde-inf-der {
@@ -339,6 +353,7 @@ body {
                         border-bottom: 1px solid;
                         border-right: 1px solid;
                         border-color: $main-color-green;
+                        margin-top: -26px;
                     }
                 }
     

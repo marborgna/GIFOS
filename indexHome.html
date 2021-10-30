@@ -16,20 +16,22 @@
                     <a href="indexHome.html" class="logo-mobile"><img alt="logo" src="img/logo-mobile.svg">  </a>  
                     <a href="indexHome.html" class="logo-desktop-noc"><img alt="logo" src="img/Logo-modo-noc.svg"></a>
                     <a href="indexHome.html" class="logo-mobile-noc"><img alt="logo" src="img/logo-mobile-modo-noc.svg">  </a>  
-                    <input type="checkbox" id="toggle"/>
-                    <label for="toggle" class="menu">
-                        <span class="raya"></span>
-                        <span class="raya"></span>
-                        <span class="raya"></span>
-                        <span class="cuadrado"></span>
-                    </label>
-                    <form class="barra">             
-                        <input type="search" class="search" placeholder="Busca GIFOS y más">
-                        <div class="boton-search"></div>
-                        </input>
-                        <div class="separador-lista"></div>
-                        <ul id="lista-search" class="lista-search"></ul>
-                    </form>
+                    <!--<input type="checkbox" id="toggle"/>-->
+                    <div class="menu-desplegable"></div>
+                    <div class="boton-hamburguesa"></div>
+                    <div class="container-barra">
+                        <form class="barra">
+                            <div class="barra-simple">
+                                <input type="search" class="search" placeholder="Busca GIFOS y más">
+                                <div class="boton-search boton"></div>
+                                <div class="boton-cancel-search boton"></div>
+                            </div>             
+                            <div class="boton-search"></div>
+                            </input>
+                            <div class="separador-lista"></div>
+                            <ul id="lista-search" class="lista-search"></ul>
+                        </form>
+                    </div>
                     <ul class="sections">
                         <li><div class="switch" id="switch">Modo Nocturno</div></li>
                         <li><div class="separador"></div></li>
@@ -40,14 +42,26 @@
                         <li><a href="indexCrear.html"><div class="boton-mas"></div></a></li>
                     </ul>
                 </nav>
+                <ul class="sections-mobile">
+                    <li><div class="switch" id="switch">Modo Nocturno</div></li>
+                    <li><div class="separador"></div></li>
+                    <li><a href="indexFavoritos.html">Favoritos</a></li>
+                    <li><div class="separador"></div></li>
+                    <li><a href="indexGifos.html">Mis GIFOS</a></li>
+                    <li><div class="separador"></div></li>
+                    <li><a href="indexCrear.html"><div class="boton-mas"></div></a></li>
+                </ul>
             </header>
 
             <section class="main-section">
                 <h1>Inspírate, busca,<br class="mobile-break"> guarda, y crea<br class="desktop-break"> los <br class="mobile-break">mejores <span>GIFOS</span></h1>
                 <img src="img/ilustra_header.svg">
-                <form class="barra">             
-                    <input type="search" class="search" placeholder="Busca GIFOS y más">
-                    <div class="boton-search"></div>
+                <form class="barra">       
+                    <div class="barra-simple">
+                        <input type="search" class="search" placeholder="Busca GIFOS y más">
+                        <div class="boton-search boton"></div>
+                        <div class="boton-cancel-search boton"></div>
+                    </div>      
                     </input>
                     <div class="separador-lista"></div>
                     <ul id="lista-search" class="lista-search"></ul>
@@ -113,7 +127,7 @@
             <div class="modalResultados modal">
             
                 <div class="modal-content">
-                    <div class="cerrar">&times;</div>
+                    <div class="cerrar"></div>
                     <div class="botones">
                         <div class="modal-btn left"></div>
                         <div class="modal-btn right"></div>

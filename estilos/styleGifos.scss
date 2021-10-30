@@ -759,3 +759,32 @@ body {
         }
     }
 }
+
+
+@media screen and (max-width: 1000px) {
+    body {
+        margin: 0%;
+        width: 100%;
+
+        .mis-GIFOS {
+            .container-favoritos {
+                grid-template-columns: 1fr 1fr;
+                    grid-row-gap: 1.5vw;
+                    grid-column-gap: 1.5vw;
+                    width: auto;
+                grid-template-rows: 1fr 1fr 1fr;
+    
+                    .img-favorito {
+                        width: 47vw;
+                        height: inherit;
+                        margin-left: 0;
+    
+                        img {
+                            width: 47vw;
+                            height: 47vw;
+                        }
+                    }
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
 // CAMARA
 
 var cuadro = document.getElementsByClassName('main-cuadro')[0];
+var fondoHover = document.getElementsByClassName('fondoHover')[0];
 var titulo = document.getElementById('titulo');
 var texto = document.getElementById('texto');
 var video = document.getElementById('video');
@@ -131,8 +132,7 @@ botonSubir.addEventListener('click', () => {
    texto.style.display = "flex";
    texto.textContent = "Estamos subiendo tu GIFO";
    imgCarga.style.display = "flex";
-   cuadro.classList.add("fondo-acceso"); 
-   
+   fondoHover.classList.add("fondo-acceso"); 
 })
 
 function uploadGif() {

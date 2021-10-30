@@ -748,8 +748,9 @@ body {
                             &.favoritos-active {
                                 background-image: url('/img/icon-fav-active.svg');
                                 background-repeat: no-repeat;
-                                padding-top: 3%;
-                                padding-left: 3%;
+                                //padding-top: 3%;
+                                //padding-left: 3%;
+                                border: none;
                                 width: 32px;
                                 height: 32px;
                             }
@@ -770,6 +771,77 @@ body {
 
                     }
                 }               
+            }
+        }
+    }
+}
+
+
+@media screen and (max-device-width: 1000px) {
+    body {
+        margin: 0;
+        width: 100%;
+
+        .favoritos {
+            .container-favoritos {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-row-gap: 21px;
+                grid-column-gap: 25px;
+
+                .img-favorito {
+                    width: 156px;
+                    height: 120px;
+                    
+                }
+            }
+        }
+
+        .gifos-section {
+            h2 {
+                padding-bottom: 2%;
+            }
+            h5 {
+                text-align: center;
+                br {
+                    display: inline;
+                }
+            }
+
+            .container-slider {
+                .slider-btn {
+                    display: none;
+                }
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            padding-top: 8%;
+            padding-bottom: 5%;
+            align-content: center;
+            .footerA {
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                h3 {
+                    width: 100%;
+                    margin-left: 15%;
+                }   
+                           
+            }
+            
+            .footerB {
+                display: block;
+                align-items: center;
+                justify-content: flex-start;
+                h2 {
+                    font-family: 'Roboto-Regular', sans-serif;
+                    font-size: 13px;
+                }
             }
         }
     }

@@ -907,4 +907,29 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
 body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-descarga:hover {
   background-image: url("img/icon-download-hover.svg");
 }
+
+@media screen and (max-width: 1000px) {
+  body {
+    margin: 0%;
+    width: 100%;
+  }
+  body .mis-GIFOS .container-favoritos {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1.5vw;
+    grid-column-gap: 1.5vw;
+    width: auto;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+  }
+  body .mis-GIFOS .container-favoritos .img-favorito {
+    width: 47vw;
+    height: inherit;
+    margin-left: 0;
+  }
+  body .mis-GIFOS .container-favoritos .img-favorito img {
+    width: 47vw;
+    height: 47vw;
+  }
+}
 /*# sourceMappingURL=styleGifos.css.map */

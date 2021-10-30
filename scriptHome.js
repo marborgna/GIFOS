@@ -46,14 +46,16 @@ function askSearchSuggestions(inputBusqueda) {
     let info = getSearch(inputBusqueda);
     info.then(response => {
         console.log(response);
-        listaSugerencias = inputBusqueda.parentNode.getElementsByClassName('lista-search')[0];
+        listaSugerencias = inputBusqueda.parentNode.parentNode.getElementsByClassName('lista-search')[0];
         listaSugerencias.textContent = '';
         
         if (response.data.length != 0){
-            separador = inputBusqueda.parentNode.getElementsByClassName('separador-lista')[0];
+            separador = inputBusqueda.parentNode.parentNode.getElementsByClassName('separador-lista')[0];
             separador.style.display = "flex";
+            listaSugerencias.style.display = "flex";
         } else {
             separador.style.display = "none";
+            listaSugerencias.style.display = "none";
         }
 
 
@@ -67,14 +69,34 @@ function askSearchSuggestions(inputBusqueda) {
         console.log(error);
     });
 
+}
 
-
+function oninputBusqueda(inputBusqueda) {
+    let botonLupa = inputBusqueda.parentNode.getElementsByClassName('boton-search')[0];
+    let botonCancel = inputBusqueda.parentNode.getElementsByClassName('boton-cancel-search')[0];
+    if(inputBusqueda.value.length > 0) {
+        botonLupa.style.display = "none";
+        botonCancel.style.display = "block";
+    } else {
+        botonLupa.style.display = "block";
+        botonCancel.style.display = "none";
+    }
+    askSearchSuggestions(inputBusqueda);
 }
 
 inputBusqueda = document.getElementsByClassName('search');
 for (var i = 0; i < inputBusqueda.length; ++i) {
     inputBusqueda[i].addEventListener('input', (e) => {
-        askSearchSuggestions(e.target);
+        oninputBusqueda(e.target);
+    });
+}
+
+inputCancelBusqueda = document.getElementsByClassName('boton-cancel-search');
+for (var i = 0; i < inputCancelBusqueda.length; ++i) {
+    inputCancelBusqueda[i].addEventListener('click', (e) => {
+        let inputBusqueda = e.target.parentNode.getElementsByClassName('search')[0];
+        inputBusqueda.value = "";
+        oninputBusqueda(inputBusqueda);
     });
 }
 

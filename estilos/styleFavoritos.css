@@ -899,8 +899,7 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favo
 body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favorito.favoritos-active {
   background-image: url("/img/icon-fav-active.svg");
   background-repeat: no-repeat;
-  padding-top: 3%;
-  padding-left: 3%;
+  border: none;
   width: 32px;
   height: 32px;
 }
@@ -916,5 +915,79 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
 
 body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-descarga:hover {
   background-image: url("img/icon-download-hover.svg");
+}
+
+@media screen and (max-device-width: 1000px) {
+  body {
+    margin: 0;
+    width: 100%;
+  }
+  body .favoritos .container-favoritos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-row-gap: 21px;
+    grid-column-gap: 25px;
+  }
+  body .favoritos .container-favoritos .img-favorito {
+    width: 156px;
+    height: 120px;
+  }
+  body .gifos-section h2 {
+    padding-bottom: 2%;
+  }
+  body .gifos-section h5 {
+    text-align: center;
+  }
+  body .gifos-section h5 br {
+    display: inline;
+  }
+  body .gifos-section .container-slider .slider-btn {
+    display: none;
+  }
+  body footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 8%;
+    padding-bottom: 5%;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  body footer .footerA {
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body footer .footerA h3 {
+    width: 100%;
+    margin-left: 15%;
+  }
+  body footer .footerB {
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  body footer .footerB h2 {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 13px;
+  }
 }
 /*# sourceMappingURL=styleFavoritos.css.map */
