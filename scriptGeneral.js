@@ -26,8 +26,10 @@ botonHamburguesa.addEventListener('click', () => {
     let menuMobile = document.getElementsByClassName('sections-mobile')[0];
     
     if(menuMobile.matches('.expanded')) {
+        document.body.classList.remove("scroll-locked");
         menuMobile.classList.remove('expanded');
     } else {
+        document.body.classList.add("scroll-locked");
         menuMobile.classList.add('expanded');
     }
 });

@@ -1201,11 +1201,18 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     margin: 0%;
     width: 100%;
   }
+  body.scroll-locked {
+    overflow-y: hidden;
+    position: fixed;
+    height: 100vh;
+  }
   body .main header {
     background-color: #ffffff;
-  }
-  body .main header .logo-mobile {
-    margin-top: 25%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 8vh;
   }
   body .main header .logo-mobile a {
     padding-left: 15px;
@@ -1232,6 +1239,7 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
+    height: 8vh;
   }
   body .main header nav .boton-hamburguesa {
     display: block;
@@ -1241,7 +1249,10 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
   body .main header nav .sections {
     display: none;
   }
-  body .main header .sections-mobile.expanded {
+  body .main header .sections-mobile-container {
+    z-index: 20;
+  }
+  body .main header .sections-mobile-container .sections-mobile.expanded {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1249,9 +1260,13 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background: #572EE5;
+    background: rgba(87, 46, 229, 0.9);
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    margin: 0;
+  }
+  body .main header .sections-mobile-container .sections-mobile.expanded li {
+    text-decoration: none;
   }
   body .main .main-section {
     width: 100%;
