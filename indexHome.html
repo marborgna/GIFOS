@@ -33,11 +33,11 @@
                         </form>
                     </div>
                     <ul class="sections">
-                        <li><div class="switch" id="switch">Modo Nocturno</div></li>
+                        <li><div class="switch item" id="switch">Modo Nocturno</div></li>
                         <li><div class="separador"></div></li>
-                        <li><a href="indexFavoritos.html">Favoritos</a></li>
+                        <li><a class="item" href="indexFavoritos.html">Favoritos</a></li>
                         <li><div class="separador"></div></li>
-                        <li><a href="indexGifos.html">Mis GIFOS</a></li>
+                        <li><a class="item" href="indexGifos.html">Mis GIFOS</a></li>
                         <li><div class="separador"></div></li>
                         <li><a href="indexCrear.html"><div class="boton-mas"></div></a></li>
                     </ul>
@@ -129,7 +129,9 @@
             <div class="modalResultados modal">
             
                 <div class="modal-content">
-                    <div class="cerrar"></div>
+                    <div class="container-cerrar">
+                        <div class="cerrar"></div>
+                    </div>
                     <div class="botones">
                         <div class="modal-btn left"></div>
                         <div class="modal-btn right"></div>
@@ -141,8 +143,8 @@
                             <h3 class="titulo-GIFO"></h4>
                         </div>
                         <div class="bloque-botones">
-                            <a class="boton fav boton-favorito"><img src="img/icon-fav.svg" alt="favorito"></a>
-                            <a class="boton descarga"><img src="img/icon-download.svg" alt="icon-download"></a>
+                            <div class="boton-favorito"></div>
+                            <div class="boton-descarga"></div>
                         </div>
                     </div>
                 </div>

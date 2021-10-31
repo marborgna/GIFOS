@@ -529,7 +529,7 @@ body .main .main-section .barra .separador-lista {
   -ms-grid-column-align: center;
       justify-self: center;
   background-color: #9CAFC3;
-  width: 505px;
+  width: 85%;
   height: 1px;
   opacity: 0.5;
   margin: 5px auto;
@@ -562,6 +562,7 @@ body .main .trending-section h4 {
 }
 
 body .main .trending-section .contenedor-sugerencias {
+  width: 65%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1163,6 +1164,12 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones {
 }
 
 body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favorito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 2%;
   width: 32px;
   height: 32px;
@@ -1178,9 +1185,16 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favo
 body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favorito.favoritos-active {
   background-image: url("/img/icon-fav-active.svg");
   background-repeat: no-repeat;
-  border: none;
+  /*border: none;
+                                padding-top: 5px;
+                                padding-left: 5px;
+                                width: 32px;
+                                height: 32px;*/
+  margin: 2%;
   width: 32px;
   height: 32px;
+  border: 1px solid #CED7E1;
+  border-radius: 6px;
 }
 
 body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-descarga {
@@ -1245,6 +1259,7 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     display: block;
     margin-top: 30px;
     cursor: pointer;
+    margin-right: 5%;
   }
   body .main header nav .sections {
     display: none;
@@ -1266,7 +1281,32 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     margin: 0;
   }
   body .main header .sections-mobile-container .sections-mobile.expanded li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 16px;
+    margin-right: 0px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    text-transform: uppercase;
+    color: #572EE5;
     text-decoration: none;
+    outline: none;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  body .main header .sections-mobile-container .sections-mobile.expanded li .item {
+    color: #ffffff;
+    font-family: "Montserrat-Bold";
+    font-size: 15px;
+    text-decoration: none;
+  }
+  body .main header .sections-mobile-container .sections-mobile.expanded li .item .boton-mas {
+    height: 54px;
+    width: 54px;
+    background-image: url("/img/button-crear-gifo.svg");
+  }
+  body .main header .sections-mobile-container .sections-mobile.expanded li .item .boton-mas:hover {
+    background-image: url("/img/CTA-crear-gifo-hover.svg");
   }
   body .main .main-section {
     width: 100%;
@@ -1446,6 +1486,50 @@ body.dark .main .main-section h1 {
 body.dark .main .main-section .barra {
   border-color: #ffffff;
   background-color: #37383C;
+}
+
+body.dark .main .main-section .barra .lista-search {
+  display: none;
+  border: #572EE5;
+  border-radius: 27px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 10%;
+  text-align: left;
+  padding: 0%;
+  padding-left: 2%;
+}
+
+body.dark .main .main-section .barra .lista-search li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #9CAFC3;
+  text-decoration: none;
+  list-style: none;
+  border-color: #572EE5;
+  border-radius: 27px;
+  font-family: 'Roboto-black', sans-serif;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  cursor: pointer;
+  text-align: left;
+  margin-top: 15%;
+}
+
+body.dark .main .main-section .barra .lista-search li img {
+  height: 15.8px;
+  width: 15.8px;
+  color: #9CAFC3;
+  -webkit-filter: grayscale(100%) brightness(0.8) opacity(35%);
+          filter: grayscale(100%) brightness(0.8) opacity(35%);
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-right: 5%;
 }
 
 body.dark .main .main-section .barra .search {
