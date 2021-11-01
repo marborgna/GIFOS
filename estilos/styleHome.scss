@@ -67,28 +67,6 @@ body {
                     }
                 }
 
-                .menu {
-                    display: none;
-                    color: $main-color-blue;
-                    padding-right: 3px;
-                    align-self: center;
-                    flex-direction: column;
-                    margin-right: 19px;
-                    
-                    .raya {
-                        display: none;
-                        height: 2px;
-                        width: 18px;
-                        background-color: $main-color-blue;
-                        margin-top: 3px;
-                    }
-                    .cuadrado {
-                        display: none;
-                        background-color: $main-color-blue;
-                        width: 14px;
-                        height: 14px;
-                    }
-                }
 
                 .container-barra {
                     display: none;
@@ -419,7 +397,9 @@ body {
                     padding: 0%;
                     padding-left: 2%;
 
-                    
+                    &.hay-resultados {
+                        display: flex;
+                    }
 
 
                     li {
@@ -1085,25 +1065,29 @@ body {
                         background: rgba(87,46,229,0.90);
                         width: 100%;
                         height: 100vh;
-                        margin: 0;
+                        margin: 0; 
+                        justify-content: flex-start;
+                        margin-top: 2%;   
+                        align-items: center;                     
 
                         li {
                             display: flex;
                             font-size: 16px;
                             margin-right: 0px;
                             font-family: 'Montserrat-Bold', sans-serif;
-                            text-transform: uppercase;
-                            color: $main-color-blue;
+                            color: $main-color-white;
                             text-decoration: none;
                             outline: none;
                             font-weight: bold;
                             text-decoration: none;
+                            margin-top: 5%;
 
                             .item {
                                 color: $main-color-white;
-                                font-family: 'Montserrat-Bold', ;
+                                font-family: 'Montserrat-Bold', sans-serif;
                                 font-size: 15px;
                                 text-decoration: none;
+                                outline: none;
                                 .boton-mas {
                                     height: 54px;
                                     width: 54px;
@@ -1113,9 +1097,18 @@ body {
                                         background-image: url('/img/CTA-crear-gifo-hover.svg');
                                     }
                                 }
+                                
                             }
-                            
+
+                            .separador {
+                                height: 0.1px;
+                                width: 41px;
+                                border: 1px solid #FFFFFF;
+                                opacity: 0.5;
+                            }
                         }
+                        
+                        
                     }
                 }
             }
@@ -1143,6 +1136,7 @@ body {
     
                 .barra {
                     //min-width: 334px;
+                    
                     text-align: space-around;
                     vertical-align: middle;
                     white-space: nowrap;
@@ -1150,6 +1144,14 @@ body {
                     input {
                         
                         width: 100%;
+                    }
+
+                    
+
+                    .lista-search {
+                        &.hay-resultados {
+                            display: none;
+                        }
                     }
                     
                 }

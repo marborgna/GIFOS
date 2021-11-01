@@ -14,21 +14,9 @@ function stickyNav() {
 }
 
 
-//DARK MODE
 
-let btnSwitch = document.getElementById('switch');
 
-btnSwitch.addEventListener('click', () =>{
-    document.body.classList.toggle('dark');
-    btnSwitch.classList.toggle('active');
 
-    if (document.body.classList == 'dark') {
-        btnSwitch.innerHTML="Modo Diurno";
-    } else {
-        btnSwitch.innerHTML="Modo Nocturno";
-    }
-    
-});
 
 
 //BARRA BUSQUEDA
@@ -48,14 +36,18 @@ function askSearchSuggestions(inputBusqueda) {
         console.log(response);
         listaSugerencias = inputBusqueda.parentNode.parentNode.getElementsByClassName('lista-search')[0];
         listaSugerencias.textContent = '';
-        
+        separador = inputBusqueda.parentNode.parentNode.getElementsByClassName('separador-lista')[0];
+
         if (response.data.length != 0){
-            separador = inputBusqueda.parentNode.parentNode.getElementsByClassName('separador-lista')[0];
-            separador.style.display = "flex";
-            listaSugerencias.style.display = "flex";
+            //separador.style.display = "flex";
+            //listaSugerencias.style.display = "flex";
+            separador.classList.add('hay-resultados');
+            listaSugerencias.classList.add('hay-resultados');   
         } else {
-            separador.style.display = "none";
-            listaSugerencias.style.display = "none";
+            //separador.style.display = "none";
+            //listaSugerencias.style.display = "none";
+            separador.classList.remove('hay-resultados');
+            listaSugerencias.classList.remove('hay-resultados');  
         }
 
 
@@ -68,6 +60,8 @@ function askSearchSuggestions(inputBusqueda) {
     }).catch(error => {
         console.log(error);
     });
+
+    //listaSugerencias.classList.add('lista-sin-mostrar');
 
 }
 

@@ -18,6 +18,25 @@ function stickyNav() {
 var imagenes = {};
 
 
+//DARK MODE
+
+let btnSwitch = document.getElementsByClassName('switch');
+
+for (var i = 0; i < btnSwitch.length; ++i) {
+    btnSwitch[i].addEventListener('click', (e) =>{
+        let btn = e.target;
+        document.body.classList.toggle('dark');
+        btn.classList.toggle('active');
+    
+        if (document.body.classList.contains('dark')) {
+            btn.innerHTML="Modo Diurno";
+        } else {
+            btn.innerHTML="Modo Nocturno";
+        }
+    });
+}
+
+
 //MENU HAMBURGUESA
 
 botonHamburguesa = document.getElementsByClassName('boton-hamburguesa')[0];
@@ -109,8 +128,6 @@ function removerGifs(idImg) {
 function guardarGifs(lista) {
     window.localStorage.setItem('misGifs', JSON.stringify(lista));
 }
-
-
 
 function registrarBotonFav(container) {
     botonFav = container.querySelectorAll(".boton-favorito");
