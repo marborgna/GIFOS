@@ -43,6 +43,7 @@ botonHamburguesa = document.getElementsByClassName('boton-hamburguesa')[0];
 
 botonHamburguesa.addEventListener('click', () => {
     let menuMobile = document.getElementsByClassName('sections-mobile')[0];
+    botonHamburguesa.classList.toggle('active-boton');
     
     if(menuMobile.matches('.expanded')) {
         document.body.classList.remove("scroll-locked");

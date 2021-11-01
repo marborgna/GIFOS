@@ -302,6 +302,10 @@ body .main header nav .boton-hamburguesa {
   height: 14px;
 }
 
+body .main header nav .boton-hamburguesa.active-boton {
+  background-image: url("/img/close.svg");
+}
+
 body .main header .sections-mobile {
   display: none;
 }
@@ -1270,6 +1274,7 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     display: flex;
     font-size: 16px;
     margin-right: 0px;
+    margin-left: 0px;
     font-family: 'Montserrat-Bold', sans-serif;
     color: #ffffff;
     text-decoration: none;
@@ -1298,6 +1303,9 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     width: 41px;
     border: 1px solid #FFFFFF;
     opacity: 0.5;
+  }
+  body .main header .sections-mobile-container .sections-mobile.expanded li .crear {
+    display: none;
   }
   body .main .main-section {
     width: 100%;
@@ -1411,16 +1419,39 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     width: 100%;
   }
   body .main footer .footerA .sections {
-    margin: 0px;
+    margin-top: 10%;
+    margin-right: 25%;
     padding: 0px;
+  }
+  body .main-modal .modalResultados .modal-content .botones {
+    display: none;
+  }
+  body .main-modal .modalResultados .modal-content .img-modal {
+    margin: 2%;
+    width: 318px;
+    height: 245px;
+  }
+  body .main-modal .modalResultados .modal-content .barra-tareas .bloque-usuario {
+    width: 45%;
+  }
+  body .main-modal .modalResultados .modal-content .barra-tareas .bloque-botones {
+    margin-top: 2%;
+    width: 25%;
   }
   body .main-modal .modalSlider .modal-content .botones {
     display: none;
   }
   body .main-modal .modalSlider .modal-content .img-modal {
     margin: 2%;
-    height: 25%;
-    width: 20%;
+    width: 318px;
+    height: 245px;
+  }
+  body .main-modal .modalSlider .modal-content .barra-tareas .bloque-usuario {
+    width: 45%;
+  }
+  body .main-modal .modalSlider .modal-content .barra-tareas .bloque-botones {
+    margin-top: 2%;
+    width: 25%;
   }
 }
 
@@ -1463,6 +1494,18 @@ body.dark .main header nav .logo-mobile-noc img {
 
 body.dark .main header nav .sections li {
   color: #FFFFFF;
+}
+
+body.dark .main header nav .boton-hamburguesa {
+  background-image: url("/img/burger-modo-noct.svg");
+}
+
+body.dark .main header nav .boton-hamburguesa.active-boton {
+  background-image: url("/img/close-modo-noct.svg");
+}
+
+body.dark .main header .sections-mobile-container .sections-mobile.expanded {
+  background: rgba(0, 0, 0, 0.9);
 }
 
 body.dark .main .sticky {
