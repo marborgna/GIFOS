@@ -52,7 +52,7 @@ function traerFavoritos(urlImg) {
         }
 
         var container = document.getElementsByClassName('container-favoritos')[0];
-        var modal = document.getElementsByClassName('modalFavoritos')[0];
+        var modal = document.getElementsByClassName('modalResultados')[0];
         modal.listaIds = listaIds;
         modal.posicion = 0;
 
