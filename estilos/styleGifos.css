@@ -1197,5 +1197,35 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     margin-left: -55%;
     width: 60%;
   }
+  body .main-modal .modalResultados .modal-content .botones {
+    display: none;
+  }
+  body .main-modal .modalResultados .modal-content .img-modal {
+    margin: 2%;
+    width: 318px;
+    height: 245px;
+  }
+  body .main-modal .modalResultados .modal-content .barra-tareas .bloque-usuario {
+    width: 45%;
+  }
+  body .main-modal .modalResultados .modal-content .barra-tareas .bloque-botones {
+    margin-top: 2%;
+    width: 25%;
+  }
+  body .main-modal .modalSlider .modal-content .botones {
+    display: none;
+  }
+  body .main-modal .modalSlider .modal-content .img-modal {
+    margin: 2%;
+    width: 318px;
+    height: 245px;
+  }
+  body .main-modal .modalSlider .modal-content .barra-tareas .bloque-usuario {
+    width: 45%;
+  }
+  body .main-modal .modalSlider .modal-content .barra-tareas .bloque-botones {
+    margin-top: 2%;
+    width: 25%;
+  }
 }
 /*# sourceMappingURL=styleGifos.css.map */

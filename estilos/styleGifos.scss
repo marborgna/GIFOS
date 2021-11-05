@@ -1012,6 +1012,56 @@ body {
             }
         }
 
-         
+        .main-modal {
+            .modalResultados {   
+                .modal-content {
+                    .botones {
+                        display: none;
+                    }
+
+                    .img-modal {
+                        margin: 2%;
+                        width: 318px;
+                        height: 245px;
+                    }
+
+                    .barra-tareas {
+                        .bloque-usuario {
+                            width: 45%;
+                        }
+
+                        .bloque-botones {
+                            margin-top: 2%;
+                            width: 25%;
+                        }
+                    }
+                } 
+            }
+    
+            .modalSlider {
+                .modal-content {
+                    .botones {
+                        display: none;
+                    }
+    
+                    .img-modal {
+                        margin: 2%;
+                        width: 318px;
+                        height: 245px;
+                    }
+
+                    .barra-tareas {
+                        .bloque-usuario {
+                            width: 45%;
+                        }
+
+                        .bloque-botones {
+                            margin-top: 2%;
+                            width: 25%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

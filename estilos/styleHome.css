@@ -1290,12 +1290,12 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     text-decoration: none;
     outline: none;
   }
-  body .main header .sections-mobile-container .sections-mobile.expanded li .item .boton-mas {
+  body .main header .sections-mobile-container .sections-mobile.expanded li .item.boton-mas {
     height: 54px;
     width: 54px;
     background-image: url("/img/button-crear-gifo.svg");
   }
-  body .main header .sections-mobile-container .sections-mobile.expanded li .item .boton-mas:hover {
+  body .main header .sections-mobile-container .sections-mobile.expanded li .item.boton-mas:hover {
     background-image: url("/img/CTA-crear-gifo-hover.svg");
   }
   body .main header .sections-mobile-container .sections-mobile.expanded li .separador {
