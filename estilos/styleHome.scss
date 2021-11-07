@@ -1064,6 +1064,7 @@ body {
 
                 .sections-mobile-container {
                     z-index: 20;
+                    margin-left: -7%;
                     .sections-mobile.expanded {
                         display: flex;
                         flex-direction: column;
@@ -1072,14 +1073,15 @@ body {
                         height: 100vh;
                         margin: 0; 
                         justify-content: flex-start;
-                        margin-top: 2%;   
+                        margin-top: 4%;  
+                        margin-left: -5%; 
                         align-items: center;                     
 
                         li {
                             display: flex;
                             font-size: 16px;
                             margin-right: 0px;
-                            margin-left: 0px;
+                            margin-left: 0%;
                             font-family: 'Montserrat-Bold', sans-serif;
                             color: $main-color-white;
                             text-decoration: none;

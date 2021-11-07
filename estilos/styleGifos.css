@@ -1076,6 +1076,7 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
   }
   body .main header .sections-mobile-container {
     z-index: 20;
+    margin-left: -7%;
   }
   body .main header .sections-mobile-container .sections-mobile.expanded {
     display: -webkit-box;

@@ -810,6 +810,7 @@ body {
                                 width: 32px;
                                 height: 32px;
                             }
+            
                         }
 
                         .boton-descarga {
@@ -893,6 +894,7 @@ body {
     
                 .sections-mobile-container {
                     z-index: 20;
+                    margin-left: -7%;
                     .sections-mobile.expanded {
                         display: flex;
                         flex-direction: column;

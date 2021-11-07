@@ -1247,6 +1247,7 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
   }
   body .main header .sections-mobile-container {
     z-index: 20;
+    margin-left: -7%;
   }
   body .main header .sections-mobile-container .sections-mobile.expanded {
     display: -webkit-box;
@@ -1263,7 +1264,8 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin-top: 2%;
+    margin-top: 4%;
+    margin-left: -5%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1274,7 +1276,7 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
     display: flex;
     font-size: 16px;
     margin-right: 0px;
-    margin-left: 0px;
+    margin-left: 0%;
     font-family: 'Montserrat-Bold', sans-serif;
     color: #ffffff;
     text-decoration: none;
