@@ -11,7 +11,18 @@ body header {
   display: flex;
 }
 
-body header #navbar {
+body header .up-barra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #572EE5;
+  width: 100%;
+  height: 5px;
+  margin-top: 0%;
+  padding-top: 0%;
+}
+
+body header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,21 +34,10 @@ body header #navbar {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background: rgba(255, 255, 255, 0.5);
-  overflow: hidden;
+  overflow: visible;
 }
 
-body header #navbar .up-barra {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #572EE5;
-  width: 100%;
-  height: 5px;
-  margin-top: 0%;
-  padding-top: 0%;
-}
-
-body header #navbar .logo-desktop {
+body header nav .logo-desktop img {
   width: 59.1px;
   height: 59.1px;
   justify-items: flex-start;
@@ -45,115 +45,177 @@ body header #navbar .logo-desktop {
       -ms-grid-row-align: center;
       align-self: center;
   font-weight: bold;
+  margin-top: 25%;
+  margin-left: 60%;
 }
 
-body header #navbar .logo-mobile {
+body header nav .logo-mobile img {
   display: none;
 }
 
-body header #navbar .menu {
+body header nav .logo-desktop-noc img {
   display: none;
-  color: #572EE5;
-  padding-right: 3px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+}
+
+body header nav .logo-mobile-noc img {
+  display: none;
+}
+
+body header nav .container-barra {
+  display: none;
+  height: 3.5em;
+  text-align: right;
+  white-space: nowrap;
+  width: 40%;
+  min-width: 250px;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body header nav .container-barra .barra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 19px;
-}
-
-body header #navbar .menu .raya {
-  display: none;
-  height: 2px;
-  width: 18px;
-  background-color: #572EE5;
-  margin-top: 3px;
-}
-
-body header #navbar .menu .cuadrado {
-  display: none;
-  background-color: #572EE5;
-  width: 14px;
-  height: 14px;
-}
-
-body header #navbar .sticky {
-  position: fixed;
-  top: 0;
+  text-align: right;
+  white-space: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 2px solid;
   width: 100%;
-  -webkit-box-shadow: 0px 2px 4px 1px #9CAFC3;
-          box-shadow: 0px 2px 4px 1px #9CAFC3;
+  min-width: 250px;
+  border-color: #572EE5;
+  border-radius: 27px;
+  background: white;
+  margin-top: 2%;
 }
 
-body header #navbar .sticky .barra {
+body header nav .container-barra .barra .barra-simple {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: right;
-  white-space: nowrap;
-  border: 2px solid;
-  width: 30%;
-  min-width: 334px;
-  height: 50px;
-  border-color: #572EE5;
-  border-radius: 27px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-body header #navbar .sticky .barra :focus {
-  outline: none;
-}
-
-body header #navbar .sticky .barra input {
+body header nav .container-barra .barra .barra-simple input {
+  margin: .7em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border: none;
   font-family: 'Roboto-black', sans-serif;
-  background: url(img/icon-search.svg) no-repeat scroll 97%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin: none;
-  width: 160%;
-  height: 100%;
+  margin-top: 1%;
+  width: 100%;
+  height: 70%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 3%;
+  text-align: left;
 }
 
-body header #navbar .sticky .barra ul {
+body header nav .container-barra .barra .barra-simple input::-webkit-search-decoration {
+  display: none;
+}
+
+body header nav .container-barra .barra .barra-simple input::-webkit-search-cancel-button {
+  display: none;
+}
+
+body header nav .container-barra .barra .barra-simple input::-webkit-search-results-button {
+  display: none;
+}
+
+body header nav .container-barra .barra .barra-simple input::-webkit-search-results-decoration {
+  display: none;
+}
+
+body header nav .container-barra .barra .barra-simple input:focus {
+  outline: none;
+}
+
+body header nav .container-barra .barra .barra-simple .boton {
+  padding-right: 3%;
+  width: 50px;
+  height: 20px;
+  margin-top: 1%;
+}
+
+body header nav .container-barra .barra .barra-simple .boton.boton-search {
+  background: url("/img/icon-search.svg");
+  background-repeat: no-repeat;
+}
+
+body header nav .container-barra .barra .barra-simple .boton.boton-cancel-search {
+  background: url("/img/close.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: none;
+}
+
+body header nav .container-barra .barra .lista-search {
+  display: none;
   border: #572EE5;
   border-radius: 27px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 10%;
+  text-align: left;
+  padding: 0%;
+  padding-left: 2%;
 }
 
-body header #navbar .sticky .barra ul li {
+body header nav .container-barra .barra .lista-search li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #9CAFC3;
   text-decoration: none;
   list-style: none;
   border-color: #572EE5;
   border-radius: 27px;
   font-family: 'Roboto-black', sans-serif;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  cursor: pointer;
+  text-align: left;
+  margin-top: 15%;
 }
 
-body header #navbar .sticky .barra ul li img {
+body header nav .container-barra .barra .lista-search li img {
   height: 15.8px;
   width: 15.8px;
   color: #9CAFC3;
   -webkit-filter: grayscale(100%) brightness(0.8) opacity(35%);
           filter: grayscale(100%) brightness(0.8) opacity(35%);
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-right: 5%;
 }
 
-body header #navbar .barra {
+body header nav .container-barra .barra .separador-lista {
   display: none;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background-color: #9CAFC3;
+  width: 505px;
+  height: 1px;
+  opacity: 0.5;
+  margin: 5px auto;
 }
 
-body header #navbar .sections {
+body header nav .sections {
   width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,7 +230,7 @@ body header #navbar .sections {
   padding: 0px;
 }
 
-body header #navbar .sections li {
+body header nav .sections li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,30 +240,62 @@ body header #navbar .sections li {
   text-transform: uppercase;
   color: #572EE5;
   text-decoration: none;
+  outline: none;
   font-weight: bold;
+  text-decoration: none;
 }
 
-body header #navbar .sections li .separador {
-  display: none;
-}
-
-body header #navbar .sections li a {
+body header nav .sections li a {
   text-decoration: none;
   color: #572EE5;
 }
 
-body header #navbar .sections li li:hover .separador {
+body header nav .sections li a .boton-mas {
+  height: 54px;
+  width: 54px;
+  background-image: url("/img/button-crear-gifo.svg");
+}
+
+body header nav .sections li a .boton-mas:hover {
+  background-image: url("/img/CTA-crear-gifo-hover.svg");
+}
+
+body header nav .sections li .separador {
+  display: none;
+}
+
+body header nav .sections li li:visited {
+  color: #572EE5;
+}
+
+body header nav .sections li li:hover .separador {
   display: inline;
   color: #50E3C2;
   width: 78px;
   height: 1px;
 }
 
-body header #navbar .sections li #last-button:hover {
-  background: url("img/CTA-crear-gifo-hover.svg");
+body header nav .sections li #last-button {
+  background-image: url("/img/button-crear-gifo.svg");
+  margin-right: 160%;
 }
 
-body header #navbar #toggle {
+body header nav .sections li #last-button:hover {
+  background: url("/img/CTA-crear-gifo-hover.svg");
+}
+
+body header nav .boton-hamburguesa {
+  display: none;
+  background-image: url("/img/burger.svg");
+  width: 15px;
+  height: 14px;
+}
+
+body header nav .boton-hamburguesa.active-boton {
+  background-image: url("/img/close.svg");
+}
+
+body header .sections-mobile {
   display: none;
 }
 

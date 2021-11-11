@@ -9,27 +9,49 @@
     <title>GIFOS</title>
 </head>
 <body>
-    <header>
-        <nav id="navbar">
+    <header id="navbar" class="navbar">
+        <nav>
             <div class="up-barra"></div>
-            <a href="indexHome.html" class="logo-desktop"><img alt="logo" src="img/logo-desktop.svg"></a>    
-            <input type="checkbox" id="toggle"/>
-            <label for="toggle" class="menu">
-                <span class="raya"></span>
-                <span class="raya"></span>
-                <span class="raya"></span>
-                <span class="cuadrado"></span>
-            </label>
+            <a href="indexHome.html" class="logo-desktop"><img alt="logo" src="/img/logo-desktop.svg"></a>
+            <a href="indexHome.html" class="logo-mobile"><img alt="logo" src="/img/logo-mobile.svg">  </a>  
+            <a href="indexHome.html" class="logo-desktop-noc"><img alt="logo" src="/img/logo-modo-noc.svg"></a>
+            <a href="indexHome.html" class="logo-mobile-noc"><img alt="logo" src="/img/logo-mobile-modo-noct.svg">  </a>  
+            <div class="menu-desplegable"></div>
+            <div class="boton-hamburguesa"></div>
+            <div class="container-barra">
+                <form class="barra">
+                    <div class="barra-simple">
+                        <input type="search" class="search" placeholder="Busca GIFOS y más">
+                        <div class="boton-search boton"></div>
+                        <div class="boton-cancel-search boton"></div>
+                    </div>             
+                    <div class="boton-search"></div>
+                    </input>
+                    <div class="separador-lista"></div>
+                    <ul id="lista-search" class="lista-search"></ul>
+                </form>
+            </div>
             <ul class="sections">
-                <li><a>Modo Nocturno</a></li>
+                <li><div class="switch item" id="switch">Modo Nocturno</div></li>
                 <li><div class="separador"></div></li>
-                <li><a href="indexFavoritos.html">Favoritos</a></li>
+                <li><a class="item" href="indexFavoritos.html">Favoritos</a></li>
                 <li><div class="separador"></div></li>
-                <li><a href="indexGifos.html">Mis GIFOS</a></li>
+                <li><a class="item" href="indexGifos.html">Mis GIFOS</a></li>
                 <li><div class="separador"></div></li>
-                <li><a href="indexCrear.html"><img alt="más" src="img/CTA-crear-gifo-active.svg"></a></li>
+                <li><a class="item crear" href="indexCrear.html"><div class="boton-mas"></div></a></li>
             </ul>
         </nav>
+        <div class="sections-mobile-container">
+            <ul class="sections-mobile">
+                <li><div class="switch item" id="switch">Modo Nocturno</div></li>
+                <li><div class="separador"></div></li>
+                <li><a class="item" href="indexFavoritos.html">Favoritos</a></li>
+                <li><div class="separador"></div></li>
+                <li><a class="item" href="indexGifos.html">Mis GIFOS</a></li>
+                <li><div class="separador"></div></li>
+                <li><a class="item crear" href="indexCrear.html"><div class="boton-mas"></div></a></li>
+            </ul>
+        </div>
     </header>
     <section class="main">
         

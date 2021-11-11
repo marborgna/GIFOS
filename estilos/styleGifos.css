@@ -284,10 +284,6 @@ body .main header nav .sections li #last-button:hover {
   background: url("/img/CTA-crear-gifo-hover.svg");
 }
 
-body .main header nav #toggle {
-  display: none;
-}
-
 body .main header nav .boton-hamburguesa {
   display: none;
   background-image: url("/img/burger.svg");
