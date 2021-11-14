@@ -1166,11 +1166,6 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favo
 body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favorito.favoritos-active {
   background-image: url("img/icon-fav-active.svg");
   background-repeat: no-repeat;
-  /*border: none;
-                                padding-top: 5px;
-                                padding-left: 5px;
-                                width: 32px;
-                                height: 32px;*/
   margin: 2%;
   width: 32px;
   height: 32px;
