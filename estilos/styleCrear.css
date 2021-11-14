@@ -149,12 +149,12 @@ body header nav .container-barra .barra .barra-simple .boton {
 }
 
 body header nav .container-barra .barra .barra-simple .boton.boton-search {
-  background: url("/img/icon-search.svg");
+  background: url("img/icon-search.svg");
   background-repeat: no-repeat;
 }
 
 body header nav .container-barra .barra .barra-simple .boton.boton-cancel-search {
-  background: url("/img/close.svg");
+  background: url("img/close.svg");
   background-repeat: no-repeat;
   cursor: pointer;
   display: none;
@@ -253,11 +253,11 @@ body header nav .sections li a {
 body header nav .sections li a .boton-mas {
   height: 54px;
   width: 54px;
-  background-image: url("/img/button-crear-gifo.svg");
+  background-image: url("img/button-crear-gifo.svg");
 }
 
 body header nav .sections li a .boton-mas:hover {
-  background-image: url("/img/CTA-crear-gifo-hover.svg");
+  background-image: url("img/CTA-crear-gifo-hover.svg");
 }
 
 body header nav .sections li .separador {
@@ -276,23 +276,23 @@ body header nav .sections li li:hover .separador {
 }
 
 body header nav .sections li #last-button {
-  background-image: url("/img/button-crear-gifo.svg");
+  background-image: url("img/button-crear-gifo.svg");
   margin-right: 160%;
 }
 
 body header nav .sections li #last-button:hover {
-  background: url("/img/CTA-crear-gifo-hover.svg");
+  background: url("img/CTA-crear-gifo-hover.svg");
 }
 
 body header nav .boton-hamburguesa {
   display: none;
-  background-image: url("/img/burger.svg");
+  background-image: url("img/burger.svg");
   width: 15px;
   height: 14px;
 }
 
 body header nav .boton-hamburguesa.active-boton {
-  background-image: url("/img/close.svg");
+  background-image: url("img/close.svg");
 }
 
 body header .sections-mobile {
@@ -487,22 +487,22 @@ body .main .central .cuadro .main-cuadro .contenedor-botones .boton-descarga {
   margin: 2%;
   width: 32px;
   height: 32px;
-  background-image: url("/img/icon-download.svg");
+  background-image: url("img/icon-download.svg");
 }
 
 body .main .central .cuadro .main-cuadro .contenedor-botones .boton-descarga:hover {
-  background-image: url("/img/icon-download-hover.svg");
+  background-image: url("img/icon-download-hover.svg");
 }
 
 body .main .central .cuadro .main-cuadro .contenedor-botones .boton-copiar {
   margin: 2%;
   width: 32px;
   height: 32px;
-  background-image: url("/img/icon-link-normal.svg");
+  background-image: url("img/icon-link-normal.svg");
 }
 
 body .main .central .cuadro .main-cuadro .contenedor-botones .boton-copiar:hover {
-  background-image: url("/img/icon-link-hover.svg");
+  background-image: url("img/icon-link-hover.svg");
 }
 
 body .main .central .cuadro .inferior {

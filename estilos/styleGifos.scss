@@ -124,12 +124,12 @@ body {
                                 margin-top: 1%;
         
                                 &.boton-search {
-                                    background: url('/img/icon-search.svg');
+                                    background: url('img/icon-search.svg');
                                     background-repeat: no-repeat;
                                 }
         
                                 &.boton-cancel-search {
-                                    background: url('/img/close.svg');
+                                    background: url('img/close.svg');
                                     background-repeat: no-repeat;
                                     cursor: pointer;
                                     display: none;
@@ -214,11 +214,11 @@ body {
                             .boton-mas {
                                 height: 54px;
                                 width: 54px;
-                                background-image: url('/img/button-crear-gifo.svg');
+                                background-image: url('img/button-crear-gifo.svg');
                                 
                                 &:hover {
                                     
-                                    background-image: url('/img/CTA-crear-gifo-hover.svg');
+                                    background-image: url('img/CTA-crear-gifo-hover.svg');
                                 }
                             }
                         }
@@ -242,10 +242,10 @@ body {
                         }
     
                         #last-button {
-                            background-image: url('/img/button-crear-gifo.svg');
+                            background-image: url('img/button-crear-gifo.svg');
                             margin-right: 160%;
                             &:hover {
-                                background: url('/img/CTA-crear-gifo-hover.svg');
+                                background: url('img/CTA-crear-gifo-hover.svg');
                             }
                         }                
                     }
@@ -253,12 +253,12 @@ body {
     
                 .boton-hamburguesa {
                     display: none;
-                    background-image: url('/img/burger.svg');
+                    background-image: url('img/burger.svg');
                     width: 15px;
                     height: 14px;
     
                     &.active-boton {
-                        background-image: url('/img/close.svg');
+                        background-image: url('img/close.svg');
                     }
                 }
             }
@@ -299,7 +299,7 @@ body {
                     display: flex;
                     border: none;
                     font-family: "Roboto-black", sans-serif;
-                    background: url("/img/icon-search.svg") no-repeat scroll 97%;
+                    background: url("img/icon-search.svg") no-repeat scroll 97%;
                     justify-content: space-around;
                     margin: none;
                     width: 160%;
@@ -385,13 +385,13 @@ body {
                             margin: 2%;
                             width: 32px;
                             height: 32px;
-                            background-image: url("/img/icon-fav.svg");
+                            background-image: url("img/icon-fav.svg");
 
                             &:hover {
-                                background-image: url("/img/icon-fav-hover.svg");
+                                background-image: url("img/icon-fav-hover.svg");
                             }
                             &.favoritos-active {
-                                background-image: url("/img/icon-fav-active.svg");
+                                background-image: url("img/icon-fav-active.svg");
                                 background-repeat: no-repeat;
                                 margin-top: 4%;
                                 margin-right: -0.5%;
@@ -404,7 +404,7 @@ body {
                             margin: 2%;
                             width: 32px;
                             height: 32px;
-                            background-image: url("/img/icon-download.svg");
+                            background-image: url("img/icon-download.svg");
 
                             &:hover {
                                 background-image: url("img/icon-download-hover.svg");
@@ -415,10 +415,10 @@ body {
                             margin: 2%;
                             width: 32px;
                             height: 32px;
-                            background-image: url("/img/icon-max-normal.svg");
+                            background-image: url("img/icon-max-normal.svg");
 
                             &:hover {
-                                background-image: url("/img/icon-max-hover.svg");
+                                background-image: url("img/icon-max-hover.svg");
                             }
                         }
                     }
@@ -529,13 +529,13 @@ body {
                                 margin: 2%;
                                 width: 32px;
                                 height: 32px;
-                                background-image: url("/img/icon-fav.svg");
+                                background-image: url("img/icon-fav.svg");
 
                                 &:hover {
-                                    background-image: url("/img/icon-fav-hover.svg");
+                                    background-image: url("img/icon-fav-hover.svg");
                                 }
                                 &.favoritos-active {
-                                    background-image: url("/img/icon-fav-active.svg");
+                                    background-image: url("img/icon-fav-active.svg");
                                     background-repeat: no-repeat;
                                     margin-top: 4%;
                                     margin-right: -0.5%;
@@ -548,10 +548,10 @@ body {
                                 margin: 2%;
                                 width: 32px;
                                 height: 32px;
-                                background-image: url("/img/icon-download.svg");
+                                background-image: url("img/icon-download.svg");
 
                                 &:hover {
-                                    background-image: url("/img/icon-download-hover.svg");
+                                    background-image: url("img/icon-download-hover.svg");
                                 }
                             }
 
@@ -559,10 +559,10 @@ body {
                                 margin: 2%;
                                 width: 32px;
                                 height: 32px;
-                                background-image: url("/img/icon-max-normal.svg");
+                                background-image: url("img/icon-max-normal.svg");
 
                                 &:hover {
-                                    background-image: url("/img/icon-max-hover.svg");
+                                    background-image: url("img/icon-max-hover.svg");
                                 }
                             }
                         }
@@ -592,18 +592,18 @@ body {
                 }
 
                 .right {
-                    background: url("/img/button-slider-right.svg");
+                    background: url("img/button-slider-right.svg");
                     right: 10px;
                     &:hover {
-                        background: url("/img/button-slider-right-hover.svg");
+                        background: url("img/button-slider-right-hover.svg");
                     }
                 }
 
                 .left {
-                    background: url("/img/button-slider-left.svg");
+                    background: url("img/button-slider-left.svg");
                     left: 10px;
                     &:hover {
-                        background: url("/img/button-slider-left-hover.svg");
+                        background: url("img/button-slider-left-hover.svg");
                     }
                 }
             }
@@ -706,7 +706,7 @@ body {
                         width: 15.2px;
                         height: 15.2px;
                         justify-self: flex-end;
-                        background-image: url("/img/close.svg");
+                        background-image: url("img/close.svg");
                         cursor: pointer;
                         background-repeat: no-repeat;
                     }
@@ -734,20 +734,20 @@ body {
                     }
 
                     .right {
-                        background: url("/img/button-slider-right.svg");
+                        background: url("img/button-slider-right.svg");
                         right: 10px;
                         margin-right: 20%;
                         &:hover {
-                            background: url("/img/button-slider-right-hover.svg");
+                            background: url("img/button-slider-right-hover.svg");
                         }
                     }
 
                     .left {
-                        background: url("/img/button-slider-left.svg");
+                        background: url("img/button-slider-left.svg");
                         left: 10px;
                         margin-left: 20%;
                         &:hover {
-                            background: url("/img/button-slider-left-hover.svg");
+                            background: url("img/button-slider-left-hover.svg");
                         }
                     }
                 }
@@ -792,15 +792,15 @@ body {
                             margin: 2%;
                             width: 32px;
                             height: 32px;
-                            background-image: url("/img/icon-fav.svg");
+                            background-image: url("img/icon-fav.svg");
                             border: 1px solid #ced7e1;
                             border-radius: 6px;
 
                             &:hover {
-                                background-image: url("/img/icon-fav-hover.svg");
+                                background-image: url("img/icon-fav-hover.svg");
                             }
                             &.favoritos-active {
-                                background-image: url("/img/icon-fav-active.svg");
+                                background-image: url("img/icon-fav-active.svg");
                                 background-repeat: no-repeat;
                                 padding-top: 3%;
                                 padding-left: 3%;
@@ -814,7 +814,7 @@ body {
                             margin: 2%;
                             width: 32px;
                             height: 32px;
-                            background-image: url("/img/icon-download.svg");
+                            background-image: url("img/icon-download.svg");
                             border: 1px solid #ced7e1;
                             border-radius: 6px;
 
@@ -925,10 +925,10 @@ body {
                                 .boton-mas {
                                     height: 54px;
                                     width: 54px;
-                                    background-image: url('/img/button-crear-gifo.svg');
+                                    background-image: url('img/button-crear-gifo.svg');
                                         
                                     &:hover {                
-                                        background-image: url('/img/CTA-crear-gifo-hover.svg');
+                                        background-image: url('img/CTA-crear-gifo-hover.svg');
                                     }
                                 }
                                 
