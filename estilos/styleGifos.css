@@ -149,12 +149,12 @@ body .main header nav .container-barra .barra .barra-simple .boton {
 }
 
 body .main header nav .container-barra .barra .barra-simple .boton.boton-search {
-  background: url("img/icon-search.svg");
+  background: url("../img/icon-search.svg");
   background-repeat: no-repeat;
 }
 
 body .main header nav .container-barra .barra .barra-simple .boton.boton-cancel-search {
-  background: url("img/close.svg");
+  background: url("../img/close.svg");
   background-repeat: no-repeat;
   cursor: pointer;
   display: none;
@@ -253,11 +253,11 @@ body .main header nav .sections li a {
 body .main header nav .sections li a .boton-mas {
   height: 54px;
   width: 54px;
-  background-image: url("img/button-crear-gifo.svg");
+  background-image: url("../img/button-crear-gifo.svg");
 }
 
 body .main header nav .sections li a .boton-mas:hover {
-  background-image: url("img/CTA-crear-gifo-hover.svg");
+  background-image: url("../img/CTA-crear-gifo-hover.svg");
 }
 
 body .main header nav .sections li .separador {
@@ -276,23 +276,23 @@ body .main header nav .sections li li:hover .separador {
 }
 
 body .main header nav .sections li #last-button {
-  background-image: url("img/button-crear-gifo.svg");
+  background-image: url("../img/button-crear-gifo.svg");
   margin-right: 160%;
 }
 
 body .main header nav .sections li #last-button:hover {
-  background: url("img/CTA-crear-gifo-hover.svg");
+  background: url("../img/CTA-crear-gifo-hover.svg");
 }
 
 body .main header nav .boton-hamburguesa {
   display: none;
-  background-image: url("img/burger.svg");
+  background-image: url("../img/burger.svg");
   width: 15px;
   height: 14px;
 }
 
 body .main header nav .boton-hamburguesa.active-boton {
-  background-image: url("img/close.svg");
+  background-image: url("../img/close.svg");
 }
 
 body .main header .sections-mobile {
@@ -340,7 +340,7 @@ body .main .sticky .barra input {
   display: flex;
   border: none;
   font-family: "Roboto-black", sans-serif;
-  background: url("img/icon-search.svg") no-repeat scroll 97%;
+  background: url("../img/icon-search.svg") no-repeat scroll 97%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: none;
@@ -465,15 +465,15 @@ body .main .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-favo
   margin: 2%;
   width: 32px;
   height: 32px;
-  background-image: url("img/icon-fav.svg");
+  background-image: url("../img/icon-fav.svg");
 }
 
 body .main .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-favorito:hover {
-  background-image: url("img/icon-fav-hover.svg");
+  background-image: url("../img/icon-fav-hover.svg");
 }
 
 body .main .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-favorito.favoritos-active {
-  background-image: url("img/icon-fav-active.svg");
+  background-image: url("../img/icon-fav-active.svg");
   background-repeat: no-repeat;
   margin-top: 4%;
   margin-right: -0.5%;
@@ -485,22 +485,22 @@ body .main .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-desc
   margin: 2%;
   width: 32px;
   height: 32px;
-  background-image: url("img/icon-download.svg");
+  background-image: url("../img/icon-download.svg");
 }
 
 body .main .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-descarga:hover {
-  background-image: url("img/icon-download-hover.svg");
+  background-image: url("../img/icon-download-hover.svg");
 }
 
 body .main .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-expandir {
   margin: 2%;
   width: 32px;
   height: 32px;
-  background-image: url("img/icon-max-normal.svg");
+  background-image: url("../img/icon-max-normal.svg");
 }
 
 body .main .mis-GIFOS .container-favoritos .img-favorito .fondoHover .boton-expandir:hover {
-  background-image: url("img/icon-max-hover.svg");
+  background-image: url("../img/icon-max-hover.svg");
 }
 
 body .main .mis-GIFOS .contenedor-ver-mas {
@@ -654,15 +654,15 @@ body .main .gifos-section .container-slider .slider .slider-section .fondoHover 
   margin: 2%;
   width: 32px;
   height: 32px;
-  background-image: url("img/icon-fav.svg");
+  background-image: url("../img/icon-fav.svg");
 }
 
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-favorito:hover {
-  background-image: url("img/icon-fav-hover.svg");
+  background-image: url("../img/icon-fav-hover.svg");
 }
 
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-favorito.favoritos-active {
-  background-image: url("img/icon-fav-active.svg");
+  background-image: url("../img/icon-fav-active.svg");
   background-repeat: no-repeat;
   margin-top: 4%;
   margin-right: -0.5%;
@@ -674,22 +674,22 @@ body .main .gifos-section .container-slider .slider .slider-section .fondoHover 
   margin: 2%;
   width: 32px;
   height: 32px;
-  background-image: url("img/icon-download.svg");
+  background-image: url("../img/icon-download.svg");
 }
 
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-descarga:hover {
-  background-image: url("img/icon-download-hover.svg");
+  background-image: url("../img/icon-download-hover.svg");
 }
 
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-expandir {
   margin: 2%;
   width: 32px;
   height: 32px;
-  background-image: url("img/icon-max-normal.svg");
+  background-image: url("../img/icon-max-normal.svg");
 }
 
 body .main .gifos-section .container-slider .slider .slider-section .fondoHover .boton-expandir:hover {
-  background-image: url("img/icon-max-hover.svg");
+  background-image: url("../img/icon-max-hover.svg");
 }
 
 body .main .gifos-section .container-slider .slider .slider-section img {
@@ -719,21 +719,21 @@ body .main .gifos-section div .slider-btn {
 }
 
 body .main .gifos-section div .right {
-  background: url("img/button-slider-right.svg");
+  background: url("../img/button-slider-right.svg");
   right: 10px;
 }
 
 body .main .gifos-section div .right:hover {
-  background: url("img/button-slider-right-hover.svg");
+  background: url("../img/button-slider-right-hover.svg");
 }
 
 body .main .gifos-section div .left {
-  background: url("img/button-slider-left.svg");
+  background: url("../img/button-slider-left.svg");
   left: 10px;
 }
 
 body .main .gifos-section div .left:hover {
-  background: url("img/button-slider-left-hover.svg");
+  background: url("../img/button-slider-left-hover.svg");
 }
 
 body .main footer {
@@ -879,7 +879,7 @@ body .main-modal .modal .modal-content .container-cerrar .cerrar {
   width: 15.2px;
   height: 15.2px;
   justify-self: flex-end;
-  background-image: url("img/close.svg");
+  background-image: url("../img/close.svg");
   cursor: pointer;
   background-repeat: no-repeat;
 }
@@ -905,23 +905,23 @@ body .main-modal .modal .modal-content .botones .modal-btn {
 }
 
 body .main-modal .modal .modal-content .botones .right {
-  background: url("img/button-slider-right.svg");
+  background: url("../img/button-slider-right.svg");
   right: 10px;
   margin-right: 20%;
 }
 
 body .main-modal .modal .modal-content .botones .right:hover {
-  background: url("img/button-slider-right-hover.svg");
+  background: url("../img/button-slider-right-hover.svg");
 }
 
 body .main-modal .modal .modal-content .botones .left {
-  background: url("img/button-slider-left.svg");
+  background: url("../img/button-slider-left.svg");
   left: 10px;
   margin-left: 20%;
 }
 
 body .main-modal .modal .modal-content .botones .left:hover {
-  background: url("img/button-slider-left-hover.svg");
+  background: url("../img/button-slider-left-hover.svg");
 }
 
 body .main-modal .modal .modal-content .barra-tareas {
@@ -985,17 +985,17 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favo
   margin: 2%;
   width: 32px;
   height: 32px;
-  background-image: url("img/icon-fav.svg");
+  background-image: url("../img/icon-fav.svg");
   border: 1px solid #ced7e1;
   border-radius: 6px;
 }
 
 body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favorito:hover {
-  background-image: url("img/icon-fav-hover.svg");
+  background-image: url("../img/icon-fav-hover.svg");
 }
 
 body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-favorito.favoritos-active {
-  background-image: url("img/icon-fav-active.svg");
+  background-image: url("../img/icon-fav-active.svg");
   background-repeat: no-repeat;
   padding-top: 3%;
   padding-left: 3%;
@@ -1007,13 +1007,13 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
   margin: 2%;
   width: 32px;
   height: 32px;
-  background-image: url("img/icon-download.svg");
+  background-image: url("../img/icon-download.svg");
   border: 1px solid #ced7e1;
   border-radius: 6px;
 }
 
 body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-descarga:hover {
-  background-image: url("img/icon-download-hover.svg");
+  background-image: url("../img/icon-download-hover.svg");
 }
 
 @media screen and (max-width: 1000px) {
@@ -1119,10 +1119,10 @@ body .main-modal .modal .modal-content .barra-tareas .bloque-botones .boton-desc
   body .main header .sections-mobile-container .sections-mobile.expanded li .item .boton-mas {
     height: 54px;
     width: 54px;
-    background-image: url("img/button-crear-gifo.svg");
+    background-image: url("../img/button-crear-gifo.svg");
   }
   body .main header .sections-mobile-container .sections-mobile.expanded li .item .boton-mas:hover {
-    background-image: url("img/CTA-crear-gifo-hover.svg");
+    background-image: url("../img/CTA-crear-gifo-hover.svg");
   }
   body .main header .sections-mobile-container .sections-mobile.expanded li .separador {
     height: 0.1px;

@@ -122,12 +122,12 @@ body {
                             margin-top: 1%;
     
                             &.boton-search {
-                                background: url('img/icon-search.svg');
+                                background: url('../img/icon-search.svg');
                                 background-repeat: no-repeat;
                             }
     
                             &.boton-cancel-search {
-                                background: url('img/close.svg');
+                                background: url('../img/close.svg');
                                 background-repeat: no-repeat;
                                 cursor: pointer;
                                 display: none;
@@ -212,11 +212,11 @@ body {
                         .boton-mas {
                             height: 54px;
                             width: 54px;
-                            background-image: url('img/button-crear-gifo.svg');
+                            background-image: url('../img/button-crear-gifo.svg');
                             
                             &:hover {
                                 
-                                background-image: url('img/CTA-crear-gifo-hover.svg');
+                                background-image: url('../img/CTA-crear-gifo-hover.svg');
                             }
                         }
                     }
@@ -240,10 +240,10 @@ body {
                     }
 
                     #last-button {
-                        background-image: url('img/button-crear-gifo.svg');
+                        background-image: url('../img/button-crear-gifo.svg');
                         margin-right: 160%;
                         &:hover {
-                            background: url('img/CTA-crear-gifo-hover.svg');
+                            background: url('../img/CTA-crear-gifo-hover.svg');
                         }
                     }                
                 }
@@ -251,12 +251,12 @@ body {
 
             .boton-hamburguesa {
                 display: none;
-                background-image: url('img/burger.svg');
+                background-image: url('../img/burger.svg');
                 width: 15px;
                 height: 14px;
 
                 &.active-boton {
-                    background-image: url('img/close.svg');
+                    background-image: url('../img/close.svg');
                 }
             }
         }
@@ -401,10 +401,10 @@ body {
                             margin: 2%;
                             width: 32px;
                             height: 32px;
-                            background-image: url('img/icon-download.svg');
+                            background-image: url('../img/icon-download.svg');
 
                             &:hover {
-                                background-image: url('img/icon-download-hover.svg');
+                                background-image: url('../img/icon-download-hover.svg');
                             }
                         }
 
@@ -412,10 +412,10 @@ body {
                             margin: 2%;
                             width: 32px;
                             height: 32px;
-                            background-image: url('img/icon-link-normal.svg');
+                            background-image: url('../img/icon-link-normal.svg');
 
                             &:hover {
-                                background-image: url('img/icon-link-hover.svg');
+                                background-image: url('../img/icon-link-hover.svg');
                             }
                         }
                     }
