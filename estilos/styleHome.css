@@ -260,7 +260,7 @@ body .main header nav .sections li a {
 body .main header nav .sections li a .boton-mas {
   height: 54px;
   width: 54px;
-  background-image: url("img/button-crear-gifo.svg");
+  background-image: url("../img/button-crear-gifo.svg");
 }
 
 body .main header nav .sections li a .boton-mas:hover {
