@@ -541,6 +541,17 @@ body .main .mis-GIFOS .contenedor-ver-mas :hover {
 body .main .mis-GIFOS .vacio {
   display: none;
   text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10%;
 }
 
 body .main .mis-GIFOS .vacio img {
